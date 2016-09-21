@@ -11,3 +11,5 @@ legacy/mogfx/*
 legacy/sound/*
 legacy/torchsparks/*
 prepros.cfg
+style.css
+style.css.map

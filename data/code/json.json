@@ -1,0 +1,15 @@
+{
+	"basics": {
+		"name": "Cole Marshall",
+		"label": "Web Designer & Developer",
+		"picture": "http://www.ColeMarshall.net/images/ColeMarshall.jpg",
+		"email": "ColeM@ColeMarshall.net",
+		"website": "http://www.ColeMarshall.net",
+		"location": {
+			"postalCode": "53704",
+			"city": "Madison",
+			"countryCode": "US",
+			"region": "WI"
+		}
+	}
+}

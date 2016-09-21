@@ -1,0 +1,52 @@
+@import "compass";
+
+/* Human container */
+#humans {
+	font-family: "Homo Sapiens", Arial, sans-serif;
+	box-shadow: 12px 2px 16px 1px rgba(0, 0, 0, 0.3);
+	position: relative;
+	animation-duration: 10s;
+	animation-name: walk;
+
+	/* Walk forward */
+	@keyframes walk {
+		from {
+			left:0;
+		}
+
+		to {
+			left:100px;
+		}
+	}
+
+	/* Human smile */
+	@mixin smile($radius) {
+		border-radius: 0 0 $radius $radius;
+	}
+
+	/* Average male height, medium build, and imperfect posture */
+	.cole {
+		height: 177cm;
+		padding: 1cm;
+		font-weight: italic;
+
+		/* Hazel eyes and light skin tone */
+		main {
+			color: #514a3a;
+			background-color: adjust-lightness(#e5d7be, 8%);
+		}
+
+		/* Mouth */
+		> div {
+			width: 5cm;
+			height: 1cm;
+			color: #ccc8c5;
+			background-color: #9f7879;
+
+			/* Smile */
+			&:active {
+				@include smile(8px);
+			}
+		}
+	}
+}

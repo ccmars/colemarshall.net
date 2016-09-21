@@ -1,0 +1,11 @@
+POST /api/cole/properties HTTP/1.1
+Host: colemarshall.net
+Content-Type: application/json; charset=utf-8
+Content-Length: 52
+
+{
+	"bloodType": {
+		"group": "O",
+		"rhesusFactor": true
+	}
+}

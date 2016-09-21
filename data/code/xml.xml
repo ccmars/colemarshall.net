@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<human>
+	<name>
+		<first>Cole</first>
+		<last>Marshall</last>
+	</name>
+	<measurements>
+		<chest cut="regular">40</chest>
+		<waist unit="inch">34</waist>
+		<outseam unit="inch">40 1/2</outseam>
+		<neck unit="inch">15 3/4</neck>
+		<sleeve unit="inch">35</sleeve>
+		<head unit="inch">7 1/2</head>
+		<shoe unit="inch">10</shoe>
+		<hand unit="inch">8.5</hand>
+		<pupil unit="mm">64</pupil>
+		<height unit="cm">177</height>
+		<weight unit="kg">80</weight>
+	</measurements>
+</human>

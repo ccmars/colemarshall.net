@@ -1,0 +1,244 @@
+{
+	"basics": {
+		"name": "Cole Marshall",
+		"label": "Web Designer & Developer",
+		"picture": "http://www.ColeMarshall.net/images/ColeMarshall.jpg",
+		"email": "ColeM@ColeMarshall.net",
+		"website": "http://www.ColeMarshall.net",
+		"summary": "I am an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks. I hold a Bachelor of Fine Arts degree in Interactive Media from the Minneapolis College of Art and Design, and I have been actively involved in the online media industry for over a decade and a half.\n\nMany people are surprised to learn that I know things. These things I know are useful things too. Special things even—like how to work with useful technologies like HTML, CSS, JavaScript, PHP, MySQL, Sass, jQuery, XML, JSON, REST, Git, and even dead languages like ActionScript and Lingo. I also know how to use software such as Photoshop, Illustrator, After Effects, Animate, Maya, and Vegas, among many others. I know some interesting things about nuclear fallout too, but for some reason, no one's ever been interested in getting me to divulge that information.",
+		"location": {
+			"postalCode": "53704",
+			"city": "Madison",
+			"countryCode": "US",
+			"region": "WI"
+		},
+		"profiles": [
+			{
+				"network": "LinkedIn",
+				"username": "colemarshall",
+				"url": "http://www.linkedin.com/in/colemarshall"
+			},
+			{
+				"network": "StackOverflow",
+				"username": "1836703",
+				"url": "http://stackoverflow.com/users/1836703/cole"
+			},
+			{
+				"network": "GitHub",
+				"username": "ccmars",
+				"url": "https://github.com/ccmars"
+			},
+			{
+				"network": "Behance",
+				"username": "ColeMarshall",
+				"url": "https://www.behance.net/ColeMarshall"
+			},
+			{
+				"network": "MyFonts",
+				"username": "CC_Marshall",
+				"url": "http://www.myfonts.com/person/CC_Marshall/"
+			},
+			{
+				"network": "500px",
+				"username": "colemarshall",
+				"url": "https://500px.com/colemarshall"
+			}
+		]
+	},
+	"work": [
+		{
+			"company": "MusicMaster, Inc.",
+			"position": "Web Designer & Developer",
+			"website": "http://www.MusicMaster.com/",
+			"startDate": "2011-03-07",
+			"endDate": "",
+			"summary": "As head of MusicMaster's web department, I'm responsible for overseeing the company's online presence, from design, to frontend development, and even backend development. I also contribute to the company's online products.",
+			"highlights": [
+				"(Serapis) Created an automated system to gather various report metrics data from Salesforce (http://www.salesforce.com/) for review, with historical data presented using Google Charts (https://developers.google.com/chart/)",
+				"(Pluto) Integrated the PayPal (http://www.paypal.com/) API into MusicMaster's web store",
+				"Integrated the currencylayer (https://currencylayer.com/) API into MusicMaster's web store using the Guzzle (http://guzzlephp.org) REST client",
+				"(Seshat) Integrated the Google Drive (http://drive.google.com/) API to parse and display frequently-updated spreadsheet data in a reader-friendly manner",
+				"(Moneta) Integrated the Dropbox (http://www.dropbox.com/) API to allow for the transfer daily site backups to a company folder in the cloud",
+				"Developed an API method for Munin to allow for easy creation of cases in Salesforce, including the ability to add relevant file attachments to the newly created cases",
+				"(Hugin) Created a PHP SDK to accompany the Odin API for use throughout the site",
+				"(Munin) Created a RESTful (https://en.wikipedia.org/wiki/Representational_state_transfer) API for Odin using Slim (http://www.slimframework.com/) that accepts and returns JSON (http://www.json.org/) or XML as needed, uses HTTP authentication, and includes extensive Markdown documentation",
+				"Integrated the Constant Contact (http://www.constantcontact.com/) API into MusicMaster's website to allow the syncing subscriber information between Constant Contact and Salesforce",
+				"(Apophis) Created a form-flooding detection system to record contact form activity and ban users who abuse contact forms by repeatedly submitting spam within a short window of time",
+				"Designed the graphics for MusicMaster's massive 20'x40' exhibit for NAB Show 2015",
+				"Integrated the Disqus (https://disqus.com/) API into MusicMaster's website to allow for comments on web content",
+				"Designed a poster (http://www.musicmaster.com/party/images/crs2015.jpg) and three web ads for MusicMaster's officially sanctioned Country Radio Seminar 2015 party",
+				"Designed and developed an HTML5 station player widget, accompanied by a widget creation page, allowing MusicMaster clients to create and customize a widget for their websites that streams their station's audio to their web listeners",
+				"(Locus) Developed a detailed client station database accompanied by a responsive station player skeuomorph frontend that looks and works much like a car stereo (http://www.musicmaster.com/stations_player.php)",
+				"Designed a landing page for MusicMaster's Raving Fan (http://www.musicmaster.com/RavingFan/) web campaign",
+				"Redesigned and developed the 2014 desktop and mobile versions of MusicMaster.com (http://www.musicmaster.com/)",
+				"(Sangus) Designed and developed an extensive, custom eCommerce system with Authorize.net integration, PhaseWare integration, Salesforce integration, PayPal integration, customer accounts, subscription management, contracts, invoices, and wide-ranging discount options among many other features",
+				"Developed a PHP SDK for use with the PhaseWare Tracker (http://www.phaseware.com/) API",
+				"Designed a flexible ad for MusicMaster's Don't Click Here (http://www.musicmaster.com/DontClickHere/) web ad campaign with over 100 ads in different resolutions and numerous taglines",
+				"Designed a flexible logo for different versions of MusicMaster Scheduling (Client-Server Edition, Personal Edition, Professional Edition, Limited Edition, etc.)",
+				"(Nodens) Created an ad code tracking system, which records detailed information about users that visit the MusicMaster site with certain strings contained within the URL, sends users to a specific page on the site in a specific language if necessary, and tallies hits and visits for each code. Administrators can view a sortable list of hits and visits, view the cost-per-click analysis on individual ads, and view chart visualizations of ad campaign effectiveness.",
+				"(Terminus) Created a survey system which takes the results of surveys and displays them and their details to administrators with chart visualizations",
+				"Created MusicMaster's 30th Anniversary logo (http://on.be.net/1zFdaCs), which appeared on banners, shirts, plaques, and even packets of fruit snacks",
+				"Integrated the Salesforce (https://www.salesforce.com/) API into the MusicMaster website, sending it web leads, contacts, cases, and newsletter subscriber information",
+				"(Cissonius) Created a sales lead tracker, which stores lead information and verifies that all sales executives have received the lead via e-mail",
+				"Integrated the MusicMaster site with YouTube to handle walkthrough, webinar, and featured videos",
+				"Created multiple desktop background images for the demonstration machines in the MusicMaster booth at the National Association of Broadcasters Show",
+				"(Atlas) Created a geocoding system that imports client addresses and uses Google's API's to convert street addresses into globe coordinates for placement on an interactive map",
+				"Redesigned the primary icons for MusicMaster 6.0 (http://on.be.net/11P0NJE)",
+				"(Athena) Created a certification testing system for the MusicMaster Scheduling software, which displays questions that must be answered in a fixed time-frame, giving users the option to occasionally pass on a question, add time to answer, and remove one wrong answer from a question. Administrative features include managing test questions with the option to include images and shuffle the order of the multiple choice answers, the creation of custom categories and custom difficulties, and a comprehensive look at how questions are statistically being answered.",
+				"(Odin) Created a back-end administrative framework that manages all of MusicMaster's web applications, selectively giving its users the ability to access the site's administrative options. Built on PHP and JavaScript, the system is designed to allow developers to rapidly create administrative user interfaces, the centerpiece being a form creation class that handles intricate error-checking with minimal parameters",
+				"(Mecury) Created a newsletter management program that integrates into WordPress, turning postings into suitable HTML and text e-mails, sends previews to editors, gives subscribers and administrators easy-to-use subscription management options, processes returned mail, and removes and reports undeliverable e-mail addresses from the subscribers database",
+				"(Nimrod) Created a robust localization system with an easy-to-use Ajax administration that supports all UTF-8 languages, multiple software and web products, XML/CSV import/export of localization data, and a RESTful API",
+				"Created  MusicMaster's moving title animation (http://bit.ly/1ldDvnL)",
+				"Designed nine different MusicMaster holiday logos (http://on.be.net/1tpouxP) which appear on the site around the time of the occasion",
+				"Search Engine Optimization: Optimized the MusicMaster website so that it appears as number one on Google for the company's primary keywords \"music scheduling\" and \"music scheduling software\"",
+				"Redesigned and developed the 2011 desktop and mobile versions of MusicMaster.com (http://www.musicmaster.com/)",
+				"Designed a landing page to detail the MusicMaster's products from 2011 (http://www.musicmaster.com/NewStuff)",
+				"Designed several skins for MusicMaster Live Server, the technology behind Blendella",
+				"Created branding packages (https://www.behance.net/gallery/26791257/Blendella-Branding-Packages), designed user interfaces and outlined the user experience (https://www.behance.net/gallery/26758243/Blendella-Mars-UIUX), and developed frontend styling for Blendella, where users can listen to and vote on the music they want to hear next"
+			]
+		},{
+			"company": "Active Depth",
+			"position": "Owner",
+			"website": "http://www.ActiveDepth.com/",
+			"startDate": "2000-03-01",
+			"endDate": "",
+			"summary": "I've been actively involved in the online media industry with my own business for over a decade and a half, during which time I've tackled many diverse projects for a multitude of different clients.",
+			"highlights": []
+		},{
+			"company": "Raichert Media, Inc.",
+			"position": "Web Designer & Developer",
+			"website": "http://www.RaichertMedia.com/",
+			"startDate": "2006-05-01",
+			"endDate": "2008-12-01",
+			"summary": "I performed root-level maintenance on the company’s dedicated server, and I also assisted with web design and development for the company’s clients as needed.",
+			"highlights": []
+		},{
+			"company": "Administrator",
+			"position": "The Central Outpost",
+			"website": "http://www.CentralOutpost.com/",
+			"startDate": "2000-07-22",
+			"endDate": "",
+			"summary": "This website, a community for online gaming groups, has been a labor of love of mine for a decade and a half. The site receives tens of thousands of unique visitors monthly, hosting over 5,000 clan accounts and nearly 7,000 user accounts. I manage every aspect of the site from the graphic design, user experience, front-end development, back-end development (the entire site operates on a custom content-management system), copywriting, community relations, marketing, finances, and even technical support. Development and upkeep are entirely funded through donations from users.",
+			"highlights": []
+		},{
+			"company": "Teaching Assistant",
+			"position": "Minneapolis College of Art and Design",
+			"website": "http://mcad.edu/",
+			"startDate": "2007-01-01",
+			"endDate": "2008-05-01",
+			"summary": "As a teaching assistant for the Interactive Multi-Linear Narrative (game design) class, I provided technical direction and advice as the programming lead for two Flash-based computer game projects.",
+			"highlights": [
+				"Gold Rush (http://www.activedepth.com/games/goldrush) (Adventure Game: Solo Project)",
+				"Splendortron (Platformer Game: Artificial Intelligence Programmer and User Interface Designer)",
+				"Death's Memoirs (http://www.activedepth.com/games/deathsmemoirs) (Puzzle/Adventure Game: Lead Programmer and User Interface Designer)",
+				"Plasmid (http://www.activedepth.com/games/plasmid) (Arcade Game: Solo Project)",
+				"Awesome Wars (Networked Turn-Based Strategy: Lead Programmer and User Interface Designer)"
+			]
+		}
+	],
+	"education": [
+		{
+			"institution": "Minneapolis College of Art and Design",
+			"area": "Fine Arts",
+			"studyType": "Bachelor",
+			"startDate": "2004-08-01",
+			"endDate": "2008-05-01",
+			"gpa": "3.8",
+			"courses": [
+				"Interactive Media",
+				"Web Design",
+				"Graphic Design",
+				"History of Graphic Design",
+				"Art History",
+				"Typography",
+				"Animation",
+				"Motion Graphics",
+				"3D Modeling",
+				"3D Animation",
+				"Photography",
+				"Film",
+				"Sound",
+				"Game Design",
+				"History of Video Games",
+				"Game Level Design",
+				"Short Story Writing",
+				"Novel Writing",
+				"Screenwriting"
+			]
+		}
+	],
+	"skills": [
+		{
+			"name": "Frontend Web Development",
+			"keywords": [
+				"HTML",
+				"CSS",
+				"JavaScript",
+				"Sass",
+				"jQuery",
+				"cross-browser compatibility",
+				"mobile/responsive design",
+				"search engine optimization"
+			]
+		},{
+			"name": "Backend Web Development",
+			"keywords": [
+				"PHP",
+				"MySQL",
+				"REST",
+				"XML",
+				"JSON",
+				"Git",
+				"automation"
+			]
+		},{
+			"name": "Web Design",
+			"keywords": [
+				"Photoshop",
+				"Illustrator",
+				"After Effects",
+				"Graphic Design",
+				"Typography",
+				"User Interface (UI) Design",
+				"User Experience (UX) Design",
+				"Motion Graphics"
+			]
+		}
+	],
+	"languages": [
+		{
+			"language": "English",
+			"fluency": "Native"
+		}
+	],
+	"interests": [
+		{
+			"name": "PC Gaming",
+			"keywords": [
+				"FPSs",
+				"RPGs",
+				"RTSs"
+			]
+		},
+		{
+			"name": "Art",
+			"keywords": [
+				"Digital",
+				"Design",
+				"Pen",
+				"Photography"
+			]
+		},
+		{
+			"name": "Writing",
+			"keywords": [
+				"Short Stories",
+				"Novels"
+			]
+		}
+	],
+	"references": {},
+	"meta": {
+		"url": "http://www.colemarshall.net/data/resume.json"
+	}
+}

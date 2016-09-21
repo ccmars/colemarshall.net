@@ -1,0 +1,22 @@
+@import 'https://fonts.googleapis.com/css?family=Catamaran|Cousine:400,700|Oswald:300,400';
+
+body {
+	font-family:Catamaran,Arial,sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family:'Oswald',Arial,sans-serif;
+	font-weight:300;
+	letter-spacing:2px;
+}
+
+h1 {
+	letter-spacing:3px;
+	font-weight:400;
+}
+
+pre, code {
+	tab-size:3;
+	font-family:"Cousine","Courier New",monospace;
+	white-space:pre-wrap;
+}
