@@ -1,5 +1,3 @@
-@import "compass";
-
 /* Human container */
 #humans {
 	font-family: "Homo Sapiens", Arial, sans-serif;
@@ -33,7 +31,7 @@
 		/* Hazel eyes and light skin tone */
 		main {
 			color: #514a3a;
-			background-color: adjust-lightness(#e5d7be, 8%);
+			background-color: lighten(#e5d7be, 8%);
 		}
 
 		/* Mouth */
