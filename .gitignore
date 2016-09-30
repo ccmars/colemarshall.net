@@ -13,3 +13,5 @@ legacy/torchsparks/*
 prepros.cfg
 style.css
 style.css.map
+includes/highlight/styles/cole-neon.css
+*.map

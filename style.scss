@@ -4,6 +4,17 @@ body {
 	font-family:Catamaran,Arial,sans-serif;
 }
 
+@mixin underline($foregroundColor,$backgroundColor) {
+	color:$foregroundColor;
+	text-decoration:none;
+	text-shadow:1px 1px 0 $backgroundColor, -1px 1px 0 $backgroundColor, 2px 0 0 $backgroundColor, -2px 0 0 $backgroundColor;
+	box-shadow:inset 0 -1px 0 0 $backgroundColor, inset 0 -3px 0 0 lighten($foregroundColor,30%);
+}
+
+a {
+	@include underline(#f60,#fff);
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family:'Oswald',Arial,sans-serif;
 	font-weight:300;
@@ -13,10 +24,4 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	letter-spacing:3px;
 	font-weight:400;
-}
-
-pre, code {
-	tab-size:3;
-	font-family:"Cousine","Courier New",monospace;
-	white-space:pre-wrap;
 }

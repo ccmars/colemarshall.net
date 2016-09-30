@@ -1,0 +1,107 @@
+.hljs {
+	display:block;
+	overflow-x:auto;
+	padding:0.5em;
+	background:#1c1c1c;
+	color:#71787c;
+	tab-size:4;
+	font-family:"Cousine","Courier New",monospace;
+	white-space:pre-wrap;
+}
+
+.hljs span {
+	border-radius:6px;
+}
+
+.hljs-comment {
+	color:rgba(255,204,0,0.866); // Orange
+	background:rgba(161,120,76,0.105);
+	font-style:italic;
+	font-weight:bold;
+}
+
+.hljs-string {
+	color:rgba(200,200,210,0.933); // Very Light Purple
+	background:rgba(170,175,219,0.1);
+}
+
+.hljs-number {
+	color:rgba(143,194,187,0.866); // Light Green
+	background:rgba(119,194,187,0.058);
+	font-weight:bold;
+}
+
+.hljs-tag {
+	color:rgba(73,166,210,0.5); // Blue
+}
+
+.hljs-name {
+	color:rgba(73,166,210,0.9); // Bright Blue
+	background:rgba(73,166,210,0.07)
+}
+
+.hljs-attribute,
+.hljs-attr {
+	color:rgba(73,134,194,0.8); // Dark Blue
+	background:rgba(73,134,194,0.1);
+}
+
+.hljs-literal {
+	color:rgba(209,203,135,0.733); // Dark Yellow
+	background:rgba(209,203,135,0.2);
+}
+
+.hljs-keyword {
+	color:rgba(145,119,206,1); // Purple
+	background:rgba(139,93,223,0.066);
+}
+
+.hljs-variable,
+.hljs-built_in {
+	color:rgba(97, 216, 169,0.733); // Bright Green
+	background:rgba(34,255,169,0.07);
+}
+
+.hljs-regexp {
+	color:rgba(255,255,0,0.733); // Yellow
+	background:rgba(255,255,0,0.133);
+	font-weight:bold;
+}
+
+.hljs-selector-id {
+	color:rgba(158,150,204,1); // Light Purple
+	background:rgba(206,138,139,0.133);
+	font-style:italic;
+}
+
+.hljs-selector-class {
+	// color:rgba(38,139,210,1); // Blue
+	// background:rgba(38,139,210,0.05);
+	color:rgba(157,163,0,0.866); // Yellow Green
+	background:rgba(157,163,0,0.066);
+}
+
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+	color:rgba(214,191,42,0.866);
+	background:rgba(214,191,42,0.1);
+	font-style:italic;
+}
+
+.hljs-selector-tag {
+	color:rgba(182,128,85,1); // Red
+	background:rgba(182,128,85,0.1);
+}
+
+.hljs-meta {
+	color:rgba(183, 70, 55,1); // Bright Red
+	background:rgba(45,0,22,0.3);
+}
+
+.hljs-emphasis {
+	font-style:italic;
+}
+
+.hljs-strong {
+	font-weight:bold;
+}
