@@ -24,7 +24,7 @@
 			if (file_exists("data/code/{$codeDetails['file']}")) {
 				echo "<fieldset>
 					<legend>" . $codeDetails['name'] . "</legend>
-					<pre><code class=" . $codeKey . ">";
+					<pre><code" . ($codeDetails['interpret']?" class='" . $codeDetails['interpret'] . "'":'') . ">";
 					$sampleCode = file_get_contents("data/code/{$codeDetails['file']}");
 					echo htmlspecialchars($sampleCode);
 				echo "</code></pre>

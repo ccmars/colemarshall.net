@@ -54,7 +54,8 @@ $codeSampleItems = [
 	'git' => [
 		'name' => 'Git',
 		'description' => 'Allows the tracking of changes to a web page',
-		'file' => 'git.txt'
+		'file' => 'git.txt',
+		'interpret' => 'hljs nohighlight'
 	]
 ];
 ?>
