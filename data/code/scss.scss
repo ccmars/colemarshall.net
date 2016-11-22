@@ -6,17 +6,6 @@
 	animation-duration: 10s;
 	animation-name: walk;
 
-	/* Walk forward */
-	@keyframes walk {
-		from {
-			left:0;
-		}
-
-		to {
-			left:100px;
-		}
-	}
-
 	/* Human smile */
 	@mixin smile($radius) {
 		border-radius: 0 0 $radius $radius;
@@ -46,5 +35,16 @@
 				@include smile(8px);
 			}
 		}
+	}
+}
+
+/* Walk forward */
+@keyframes walk {
+	from {
+		left:0;
+	}
+
+	to {
+		left:100px;
 	}
 }
