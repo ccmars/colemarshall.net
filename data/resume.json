@@ -54,47 +54,48 @@
 			"endDate": "",
 			"summary": "As head of MusicMaster's web department, I'm responsible for overseeing the company's online presence, from design, to frontend development, and even backend development. I also automate time-consuming tasks for support and sales staff, as well as contribute to the development of the company’s online products.",
 			"highlights": [
-				"(Serapis) Created an automated system to gather various report metrics data from Salesforce (http://www.salesforce.com/) for review, with historical data presented using Google Charts (https://developers.google.com/chart/)",
-				"(Pluto) Integrated the PayPal (http://www.paypal.com/) API into MusicMaster's web store",
-				"Integrated the currencylayer (https://currencylayer.com/) API into MusicMaster's web store using the Guzzle (http://guzzlephp.org) REST client",
-				"(Seshat) Integrated the Google Drive (http://drive.google.com/) API to parse and display frequently-updated spreadsheet data in a reader-friendly manner",
-				"(Moneta) Integrated the Dropbox (http://www.dropbox.com/) API to allow for the transfer daily site backups to a company folder in the cloud",
+				"(Panacea) Created a custom, [Salesforce](http://www.salesforce.com/)-integrated support center with live chat support, complete with the ability to submit new cases, review old cases, and comment on currently open cases",
+				"(Serapis) Created an automated system to gather various report metrics data from [Salesforce](http://www.salesforce.com/) for review, with historical data presented using [Google Charts](https://developers.google.com/chart/)",
+				"(Pluto) Integrated the [PayPal](http://www.paypal.com/) API into MusicMaster's web store",
+				"Integrated the [currencylayer](https://currencylayer.com/) API into MusicMaster's web store using the [Guzzle](http://guzzlephp.org) REST client",
+				"(Seshat) Integrated the [Google Drive](http://drive.google.com/) API to parse and display frequently-updated spreadsheet data in a reader-friendly manner",
+				"(Moneta) Integrated the [Dropbox](http://www.dropbox.com/) API to allow for the transfer daily site backups to a company folder in the cloud",
 				"Developed an API method for Munin to allow for easy creation of cases in Salesforce, including the ability to add relevant file attachments to the newly created cases",
 				"(Hugin) Created a PHP SDK to accompany the Odin API for use throughout the site",
-				"(Munin) Created a RESTful (https://en.wikipedia.org/wiki/Representational_state_transfer) API for Odin using Slim (http://www.slimframework.com/) that accepts and returns JSON (http://www.json.org/) or XML as needed, uses HTTP authentication, and includes extensive Markdown documentation",
-				"Integrated the Constant Contact (http://www.constantcontact.com/) API into MusicMaster's website to allow the syncing subscriber information between Constant Contact and Salesforce",
+				"(Munin) Created a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) API for Odin using [Slim](http://www.slimframework.com/) that accepts and returns [JSON](http://www.json.org/) or [XML](https://www.w3.org/XML/) as needed, uses [HTTP authentication](https://en.wikipedia.org/wiki/Basic_access_authentication), and includes extensive [Markdown](https://en.wikipedia.org/wiki/Markdown) documentation",
+				"Integrated the [Constant Contact](http://www.constantcontact.com/) API into MusicMaster's website to allow the syncing subscriber information between Constant Contact and Salesforce",
 				"(Apophis) Created a form-flooding detection system to record contact form activity and ban users who abuse contact forms by repeatedly submitting spam within a short window of time",
-				"Designed the graphics for MusicMaster's massive 20'x40' exhibit for NAB Show 2015",
-				"Integrated the Disqus (https://disqus.com/) API into MusicMaster's website to allow for comments on web content",
-				"Designed a poster (http://www.musicmaster.com/party/images/crs2015.jpg) and three web ads for MusicMaster's officially sanctioned Country Radio Seminar 2015 party",
+				"Designed the graphics for MusicMaster's massive 20' x 40' exhibit for the yearly [NAB Show in Las Vegas](http://www.nabshow.com/)",
+				"Integrated the [Disqus](https://disqus.com/) API into MusicMaster's website to allow for comments on web content",
+				"Designed a poster and three web ads for [MusicMaster's officially sanctioned Country Radio Seminar party](http://www.musicmaster.com/party/images/crs2015.jpg)",
 				"Designed and developed an HTML5 station player widget, accompanied by a widget creation page, allowing MusicMaster clients to create and customize a widget for their websites that streams their station's audio to their web listeners",
-				"(Locus) Developed a detailed client station database accompanied by a responsive station player skeuomorph frontend that looks and works much like a car stereo (http://www.musicmaster.com/stations_player.php)",
-				"Designed a landing page for MusicMaster's Raving Fan (http://www.musicmaster.com/RavingFan/) web campaign",
-				"Redesigned and developed the 2014 desktop and mobile versions of MusicMaster.com (http://www.musicmaster.com/)",
-				"(Sangus) Designed and developed an extensive, custom eCommerce system with Authorize.net integration, PhaseWare integration, Salesforce integration, PayPal integration, customer accounts, subscription management, contracts, invoices, and wide-ranging discount options among many other features",
-				"Developed a PHP SDK for use with the PhaseWare Tracker (http://www.phaseware.com/) API",
-				"Designed a flexible ad for MusicMaster's Don't Click Here (http://www.musicmaster.com/DontClickHere/) web ad campaign with over 100 ads in different resolutions and numerous taglines",
+				"(Locus) Developed a detailed client station database accompanied by a [responsive station player skeuomorph frontend](http://www.musicmaster.com/stations_player.php) that looks and works much like a car stereo",
+				"Designed a landing page for [MusicMaster's Raving Fan](http://www.musicmaster.com/RavingFan/) web campaign",
+				"Redesigned and developed the 2014 desktop and mobile versions of [MusicMaster.com](http://www.musicmaster.com/)",
+				"(Sangus) Designed and developed an extensive, custom eCommerce system with [Authorize.net](http://www.authorize.net/) integration, [PhaseWare](http://www.phaseware.com/) integration, [Salesforce](https://www.salesforce.com/) integration, [PayPal](https://www.paypal.com/) integration, customer accounts, subscription management, contracts, invoices, and wide-ranging discount options among many other features",
+				"Developed a PHP SDK for use with the [PhaseWare Tracker](http://www.phaseware.com/) API",
+				"Designed a flexible ad for MusicMaster's [Don't Click Here](http://www.musicmaster.com/DontClickHere/) web ad campaign with over 100 ads in different resolutions and numerous taglines",
 				"Designed a flexible logo for different versions of MusicMaster Scheduling (Client-Server Edition, Personal Edition, Professional Edition, Limited Edition, etc.)",
 				"(Nodens) Created an ad code tracking system, which records detailed information about users that visit the MusicMaster site with certain strings contained within the URL, sends users to a specific page on the site in a specific language if necessary, and tallies hits and visits for each code. Administrators can view a sortable list of hits and visits, view the cost-per-click analysis on individual ads, and view chart visualizations of ad campaign effectiveness.",
 				"(Terminus) Created a survey system which takes the results of surveys and displays them and their details to administrators with chart visualizations",
-				"Created MusicMaster's 30th Anniversary logo (http://on.be.net/1zFdaCs), which appeared on banners, shirts, plaques, and even packets of fruit snacks",
-				"Integrated the Salesforce (https://www.salesforce.com/) API into the MusicMaster website, sending it web leads, contacts, cases, and newsletter subscriber information",
+				"Created [MusicMaster's 30th Anniversary logo](http://on.be.net/1zFdaCs), which appeared on banners, shirts, plaques, and even packets of fruit snacks",
+				"Integrated the [Salesforce](https://www.salesforce.com/) API into the MusicMaster website, sending it web leads, contacts, cases, and newsletter subscriber information",
 				"(Cissonius) Created a sales lead tracker, which stores lead information and verifies that all sales executives have received the lead via e-mail",
-				"Integrated the MusicMaster site with YouTube to handle walkthrough, webinar, and featured videos",
+				"Integrated the MusicMaster site with [YouTube](https://www.youtube.com/) to handle walkthrough, webinar, and featured videos",
 				"Created multiple desktop background images for the demonstration machines in the MusicMaster booth at the National Association of Broadcasters Show",
 				"(Atlas) Created a geocoding system that imports client addresses and uses Google's API's to convert street addresses into globe coordinates for placement on an interactive map",
-				"Redesigned the primary icons for MusicMaster 6.0 (http://on.be.net/11P0NJE)",
+				"Redesigned the [primary icons for MusicMaster 6.0](http://on.be.net/11P0NJE)",
 				"(Athena) Created a certification testing system for the MusicMaster Scheduling software, which displays questions that must be answered in a fixed time-frame, giving users the option to occasionally pass on a question, add time to answer, and remove one wrong answer from a question. Administrative features include managing test questions with the option to include images and shuffle the order of the multiple choice answers, the creation of custom categories and custom difficulties, and a comprehensive look at how questions are statistically being answered.",
-				"(Odin) Created a back-end administrative framework that manages all of MusicMaster's web applications, selectively giving its users the ability to access the site's administrative options. Built on PHP and JavaScript, the system is designed to allow developers to rapidly create administrative user interfaces, the centerpiece being a form creation class that handles intricate error-checking with minimal parameters",
+				"(Odin) Created a back-end administrative framework that manages all of MusicMaster's web applications, selectively giving its users the ability to access the site's administrative options; built on [PHP](http://php.net/) and [JavaScript](https://en.wikipedia.org/wiki/JavaScript), the system is designed to allow developers to rapidly create administrative user interfaces, the centerpiece being a form creation class that handles intricate error-checking with minimal parameters",
 				"(Mecury) Created a newsletter management program that integrates into WordPress, turning postings into suitable HTML and text e-mails, sends previews to editors, gives subscribers and administrators easy-to-use subscription management options, processes returned mail, and removes and reports undeliverable e-mail addresses from the subscribers database",
-				"(Nimrod) Created a robust localization system with an easy-to-use Ajax administration that supports all UTF-8 languages, multiple software and web products, XML/CSV import/export of localization data, and a RESTful API",
+				"(Nimrod) Created a robust localization system with an easy-to-use Ajax administration that supports all [UTF-8 languages](http://www.unicode.org/standard/supported.html), multiple software and web products, [XML](https://www.w3.org/XML/)/[CSV](https://en.wikipedia.org/wiki/Comma-separated_values) import/export of localization data, and a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) API",
 				"Created  MusicMaster's moving title animation (http://bit.ly/1ldDvnL)",
-				"Designed nine different MusicMaster holiday logos (http://on.be.net/1tpouxP) which appear on the site around the time of the occasion",
+				"Designed nine different [MusicMaster holiday logos](http://on.be.net/1tpouxP) which appear on the site around the time of the occasion",
 				"Search Engine Optimization: Optimized the MusicMaster website so that it appears as number one on Google for the company's primary keywords \"music scheduling\" and \"music scheduling software\"",
-				"Redesigned and developed the 2011 desktop and mobile versions of MusicMaster.com (http://www.musicmaster.com/)",
-				"Designed a landing page to detail the MusicMaster's products from 2011 (http://www.musicmaster.com/NewStuff)",
+				"Redesigned and developed the 2011 desktop and mobile versions of [MusicMaster.com](http://www.musicmaster.com/)",
+				"Designed a landing page to detail the [MusicMaster's products from 2011](http://www.musicmaster.com/NewStuff)",
 				"Designed several skins for MusicMaster Live Server, the technology behind Blendella",
-				"Created branding packages (https://www.behance.net/gallery/26791257/Blendella-Branding-Packages), designed user interfaces and outlined the user experience (https://www.behance.net/gallery/26758243/Blendella-Mars-UIUX), and developed frontend styling for Blendella, where users can listen to and vote on the music they want to hear next"
+				"Created [branding packages](https://www.behance.net/gallery/26791257/Blendella-Branding-Packages), designed [user interfaces and outlined the user experience](https://www.behance.net/gallery/26758243/Blendella-Mars-UIUX), and developed frontend styling for Blendella, where users can listen to and vote on the music they want to hear next"
 			]
 		},{
 			"company": "Active Depth",
@@ -103,7 +104,23 @@
 			"startDate": "2000-03-01",
 			"endDate": "",
 			"summary": "I've been actively involved in the online media industry with my own business for over a decade and a half, during which time I've tackled many diverse projects for a multitude of different clients.",
-			"highlights": []
+			"highlights": [
+				"Helped numerous individuals and businesses achieve a superior online presence",
+				"Designed [Catenary](http://www.ActiveDepth.com/typefoundry.php), a robust, futuristic typeface consisting of six core fonts and three display fonts, containing over 800 glyphs each. The typeface contains Latin, Greek, and Cyrillic characters; small caps; world currencies; arrows; ornaments; lining numbers; old style numbers; subscripts; superscripts; fractions; and ligatures.",
+				"Administrating the [Central Outpost](http://www.CentralOutpost.com/), a community for online gaming groups, for over 15 years. The site receives tens of thousands of unique visitors monthly, hosting over 5,000 clan accounts and nearly 7,000 user accounts. I manage every aspect of the site from the graphic design, user experience, front-end development, back-end development (the entire site operates on a custom content-management system), copywriting, community relations, marketing, finances, and even technical support. Development and upkeep are entirely funded through donations from users.",
+				"Produced over 100 [computer-generated images designed for desktop wallpapers](http://www.ActiveDepth.com/gallery.php), many in 5K and print-ready resolutions, available to use for free"
+			]
+		},{
+			"company": "Getty Images.",
+			"position": "Front-End Web Developer",
+			"website": "http://www.GettyImages.com",
+			"startDate": "2009-03-01",
+			"endDate": "2009-8-01",
+			"summary": "I was brought on for a six month contract to help a team of developers meet tough deadlines in the implementation of XHTML, CSS, and JavaScript to present some of the company's web site projects in the designer's specifications.",
+			"highlights": [
+				"Front-end development for MLB, NASCAR, NBA, and PGA photo portals",
+				"Front-end development for [Photos.com](http://www.Photos.com/) redesign"
+			]
 		},{
 			"company": "Raichert Media, Inc.",
 			"position": "Web Designer & Developer",
@@ -113,26 +130,18 @@
 			"summary": "I performed root-level maintenance on the company’s dedicated server, and I also assisted with web design and development for the company’s clients as needed.",
 			"highlights": []
 		},{
-			"company": "Administrator",
-			"position": "The Central Outpost",
-			"website": "http://www.CentralOutpost.com/",
-			"startDate": "2000-07-22",
-			"endDate": "",
-			"summary": "This website, a community for online gaming groups, has been a labor of love of mine for a decade and a half. The site receives tens of thousands of unique visitors monthly, hosting over 5,000 clan accounts and nearly 7,000 user accounts. I manage every aspect of the site from the graphic design, user experience, front-end development, back-end development (the entire site operates on a custom content-management system), copywriting, community relations, marketing, finances, and even technical support. Development and upkeep are entirely funded through donations from users.",
-			"highlights": []
-		},{
 			"company": "Teaching Assistant",
 			"position": "Minneapolis College of Art and Design",
-			"website": "http://mcad.edu/",
+			"website": "http://www.mcad.edu/",
 			"startDate": "2007-01-01",
 			"endDate": "2008-05-01",
 			"summary": "As a teaching assistant for the Interactive Multi-Linear Narrative (game design) class, I provided technical direction and advice as the programming lead for two Flash-based computer game projects.",
 			"highlights": [
-				"Gold Rush (http://www.activedepth.com/games/goldrush) (Adventure Game: Solo Project)",
-				"Splendortron (Platformer Game: Artificial Intelligence Programmer and User Interface Designer)",
-				"Death's Memoirs (http://www.activedepth.com/games/deathsmemoirs) (Puzzle/Adventure Game: Lead Programmer and User Interface Designer)",
-				"Plasmid (http://www.activedepth.com/games/plasmid) (Arcade Game: Solo Project)",
-				"Awesome Wars (Networked Turn-Based Strategy: Lead Programmer and User Interface Designer)"
+				"[Gold Rush](http://www.activedepth.com/games/goldrush) (Adventure Game: Solo Project)",
+				"[Splendortron](Platformer Game: Artificial Intelligence Programmer and User Interface Designer)",
+				"[Death's Memoirs](http://www.activedepth.com/games/deathsmemoirs) (Puzzle/Adventure Game: Lead Programmer and User Interface Designer)",
+				"[Plasmid](http://www.activedepth.com/games/plasmid) (Arcade Game: Solo Project)",
+				"[Awesome Wars](Networked Turn-Based Strategy: Lead Programmer and User Interface Designer)"
 			]
 		}
 	],
@@ -144,6 +153,7 @@
 			"startDate": "2004-08-01",
 			"endDate": "2008-05-01",
 			"gpa": "3.8",
+			"summary": "A passion for both art and computers lead me to study Interactive Media at MCAD. The program focused on interaction design, user interfaces, graphic design, typography, motion graphics, information architecture, development, and working with clients. Interested in how users interface with entertainment applications, I took courses on video game history and their design, helping teach the game design class for two years. I also supplemented my studies in courses on photography, film, sound, and even 3D modeling and animation, which has allowed me to add unique assets to my work.",
 			"courses": [
 				"Interactive Media",
 				"Web Design",
