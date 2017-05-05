@@ -54,7 +54,10 @@
 			"endDate": "",
 			"summary": "As head of MusicMaster's web department, I'm responsible for overseeing the company's online presence, from design, to frontend development, and even backend development. I also automate time-consuming tasks for support and sales staff, as well as contribute to the development of the company’s online products.",
 			"highlights": [
-				"(Panacea) Created a custom, [Salesforce](http://www.salesforce.com/)-integrated support center with live chat support, complete with the ability to submit new cases, review old cases, and comment on currently open cases",
+				"(Minerva) Created a PHP wrapper for universal use of frontend graphing charts, with [Google Charts](https://developers.google.com/chart/), and backend graphing charts, with [JpGraph](http://jpgraph.net/)",
+				"Integrated a large, complex, and constantly-changing database of industry contacts, companies, and assets into Salesforce",
+				"(Ossa) Integrated the [Facebook](http://www.facebook.com/) API into MusicMaster's website",
+				"(Panacea) Created a custom, [Salesforce](http://www.salesforce.com/)-integrated support center with live chat support, complete with the ability to submit new cases, review old cases, comment on currently open cases, and read knowledgebase articles",
 				"(Serapis) Created an automated system to gather various report metrics data from [Salesforce](http://www.salesforce.com/) for review, with historical data presented using [Google Charts](https://developers.google.com/chart/)",
 				"(Pluto) Integrated the [PayPal](http://www.paypal.com/) API into MusicMaster's web store",
 				"Integrated the [currencylayer](https://currencylayer.com/) API into MusicMaster's web store using the [Guzzle](http://guzzlephp.org) REST client",
