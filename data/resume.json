@@ -1,11 +1,11 @@
 {
 	"basics": {
 		"name": "Cole Marshall",
-		"label": "Web Developer & Designer",
+		"label": "Web Designer & Developer",
 		"picture": "http://www.ColeMarshall.net/images/ColeMarshall.jpg",
 		"email": "ColeM@ColeMarshall.net",
 		"website": "http://www.ColeMarshall.net",
-		"summary": "I am an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks. I hold a Bachelor of Fine Arts degree in Interactive Media from the Minneapolis College of Art and Design, and I have been actively involved in the online media industry for over a decade and a half.\n\nMany people are surprised to learn that I know things. These things I know are useful things too, special things even: like how to work with useful technologies like HTML, CSS, JavaScript, PHP, MySQL, Sass, jQuery, XML, JSON, REST, Git, and even dead languages like ActionScript and Lingo. I also know how to use software such as Photoshop, Illustrator, After Effects, Animate, Maya, and Vegas, among many others. I know some interesting things about nuclear fallout too, but for some reason, no one's ever been interested in that information.",
+		"summary": "I am an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks. I hold a Bachelor of Fine Arts degree in Interactive Media from the Minneapolis College of Art and Design, and I have been actively involved in the online media industry for over a decade and a half.\n\nMany people are surprised to learn that I know things. These things I know are useful things too--special things even: like how to work with useful technologies like HTML, CSS, JavaScript, PHP, MySQL, Sass, jQuery, XML, JSON, REST, Git, and even dead languages like ActionScript and Lingo. I also know how to use software such as Photoshop, Illustrator, After Effects, Animate, Maya, and Vegas, among many others. I know some interesting things about nuclear fallout too, but for some reason, no one's ever been interested in that information.",
 		"location": {
 			"postalCode": "53704",
 			"city": "Madison",
@@ -19,19 +19,19 @@
 				"url": "http://www.linkedin.com/in/colemarshall"
 			},
 			{
-				"network": "StackOverflow",
+				"network": "Behance",
+				"username": "ColeMarshall",
+				"url": "https://www.behance.net/ColeMarshall"
+			},
+			{
+				"network": "Stack Overflow",
 				"username": "1836703",
-				"url": "http://stackoverflow.com/users/1836703/cole"
+				"url": "http://stackoverflow.com/users/story/1836703"
 			},
 			{
 				"network": "GitHub",
 				"username": "ccmars",
 				"url": "https://github.com/ccmars"
-			},
-			{
-				"network": "Behance",
-				"username": "ColeMarshall",
-				"url": "https://www.behance.net/ColeMarshall"
 			},
 			{
 				"network": "MyFonts",
@@ -52,7 +52,7 @@
 			"website": "http://www.MusicMaster.com/",
 			"startDate": "2011-03-07",
 			"endDate": "",
-			"summary": "As head of MusicMaster's web department, I'm responsible for overseeing the company's online presence, from design, to frontend development, and even backend development. I also automate time-consuming tasks for support and sales staff, as well as contribute to the development of the company’s online products.",
+			"summary": "As head of MusicMaster's web department, I'm responsible for overseeing the company's online presence, from design, to frontend development, and even backend development. I also automate time-consuming tasks for support and sales staff, as well as contribute to the development of the company's online products.",
 			"highlights": [
 				"(Minerva) Created a PHP wrapper for universal use of frontend graphing charts, with [Google Charts](https://developers.google.com/chart/), and backend graphing charts, with [JpGraph](http://jpgraph.net/)",
 				"Integrated a large, complex, and constantly-changing database of industry contacts, companies, and assets into Salesforce",
@@ -62,7 +62,7 @@
 				"(Pluto) Integrated the [PayPal](http://www.paypal.com/) API into MusicMaster's web store",
 				"Integrated the [currencylayer](https://currencylayer.com/) API into MusicMaster's web store using the [Guzzle](http://guzzlephp.org) REST client",
 				"(Seshat) Integrated the [Google Drive](http://drive.google.com/) API to parse and display frequently-updated spreadsheet data in a reader-friendly manner",
-				"(Moneta) Integrated the [Dropbox](http://www.dropbox.com/) API to allow for the transfer daily site backups to a company folder in the cloud",
+				"(Moneta) Integrated the [Dropbox](http://www.dropbox.com/) API to allow for the transfer of daily site backups to a company folder in the cloud",
 				"Developed an API method for Munin to allow for easy creation of cases in Salesforce, including the ability to add relevant file attachments to the newly created cases",
 				"(Hugin) Created a PHP SDK to accompany the Odin API for use throughout the site",
 				"(Munin) Created a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) API for Odin using [Slim](http://www.slimframework.com/) that accepts and returns [JSON](http://www.json.org/) or [XML](https://www.w3.org/XML/) as needed, uses [HTTP authentication](https://en.wikipedia.org/wiki/Basic_access_authentication), and includes extensive [Markdown](https://en.wikipedia.org/wiki/Markdown) documentation",
@@ -73,7 +73,8 @@
 				"Designed a poster and three web ads for [MusicMaster's officially sanctioned Country Radio Seminar party](http://www.musicmaster.com/party/images/crs2015.jpg)",
 				"Designed and developed an HTML5 station player widget, accompanied by a widget creation page, allowing MusicMaster clients to create and customize a widget for their websites that streams their station's audio to their web listeners",
 				"(Locus) Developed a detailed client station database accompanied by a [responsive station player skeuomorph frontend](http://www.musicmaster.com/stations_player.php) that looks and works much like a car stereo",
-				"Designed a landing page for [MusicMaster's Raving Fan](http://www.musicmaster.com/RavingFan/) web campaign",
+				"Developed and contributed to the design of a landing page for [MusicMaster's Top Secrets](http://www.musicmaster.com/TopSecrets//) web campaign, which allows users to \"collect\" secrets about the software",
+				"Designed and developed a landing page for [MusicMaster's Raving Fan](http://www.musicmaster.com/RavingFan/) web campaign",
 				"Redesigned and developed the 2014 desktop and mobile versions of [MusicMaster.com](http://www.musicmaster.com/)",
 				"(Sangus) Designed and developed an extensive, custom eCommerce system with [Authorize.net](http://www.authorize.net/) integration, [PhaseWare](http://www.phaseware.com/) integration, [Salesforce](https://www.salesforce.com/) integration, [PayPal](https://www.paypal.com/) integration, customer accounts, subscription management, contracts, invoices, and wide-ranging discount options among many other features",
 				"Developed a PHP SDK for use with the [PhaseWare Tracker](http://www.phaseware.com/) API",
@@ -114,7 +115,7 @@
 				"Produced over 100 [computer-generated images designed for desktop wallpapers](http://www.ActiveDepth.com/gallery.php), many in 5K and print-ready resolutions, available to use for free"
 			]
 		},{
-			"company": "Getty Images.",
+			"company": "Getty Images",
 			"position": "Front-End Web Developer",
 			"website": "http://www.GettyImages.com",
 			"startDate": "2009-03-01",
