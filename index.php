@@ -15,61 +15,72 @@
 		</script>
 	</head>
 	<body>
-	<?php
-	if (is_null($resume)) {
-		echo "Site malfunction!";
-	} else { ?>
-		<h1><?php echo $resume->basics->name; ?></h1>
-		<h3><?php echo $resume->basics->label; ?></h3>
-		<h4><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
+		<main>
 		<?php
-		// Profiles
-		if ($resume->basics->profiles) {
-			echo "<div>
-				<h2>Profiles</h2>";
-				echo "<a href='resume.php'><span class='fa fa-file-text-o'></span><b>Resume</b></a>";
-				foreach ($resume->basics->profiles as $profile) {
-					echo "<a href='{$profile->url}' target='_new'><span class='fa ";
-					if ($profile->network == 'LinkedIn') {
-						echo "fa-linkedin";
-					} else if ($profile->network == 'Stack Overflow') {
-						echo "fa-stack-overflow";
-					} else if ($profile->network == 'GitHub') {
-						echo "fa-github";
-					} else if ($profile->network == 'Behance') {
-						echo "fa-behance";
-					} else if ($profile->network == 'MyFonts') {
-						echo "fa-font";
-					} else if ($profile->network == '500px') {
-						echo "fa-500px";
-					} else {
-						echo "fa-plus-circle ";
+		if (is_null($resume)) {
+			echo "Site malfunction!";
+		} else { ?>
+			<header>
+				<h1><?php echo $resume->basics->name; ?></h1>
+				<h3><?php echo $resume->basics->label; ?></h3>
+				<h4><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
+			</header>
+			<?php
+			// Profiles
+			if ($resume->basics->profiles) {
+				echo "<div class='profiles'>
+					<h2>Profiles</h2>";
+					echo "<div>";
+					// echo "<a href='resume.php'><span class='fa fa-file-text-o'></span><b>Resume</b></a>";
+					foreach ($resume->basics->profiles as $profile) {
+						echo "<a href='{$profile->url}' target='_new'><span class='fa ";
+						if ($profile->network == 'LinkedIn') {
+							echo "fa-linkedin";
+						} else if ($profile->network == 'Stack Overflow') {
+							echo "fa-stack-overflow";
+						} else if ($profile->network == 'GitHub') {
+							echo "fa-github";
+						} else if ($profile->network == 'Behance') {
+							echo "fa-behance";
+						} else if ($profile->network == 'MyFonts') {
+							echo "fa-font";
+						} else if ($profile->network == '500px') {
+							echo "fa-500px";
+						} else {
+							echo "fa-plus-circle ";
+						}
+						echo " fa-fw'></span><b>{$profile->network}</b></a>";
 					}
-					echo " fa-fw' title='{$profile->network}'></span><b>{$profile->network}</b></a>";
+				echo "</div>
+				</div>";
+			} ?>
+			<div class='knowledge'>
+				<h2>Knowledge</h2>
+				<?php
+				// Code Samples
+				require('includes/codeSampleItems.php');
+				foreach ($codeSampleItems as $codeKey => $codeDetails) {
+					if (file_exists("data/code/{$codeDetails['file']}")) {
+						echo "<fieldset>
+							<legend>" . ($codeDetails['icon']?"<span class='{$codeDetails['icon']}'></span>":'') . "{$codeDetails['name']}</legend>
+							<h4>{$codeDetails['description']}</h4>
+							<pre><code" . ($codeDetails['interpret']?" class='" . $codeDetails['interpret'] . "'":" class='hljs {$codeKey}'") . ">";
+							$sampleCode = file_get_contents("data/code/{$codeDetails['file']}");
+							echo htmlspecialchars($sampleCode);
+						echo "</code></pre>
+						" . ($codeDetails['fiddle']?"<p>
+								<a href='{$codeDetails['fiddle']}' target='_new'>Run it <span class='fa fa-play'></span></a>
+							</p>":'') . "
+						</fieldset>";
+					}
 				}
-			echo "</div>";
-		}
-
-		echo "<h2>Knowledge</h2>";
-		// Code Samples
-		require('/includes/codeSampleItems.php');
-		foreach ($codeSampleItems as $codeKey => $codeDetails) {
-			if (file_exists("data/code/{$codeDetails['file']}")) {
-				echo "<fieldset>
-					<legend>" . ($codeDetails['icon']?"<span class='{$codeDetails['icon']}'></span>":'') . "{$codeDetails['name']}</legend>
-					<h3>{$codeDetails['description']}</h3>
-					<pre><code" . ($codeDetails['interpret']?" class='" . $codeDetails['interpret'] . "'":" class='hljs {$codeKey}'") . ">";
-					$sampleCode = file_get_contents("data/code/{$codeDetails['file']}");
-					echo htmlspecialchars($sampleCode);
-				echo "</code></pre>
-				" . ($codeDetails['fiddle']?"<p>
-						<a href='{$codeDetails['fiddle']}' target='_new'>Run it <span class='fa fa-play'></span></a>
-					</p>":'') . "
-				</fieldset>";
-			}
-		}
-		?>
-	<?php
-	} ?>
+				?>
+			</div>
+			<footer>
+				<a href="/legacy/">Legacy Site (Flash Required)</a>
+			</footer>
+		<?php
+		} ?>
+		</main>
 	</body>
 </html>
