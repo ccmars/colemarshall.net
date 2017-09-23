@@ -3,7 +3,7 @@
 $codeSampleItems = [
 	'html' => [
 		'name' => 'HTML',
-		'description' => 'Hypertext Markup Language, defines the structure of a web page',
+		'description' => 'Hypertext Markup Language, defines the structure of the web page',
 		'file' => 'html.html',
 		'fiddle' => 'https://jsfiddle.net/CCMars/sct5L8pu/',
 		'icon' => 'devicon-html5-plain'
@@ -69,7 +69,7 @@ $codeSampleItems = [
 	],
 	'git' => [
 		'name' => 'Git',
-		'description' => 'Allows the tracking of changes to a web page or application',
+		'description' => 'Allows the tracking of source changes to the web page or application',
 		'file' => 'git.txt',
 		'interpret' => 'hljs nohighlight',
 		'icon' => 'devicon-git-plain'
