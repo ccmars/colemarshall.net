@@ -1,7 +1,7 @@
 {
 	"basics": {
 		"name": "Cole Marshall",
-		"label": "Web Designer & Developer",
+		"label": "Interactive Designer & Developer",
 		"picture": "http://www.ColeMarshall.net/images/ColeMarshall.jpg",
 		"email": "ColeM@ColeMarshall.net",
 		"website": "http://www.ColeMarshall.net",
@@ -48,7 +48,7 @@
 	"work": [
 		{
 			"company": "MusicMaster, Inc.",
-			"position": "Web Designer & Developer",
+			"position": "Webmaster",
 			"website": "http://www.MusicMaster.com/",
 			"startDate": "2011-03-07",
 			"endDate": "",

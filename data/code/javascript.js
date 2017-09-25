@@ -15,7 +15,7 @@ Cole.prototype.getFullName = function() {
 };
 
 Cole.prototype.getReadableDetails = function() {
-	var readable = this.getFullName() + " is " + (this.profession.match('/^[aeiou]/i')?"an ":"a ") + this.profession + " who specializes in ";
+	var readable = this.getFullName() + " is " + (this.profession.match(/^[aeiou]/i)?"an ":"a ") + this.profession + " who specializes in ";
 	for (var i = 0; i < this.skills.length; i++) {
 		readable += this.skills[i];
 		if (i == this.skills.length - 2) {
@@ -30,7 +30,7 @@ Cole.prototype.getReadableDetails = function() {
 }
 
 // Instantiate Cole
-var cole = new Cole("Web Developer & Designer");
+var cole = new Cole("Interactive Developer & Designer");
 
 // Echo Cole's Profession and Skills
 console.log(cole.getReadableDetails());

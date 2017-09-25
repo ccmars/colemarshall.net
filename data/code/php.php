@@ -8,7 +8,7 @@ class Cole extends Human {
 	private $profession;
 	private $specialties;
 
-	function __construct($initialProfession = "Web Developer & Designer") {
+	function __construct($initialProfession = "Interactive Developer & Designer") {
 		$this->profession = $initialProfession;
 		$this->specialties = [
 			"HTML", "CSS", "JavaScript", "Sass", "jQuery",
