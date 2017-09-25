@@ -51,7 +51,7 @@ $codeSampleItems = [
 	// ],
 	'http' => [
 		'name' => 'REST',
-		'description' => 'Representational state transfer, makes transfering data between applications easier',
+		'description' => 'Representational state transfer, makes transferring data between applications easier',
 		'file' => 'rest.txt',
 		'icon' => 'fa fa-server'
 	],

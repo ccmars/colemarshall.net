@@ -5,6 +5,8 @@
 			$resume = json_decode(file_get_contents('data/resume.json'));
 			echo $resume->basics->name . ' - ' . $resume->basics->label; 
 		?></title>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=0.75" name="viewport">
 		<link href='style.css' rel='stylesheet'>
 		<script src='https://use.fontawesome.com/f151993474.js'></script>
 		<link rel='stylesheet' href='https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css'>
