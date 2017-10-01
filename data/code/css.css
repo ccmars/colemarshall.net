@@ -10,11 +10,11 @@
 /* Walk forward */
 @keyframes walk {
 	from {
-		left:0;
+		left: 0;
 	}
 
 	to {
-		left:100px;
+		left: 100px;
 	}
 }
 	/* Average male height, medium build, and imperfect posture */
