@@ -1,56 +1,61 @@
-<!DOCTYPE html>
+<?php
+	require('includes/vendor/autoload.php');
+	$parsedown = new Parsedown();
+?><!DOCTYPE html>
 <html>
 	<head>
 		<title><?php 
 			$resume = json_decode(file_get_contents('data/resume.json'));
 			echo $resume->basics->name . ' - ' . $resume->basics->label . ' - Resume'; 
 		?></title>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=0.75" name="viewport">
 		<link href='style.css' rel='stylesheet'>
 		<script src='https://use.fontawesome.com/f151993474.js'></script>
-		<link rel='stylesheet' href='https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css'>
 	</head>
 	<body>
-		<nav>
+		<nav class='resumeOptionsSpacer'></nav>
+		<nav class='resumeOptions'>
 			<ul>
-				<li><span class='fa fa-save'></span>Save</li>
+				<!--<li><span class='fa fa-save'></span>Save</li>-->
 				<li><span class='fa fa-print'></span>Print</li>
 			</ul>
 			<ul>
 				<li>
-					<input type='checkbox' data-section='summary' checked>Summary
+					<label><input type='checkbox' data-section='summary' checked>Summary</label>
 					<ul>
-						<li><input type='checkbox' data-section='summary-extended'>Extended</li>
+						<li><label><label><input type='checkbox' id='summary-extended' data-section='summary-extended'>Extended</label></li>
 					</ul>
 				</li>
 				<li>
-					<input type='checkbox' data-section='experience' checked>Experience
+					<label><input type='checkbox' data-section='experience' checked>Experience</label>
 					<ul>
-						<li><input type='checkbox' data-section='experience-summary' checked>Summary</li>
+						<li><label><input type='checkbox' data-section='experience-summary' checked>Summary</label></li>
 						<li>
-							<input type='checkbox' data-section='experience-highlights' checked>Highlights
+							<label><input type='checkbox' data-section='experience-highlights' checked>Highlights</label>
 							<ul>
-								<li><input type='checkbox' data-section='experience-highlights-extended'>Extended</li>
+								<li><label><input type='checkbox' data-section='experience-highlights-extended'>Extended</label></li>
 							</ul>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<input type='checkbox' data-section='education' checked>Education
+					<label><input type='checkbox' data-section='education' checked>Education</label>
 					<ul>
-						<li><input type='checkbox' data-section='education-summary'>Summary</li>
-						<li><input type='checkbox' data-section='education-courses'>Courses</li>
+						<li><label><input type='checkbox' data-section='education-summary'>Summary</label></li>
+						<li><label><input type='checkbox' data-section='education-courses'>Courses</label></li>
 					</ul>
 				</li>
 				<li>
-					<input type='checkbox' data-section='skills' checked>Skills
+					<label><input type='checkbox' data-section='skills' checked>Skills</label>
 					<ul>
-						<li><input type='checkbox' data-section='skills-specifics' checked>Specifics</li>
+						<li><label><input type='checkbox' data-section='skills-specifics' checked>Specifics</label></li>
 					</ul>
 				</li>
 				<li>
-					<input type='checkbox' data-section='interests'>Interests
+					<label><input type='checkbox' data-section='interests'>Interests</label>
 					<ul>
-						<li><input type='checkbox' data-section='interests-specifics'>Specifics</li>
+						<li><label><input type='checkbox' data-section='interests-specifics'>Specifics</label></li>
 					</ul>
 				</li>
 			</ul>
@@ -74,11 +79,11 @@
 					echo "<h4>{$work->company}</h4>
 					<date>" . date('Y',strtotime($work->startDate)) . " - " . ($work->endDate?date('Y',strtotime($work->endDate)):"Present") . "</date>
 					<p class='summary'>
-						{$work->summary}
+						" . $parsedown->line($summary) . "
 					</p>
 					<ul class='highlights'>";
 						foreach ($work->highlights as $highlight) {
-							echo "<li>{$highlight}</li>\n";
+							echo "<li>" . $parsedown->line($highlight) . "</li>\n";
 						}
 					echo "</ul>";
 				}

@@ -14,6 +14,11 @@ body {
 	background:$color-dark;
 	color:$color-green-light;
 	margin:0;
+
+	@media print {
+		background:#fff;
+		color:#000;
+	}
 }
 
 .underline {
@@ -31,6 +36,11 @@ body {
 
 a {
 	color:$color-highlight;
+
+	@media print {
+		color:#000;
+		text-decoration:none;
+	}
 }
 
 header a,
@@ -189,4 +199,44 @@ footer {
 	font-size:80%;
 	text-align:center;
 	margin:8px;
+}
+
+// Resume
+$navigationWidth:200px;
+nav.resumeOptionsSpacer {
+	width:$navigationWidth;
+	height:1px;
+	float:left;
+
+	@media #{$mobile} {
+		display:none;
+	}
+}
+nav.resumeOptions {
+	padding:8px 12px;
+	position:fixed;
+	width:$navigationWidth;
+
+	@media #{$mobile} {
+		display:none;
+	}
+
+	@media print {
+		display:none;
+	}
+
+	> ul {
+		padding:0;
+	}
+
+	ul {
+		list-style-type:none;
+	}
+}
+
+#resume {
+	overflow:hidden;
+	max-width:1000px;
+	margin:auto;
+	padding:8px 12px;
 }
