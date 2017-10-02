@@ -9,6 +9,7 @@
 		<meta content="width=device-width, initial-scale=0.75" name="viewport">
 		<link href='style.css' rel='stylesheet'>
 		<script src='https://use.fontawesome.com/f151993474.js'></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 		<link rel='stylesheet' href='https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css'>
 		<link rel='stylesheet' href='/includes/highlight/styles/cole-neon.css'>
 		<script src='/includes/highlight/highlight.pack.js'></script>
@@ -17,7 +18,7 @@
 		</script>
 	</head>
 	<body>
-		<main>
+		<main id='home'>
 		<?php
 		if (is_null($resume)) {
 			echo "Site malfunction!";
@@ -33,7 +34,7 @@
 				echo "<div class='profiles'>
 					<h2>Profiles</h2>";
 					echo "<div>";
-					// echo "<a href='resume.php'><span class='fa fa-file-text-o'></span><b>Resume</b></a>";
+					echo "<a href='resume.php'><span class='fa fa-file-text-o'></span><b>Resume</b></a>";
 					foreach ($resume->basics->profiles as $profile) {
 						echo "<a href='{$profile->url}' target='_new'><span class='fa ";
 						if ($profile->network == 'LinkedIn') {
