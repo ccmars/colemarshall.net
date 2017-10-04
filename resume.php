@@ -12,7 +12,7 @@
 		<meta content='width=device-width, initial-scale=0.75' name='viewport'>
 		<link href='style.css' rel='stylesheet'>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-		<script src='https://use.fontawesome.com/f151993474.js'></script>
+		<script src="https://use.fontawesome.com/3356175cee.js"></script>
 		<script type='text/javascript' src='resume.js'></script>
 	</head>
 	<body>
@@ -66,17 +66,17 @@
 			<div>
 				<h1><?php echo $resume->basics->name; ?></h1>
 				<h3><?php echo $resume->basics->label; ?></h3>
-				<h4><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
-				<h4><a href='<?php echo $resume->basics->website; ?>'><?php echo $resume->basics->website; ?></a></h4>
+				<h4><span class='fa fa-envelope fa-fw'></span><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
+				<h4><span class='fa fa-home fa-fw'></span><a href='<?php echo $resume->basics->website; ?>'><?php echo $resume->basics->website; ?></a></h4>
 				<div data-section='summary'>
-					<h2>Summary</h2>
+					<h2><span class='fa fa-check-circle-o fa-fw'></span>Summary</h2>
 					<?php echo $parsedown->text($resume->basics->summary); ?>
 				</div>
 				<div data-section='experience'>
-					<h2>Experience</h2>
+					<h2><span class='fa fa-briefcase fa-fw'></span>Experience</h2>
 					<?php
 					foreach ($resume->work as $work) {
-						echo "<h3>{$work->position}</h3>\n";
+						echo "<h3><span class='fa fa-user-circle fa-fw'></span>{$work->position}</h3>\n";
 						echo "<h4>{$work->company}</h4>
 						<date>" . date('Y',strtotime($work->startDate)) . " - " . ($work->endDate?date('Y',strtotime($work->endDate)):"Present") . "</date>
 						<p data-section='experience-summary'>
@@ -91,10 +91,10 @@
 					?>
 				</div>
 				<div data-section='education'>
-					<h2>Education</h2>
+					<h2><span class='fa fa-graduation-cap fa-fw'></span>Education</h2>
 					<?php
 					foreach ($resume->education as $education) { ?>
-						<h3><?php echo $education->institution; ?></h3>
+						<h3><span class='fa fa-pencil fa-fw'></span><?php echo $education->institution; ?></h3>
 						<h4><?php echo $education->studyType; ?> of <?php echo $education->area; ?></h4>
 						<date><?php echo date('Y',strtotime($education->endDate)); ?></date>
 						<p data-section='education-summary'>
@@ -111,10 +111,10 @@
 					} ?>
 				</div>
 				<div data-section='skills'>
-					<h2>Skills</h2>
+					<h2><span class='fa fa-tasks fa-fw'></span>Skills</h2>
 					<?php
 					foreach ($resume->skills as $skill) { ?>
-						<h3><?php echo $skill->name; ?></h3>
+						<h3><span class='fa fa-keyboard-o fa-fw'></span><?php echo $skill->name; ?></h3>
 						<ul data-section='skills-specifics'>
 							<?php
 							foreach ($skill->keywords as $keyword) {
@@ -126,10 +126,10 @@
 					} ?>
 				</div>
 				<div data-section='interests'>
-					<h2>Interests</h2>
+					<h2><span class='fa fa-smile-o fa-fw'></span>Interests</h2>
 					<?php
 					foreach ($resume->interests as $interest) { ?>
-						<h3><?php echo $interest->name; ?></h3>
+						<h3><span class='fa fa-thumbs-up fa-fw'></span><?php echo $interest->name; ?></h3>
 						<ul data-section='interests-specifics'>
 							<?php
 							foreach ($interest->keywords as $keyword) {
