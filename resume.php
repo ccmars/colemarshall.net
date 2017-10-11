@@ -17,7 +17,6 @@
 	</head>
 	<body>
 		<main id='resume'>
-			<nav class='resumeOptionsSpacer'></nav>
 			<nav class='resumeOptions'>
 				<ul>
 					<!--<li><a><span class='fa fa-save'></span>Save</a></li>-->
@@ -64,15 +63,20 @@
 				</ul>
 			</nav>
 			<div>
-				<h1><?php echo $resume->basics->name; ?></h1>
-				<h3><?php echo $resume->basics->label; ?></h3>
-				<h4><span class='fa fa-envelope fa-fw'></span><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
-				<h4><span class='fa fa-home fa-fw'></span><a href='<?php echo $resume->basics->website; ?>'><?php echo $resume->basics->website; ?></a></h4>
+				<div data-section='header'>
+					<div></div>
+					<h1><?php echo $resume->basics->name; ?></h1>
+					<h3><?php echo $resume->basics->label; ?></h3>
+					<h4><span class='fa fa-envelope fa-fw'></span><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
+					<h4><span class='fa fa-home fa-fw'></span><a href='<?php echo $resume->basics->website; ?>'><?php echo $resume->basics->website; ?></a></h4>
+				</div>
 				<div data-section='summary'>
+					<div></div>
 					<h2><span class='fa fa-check-circle-o fa-fw'></span>Summary</h2>
 					<?php echo $parsedown->text($resume->basics->summary); ?>
 				</div>
 				<div data-section='experience'>
+					<div></div>
 					<h2><span class='fa fa-briefcase fa-fw'></span>Experience</h2>
 					<?php
 					foreach ($resume->work as $work) {
@@ -91,6 +95,7 @@
 					?>
 				</div>
 				<div data-section='education'>
+					<div></div>
 					<h2><span class='fa fa-graduation-cap fa-fw'></span>Education</h2>
 					<?php
 					foreach ($resume->education as $education) { ?>
@@ -111,6 +116,7 @@
 					} ?>
 				</div>
 				<div data-section='skills'>
+					<div></div>
 					<h2><span class='fa fa-tasks fa-fw'></span>Skills</h2>
 					<?php
 					foreach ($resume->skills as $skill) { ?>
@@ -126,6 +132,7 @@
 					} ?>
 				</div>
 				<div data-section='interests'>
+					<div></div>
 					<h2><span class='fa fa-smile-o fa-fw'></span>Interests</h2>
 					<?php
 					foreach ($resume->interests as $interest) { ?>

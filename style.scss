@@ -68,6 +68,7 @@ h1 {
 	@media #{$mobile}, print {
 		font-size:36px;
 		line-height:42px;
+		letter-spacing:1px;
 	}
 }
 
@@ -76,6 +77,7 @@ h2 {
 
 	@media #{$mobile}, print {
 		font-size:28px;
+		letter-spacing:1px;
 	}
 }
 
@@ -84,6 +86,7 @@ h3 {
 
 	@media #{$mobile}, print {
 		font-size:22px;
+		letter-spacing:1px;
 	}
 }
 
@@ -92,6 +95,7 @@ h4 {
 
 	@media #{$mobile}, print {
 		font-size:16px;
+		letter-spacing:1px;
 	}
 }
 
@@ -233,25 +237,15 @@ main#home {
 // Resume
 main#resume {
 	$navigationWidth:200px;
-	nav.resumeOptionsSpacer {
-		width:$navigationWidth;
-		height:1px;
-		float:left;
-
-		@media #{$mobile} {
-			display:none;
-		}
-
-		@media print {
-			display:none;
-		}
-	}
+	$resumeMaxWidth:1000px;
+	background:linear-gradient(132deg, $color-dark-ultra 0%,lighten($color-dark-ultra,20%) 60%);
 
 	nav.resumeOptions {
 		padding:8px 12px;
 		position:fixed;
 		width:$navigationWidth;
 		user-select:none;
+		z-index:2;
 
 		@media #{$mobile} {
 			display:none;
@@ -263,6 +257,10 @@ main#resume {
 
 		> ul {
 			padding:0;
+
+			ul {
+				padding-left:18px;
+			}
 		}
 
 		ul {
@@ -272,13 +270,32 @@ main#resume {
 		span.fa {
 			margin-right:6px;
 		}
+
+		@media screen {
+			&:before {
+				content:"";
+				position:absolute;
+				top:-10px;
+				left:-80px;
+				width:120%;
+				height:3072px;
+				background:linear-gradient(132deg, $color-dark-ultra 0%,lighten($color-dark-ultra,20%) 60%);
+				transform:skewx(1.5deg);
+				z-index:-1;
+			}
+		}
 	}
 
 	> div {
-		overflow:hidden;
-		max-width:1000px;
 		margin:auto;
-		padding:8px 12px;
+		padding:8px 12px 8px $navigationWidth;
+		position:relative;
+		z-index:1;
+		overflow:hidden;
+
+		@media #{$mobile}, print {
+			padding:12px 16px;
+		}
 
 		ul {
 			list-style-type:circle;
@@ -286,6 +303,50 @@ main#resume {
 
 		.fa {
 			margin-right:8px;
+			color:saturate($color-green-light,35%);
+		}
+
+		@media screen {
+			@mixin resumeColorBand($color,$angle,$top:auto) {
+				max-width:$resumeMaxWidth;
+				margin:auto;
+
+				div {
+					content:"";
+					position:absolute;
+					width:100%;
+					height:100px;
+					margin-top:$top;
+					left:0;
+					background:$color;
+					transform:skewY($angle);
+					z-index:-1;
+				}
+			}
+
+			[data-section='header'] {
+				@include resumeColorBand(linear-gradient(-32deg, darken($color-green-light,35%) 0%,darken($color-dark,4%) 100%),-2deg,-50px);
+			}
+
+			[data-section='summary'] {
+				@include resumeColorBand(linear-gradient(20deg, $color-green-dark 60%,darken($color-green-light,15%) 100%),-1.5deg,-5px);
+			}
+
+			[data-section='experience'] {
+				@include resumeColorBand(linear-gradient(-96deg, lighten($color-dark-ultra,10%) 32%,darken($color-dark-ultra,5%) 100%),2deg);
+			}
+
+			[data-section='education'] {
+				@include resumeColorBand(linear-gradient(40deg, desaturate(darken($color-green-light,60%),10%)  0%,desaturate(darken($color-green-light,40%),20%) 100%),-2deg,-10px);
+			}
+
+			[data-section='skills'] {
+				@include resumeColorBand(linear-gradient(-162deg, lighten($color-green-dark,5%) 10%,darken($color-dark,5%) 100%),3deg,10px);
+			}
+
+			[data-section='interests'] {
+				@include resumeColorBand(linear-gradient(162deg, darken($color-green-dark,10%) 10%,desaturate(darken($color-green-light,65%),10%) 100%),-2deg,-20px);
+			}
 		}
 	}
 }
