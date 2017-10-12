@@ -311,8 +311,24 @@ main#resume {
 		}
 
 		@media print {
-			div div {
-				display:none;
+			div {
+				&[data-section='education'],
+				&[data-section='skills'],
+				&[data-section='interests'] {
+					ul {
+						li {
+							display:inline-block;
+
+							&::before {
+								content:'\00a0\25CB\00a0\00a0';
+							}
+						}
+					}
+				}
+
+				div {
+					display:none;
+				}
 			}
 		}
 
