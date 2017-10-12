@@ -304,6 +304,16 @@ main#resume {
 		.fa {
 			margin-right:8px;
 			color:saturate($color-green-light,35%);
+
+			@media print {
+				color:#000;
+			}
+		}
+
+		@media print {
+			div div {
+				display:none;
+			}
 		}
 
 		@media screen {
@@ -337,7 +347,7 @@ main#resume {
 			}
 
 			[data-section='education'] {
-				@include resumeColorBand(linear-gradient(40deg, desaturate(darken($color-green-light,60%),10%)  0%,desaturate(darken($color-green-light,40%),20%) 100%),-2deg,-10px);
+				@include resumeColorBand(linear-gradient(40deg, desaturate(darken($color-green-light,60%),10%) 0%,desaturate(darken($color-green-light,40%),20%) 100%),-2deg,-10px);
 			}
 
 			[data-section='skills'] {
