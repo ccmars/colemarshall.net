@@ -24,17 +24,23 @@
 			echo "Site malfunction!";
 		} else { ?>
 			<header>
-				<h1><?php echo $resume->basics->name; ?></h1>
-				<h3><?php echo $resume->basics->label; ?></h3>
-				<h4><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
+				<div>
+					<h1><?php echo $resume->basics->name; ?></h1>
+					<h3><?php echo $resume->basics->label; ?></h3>
+					<h4><span class='fa fa-envelope fa-fw'></span><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
+				</div>
 			</header>
 			<?php
 			// Profiles
 			if ($resume->basics->profiles) {
 				echo "<div class='profiles'>
-					<h2>Profiles</h2>";
-					echo "<div>";
-					echo "<a href='resume.php'><span class='fa fa-file-text-o'></span><b>Resume</b></a>";
+					<h2>
+						<div>
+							Profiles
+						</div>
+					</h2>
+					<div>
+					<a href='resume.php'><span class='fa fa-file-text-o'></span><b>Resume</b></a>";
 					foreach ($resume->basics->profiles as $profile) {
 						echo "<a href='{$profile->url}' target='_new'><span class='fa ";
 						if ($profile->network == 'LinkedIn') {
@@ -58,7 +64,11 @@
 				</div>";
 			} ?>
 			<div class='knowledge'>
-				<h2>Knowledge</h2>
+				<h2>
+					<div>
+						Knowledge
+					</div>
+				</h2>
 				<?php
 				// Code Samples
 				require('includes/codeSampleItems.php');
