@@ -243,10 +243,13 @@ main#home {
 				font-size:16px;
 				max-height:300px;
 				cursor:pointer;
-				transition:max-height 2s,background-color 0.8s;
+				transition:max-height 0.5s,background-color 0.8s;
 
 				&:hover {
 					background-color:lighten(#1c1c1c,1.5%);
+				}
+
+				&.expanded {
 					max-height:2400px;
 				}
 

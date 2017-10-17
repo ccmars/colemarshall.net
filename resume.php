@@ -10,10 +10,10 @@
 		?></title>
 		<meta charset='utf-8'>
 		<meta content='width=device-width, initial-scale=0.75' name='viewport'>
-		<link href='style.css' rel='stylesheet'>
+		<link href='/style/style.css' rel='stylesheet'>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 		<script src="https://use.fontawesome.com/3356175cee.js"></script>
-		<script type='text/javascript' src='resume.js'></script>
+		<script type='text/javascript' src='/scripts/resume.js'></script>
 	</head>
 	<body>
 		<main id='resume'>

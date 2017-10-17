@@ -7,12 +7,13 @@
 		?></title>
 		<meta charset="utf-8">
 		<meta content="width=device-width, initial-scale=0.75" name="viewport">
-		<link href='style.css' rel='stylesheet'>
+		<link href='/style/style.css' rel='stylesheet'>
 		<script src="https://use.fontawesome.com/3356175cee.js"></script>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 		<link rel='stylesheet' href='https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css'>
 		<link rel='stylesheet' href='/includes/highlight/styles/cole-neon.css'>
 		<script src='/includes/highlight/highlight.pack.js'></script>
+		<script src='/scripts/home.js'></script>
 		<script>
 			hljs.initHighlightingOnLoad();
 		</script>
