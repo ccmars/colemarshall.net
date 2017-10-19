@@ -5,10 +5,11 @@
 			$resume = json_decode(file_get_contents('data/resume.json'));
 			echo $resume->basics->name . ' - ' . $resume->basics->label; 
 		?></title>
-		<meta charset="utf-8">
-		<meta content="width=device-width, initial-scale=0.75" name="viewport">
+		<meta charset='utf-8'>
+		<meta content='width=device-width, initial-scale=0.75' name='viewport'>
+		<meta property='og:image' content='http://www.ColeMarshall.net/images/ColeMarshall_landscape.jpg'>
 		<link href='/style/style.css' rel='stylesheet'>
-		<script src="https://use.fontawesome.com/3356175cee.js"></script>
+		<script src='https://use.fontawesome.com/3356175cee.js'></script>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 		<link rel='stylesheet' href='https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css'>
 		<link rel='stylesheet' href='/includes/highlight/styles/cole-neon.css'>
