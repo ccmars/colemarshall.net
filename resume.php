@@ -2,7 +2,7 @@
 	require('includes/vendor/autoload.php');
 	$parsedown = new Parsedown();
 ?><!DOCTYPE html>
-<html>
+<html lang='en'>
 	<head>
 		<title><?php 
 			$resume = json_decode(file_get_contents('data/resume.json'));
@@ -11,6 +11,8 @@
 		<meta charset='utf-8'>
 		<meta content='width=device-width, initial-scale=0.75' name='viewport'>
 		<meta property='og:image' content='http://www.ColeMarshall.net/images/ColeMarshall_landscape.jpg'>
+		<meta name='description' content='I am an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks.'>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<link href='/style/style.css' rel='stylesheet'>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 		<script src='https://use.fontawesome.com/3356175cee.js'></script>
