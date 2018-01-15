@@ -37,11 +37,11 @@
 		} else { ?>
 			<header>
 				<div>
-					<hgroup>
+					<div>
 						<h1><?php echo $resume->basics->name; ?></h1>
 						<h3><?php echo $resume->basics->label; ?></h3>
 						<h4><span class='fa fa-envelope fa-fw'></span><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
-					</hgroup>
+					</div>
 					<img src='/images/cm_wireframe.svg' width='200'>
 				</div>
 			</header>

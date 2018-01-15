@@ -130,7 +130,7 @@ main#home {
 			@extend .iconStandard;
 		}
 
-		div {
+		> div {
 			max-width:$homeMaxWidth;
 			margin:auto;
 			position:relative;
@@ -148,7 +148,7 @@ main#home {
 				}
 			}
 
-			hgroup {
+			> div {
 				position:relative;
 				z-index:20;
 
