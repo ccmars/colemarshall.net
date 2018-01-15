@@ -133,10 +133,29 @@ main#home {
 		div {
 			max-width:$homeMaxWidth;
 			margin:auto;
+			position:relative;
 
-			h1 {
-				+ h3 {
-					margin-top:-12px;
+			img {
+				width:600px;
+				position:absolute;
+				right:0;
+				top:-100px;
+				z-index:1;
+
+				@media #{$mobile} {
+					width:400px;
+					top:-50px;
+				}
+			}
+
+			hgroup {
+				position:relative;
+				z-index:20;
+
+				h1 {
+					+ h3 {
+						margin-top:-12px;
+					}
 				}
 			}
 		}
@@ -179,6 +198,8 @@ main#home {
 				padding:8px;
 				transition:background-color 0.8s;
 				text-align:center;
+				position:relative;
+				z-index:10;
 
 				&:hover {
 					background:$color-highlight-ultra;
@@ -219,6 +240,8 @@ main#home {
 			background:linear-gradient(-162deg, lighten($color-green-dark,6%) 10%,darken($color-green-dark,15%) 100%);
 			max-width:$homeMaxWidth;
 			margin:0 auto 18px;
+			position:relative;
+			z-index:15;
 
 			legend {
 				background:$color-dark;
