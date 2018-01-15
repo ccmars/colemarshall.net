@@ -5,6 +5,14 @@
 			$resume = json_decode(file_get_contents('data/resume.json'));
 			echo $resume->basics->name . ' - ' . $resume->basics->label; 
 		?></title>
+		<!--
+
+		Looking under the hood, I see. Nice!
+		These code samples are presented with highlight.js and some logos from Devicon.
+		The content may be a joke, but all the code actually runs.
+		You should give it a try.
+
+		-->
 		<meta charset='utf-8'>
 		<meta content='width=device-width, initial-scale=0.75' name='viewport'>
 		<meta property='og:image' content='http://www.ColeMarshall.net/images/ColeMarshall_landscape.jpg'>
