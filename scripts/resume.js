@@ -50,4 +50,6 @@ $(document).ready(function() {
 	$(window).resize(function() {
 		resizeBands();
 	});
+
+	$('.cm_wireframe').svgInject();
 });

@@ -16,7 +16,7 @@
 		<meta charset='utf-8'>
 		<meta content='width=device-width, initial-scale=0.75' name='viewport'>
 		<meta property='og:image' content='http://www.ColeMarshall.net/images/ColeMarshall_landscape.jpg'>
-		<meta name='description' content='I am an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks.'>
+		<meta name='description' content='Cole Marshall is an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks.'>
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<link href='/style/style.css' rel='stylesheet'>
 		<script src='https://use.fontawesome.com/3356175cee.js'></script>
@@ -24,6 +24,7 @@
 		<link rel='stylesheet' href='https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css'>
 		<link rel='stylesheet' href='/includes/highlight/styles/cole-neon.css'>
 		<script src='/includes/highlight/highlight.pack.js'></script>
+		<script src='/includes/svgInject/jquery.svgInject.js'></script>
 		<script src='/scripts/home.js'></script>
 		<script>
 			hljs.initHighlightingOnLoad();
@@ -55,7 +56,7 @@
 						</div>
 					</h2>
 					<div>
-					<a href='resume.php'><span class='fa fa-file-text-o'></span><b>Resume</b></a>";
+					<a href='resume.php'><span class='fa fa-file-text-o resume'></span><b>Resume</b></a>";
 					foreach ($resume->basics->profiles as $profile) {
 						echo "<a href='{$profile->url}' target='_new'><span class='fa ";
 						if ($profile->network == 'LinkedIn') {

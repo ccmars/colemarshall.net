@@ -11,12 +11,13 @@
 		<meta charset='utf-8'>
 		<meta content='width=device-width, initial-scale=0.75' name='viewport'>
 		<meta property='og:image' content='http://www.ColeMarshall.net/images/ColeMarshall_landscape.jpg'>
-		<meta name='description' content='I am an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks.'>
+		<meta name='description' content='Cole Marshall is an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks.'>
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<link href='/style/style.css' rel='stylesheet'>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 		<script src='https://use.fontawesome.com/3356175cee.js'></script>
-		<script type='text/javascript' src='/scripts/resume.js'></script>
+		<script src='/includes/svgInject/jquery.svgInject.js'></script>
+		<script src='/scripts/resume.js'></script>
 	</head>
 	<body>
 		<main id='resume'>
@@ -66,6 +67,7 @@
 				</ul>
 			</nav>
 			<div>
+				<img class='cm_wireframe' src='/images/cm_wireframe.svg' width='200'>
 				<div data-section='header'>
 					<div></div>
 					<h1><?php echo $resume->basics->name; ?></h1>
@@ -85,7 +87,7 @@
 					foreach ($resume->work as $work) {
 						echo "<h3><span class='fa fa-user-circle fa-fw'></span>{$work->position}</h3>\n";
 						echo "<h4>{$work->company}</h4>
-						<date>" . date('Y',strtotime($work->startDate)) . " - " . ($work->endDate?date('Y',strtotime($work->endDate)):"Present") . "</date>
+						<time>" . date('Y',strtotime($work->startDate)) . " - " . ($work->endDate?date('Y',strtotime($work->endDate)):"Present") . "</time>
 						<p data-section='experience-summary'>
 							" . $parsedown->line($work->summary) . "
 						</p>
