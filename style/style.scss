@@ -222,6 +222,10 @@ main#home {
 					font-size:12px;
 					margin-top:12px;
 				}
+
+				&[href='resume.php'] {
+					background-color:$color-highlight-ultra;
+				}
 			}
 		}
 	}

@@ -56,7 +56,7 @@
 						</div>
 					</h2>
 					<div>
-					<a href='resume.php'><span class='fa fa-file-text-o resume'></span><b>Resume</b></a>";
+					<a href='resume.php'><span class='fa fa-file-text-o'></span><b>Resume</b></a>";
 					foreach ($resume->basics->profiles as $profile) {
 						echo "<a href='{$profile->url}' target='_new'><span class='fa ";
 						if ($profile->network == 'LinkedIn') {
