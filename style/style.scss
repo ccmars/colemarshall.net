@@ -126,7 +126,7 @@ main#home {
 		background:linear-gradient(-32deg, darken($color-green-light,35%) 0%,darken($color-dark,4%) 100%);
 		padding:10px;
 
-		.fa {
+		.svg-inline--fa {
 			@extend .iconStandard;
 		}
 
@@ -209,7 +209,7 @@ main#home {
 					background:saturate($color-highlight-ultra,100%);
 				}
 
-				span {
+				svg {
 					display:block;
 					margin:auto;
 					font-size:48px;
@@ -255,11 +255,9 @@ main#home {
 				border-radius:$generalRadius;
 				line-height:80%;
 
-				span {
+				.svg-inline--fa {
 					@extend .iconStandard;
 					margin-right:16px;
-					line-height:-12px;
-					vertical-align:baseline;
 				}
 			}
 
@@ -338,7 +336,7 @@ main#resume {
 			list-style-type:none;
 		}
 
-		span.fa {
+		.svg-inline--fa {
 			margin-right:6px;
 		}
 
@@ -407,7 +405,7 @@ main#resume {
 			list-style-type:circle;
 		}
 
-		.fa {
+		.svg-inline--fa {
 			@extend .iconStandard;
 		}
 
