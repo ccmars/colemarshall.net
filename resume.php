@@ -15,7 +15,8 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<link href='/style/style.css' rel='stylesheet'>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-		<script defer src="https://pro.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-+1nLPoB0gaUktsZJP+ycZectl3GX7wP8Xf2PE/JHrb7X1u7Emm+v7wJMbAcPr8Ge" crossorigin="anonymous"></script>
+		<script defer src="/includes/fontawesome/fa-light.min.js"></script>
+		<script src="/includes/fontawesome/fontawesome.min.js"></script>
 		<script src='/includes/svgInject/jquery.svgInject.js'></script>
 		<script src='/scripts/resume.js'></script>
 	</head>

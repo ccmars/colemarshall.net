@@ -34,7 +34,7 @@ $codeSampleItems = [
 		'description' => 'Stores data for the web page',
 		'file' => 'sql.sql',
 		'fiddle' => 'http://sqlfiddle.com/#!9/ff8c4/2/0',
-		'icon' => 'fas fa-database'
+		'icon' => 'fal fa-database'
 	],
 	'scss' => [
 		'name' => 'Sass',
@@ -53,19 +53,19 @@ $codeSampleItems = [
 		'name' => 'REST',
 		'description' => 'Representational state transfer, makes transferring data between applications easier',
 		'file' => 'rest.txt',
-		'icon' => 'fas fa-server'
+		'icon' => 'fal fa-server'
 	],
 	'xml' => [
 		'name' => 'XML',
 		'description' => 'Extensible Markup Language, a format for storing data for the web page or application',
 		'file' => 'xml.xml',
-		'icon' => 'fas fa-code'
+		'icon' => 'fal fa-code'
 	],
 	'json' => [
 		'name' => 'JSON',
 		'description' => 'JavaScript Object Notation, a format for storing data for the web page or application',
 		'file' => 'json.json',
-		'icon' => 'fas fa-file-code'
+		'icon' => 'fal fa-file-code'
 	],
 	'git' => [
 		'name' => 'Git',
