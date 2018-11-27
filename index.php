@@ -72,6 +72,8 @@
 							echo "fal fa-font";
 						} else if ($profile->network == '500px') {
 							echo "fab fa-500px";
+						} else if ($profile->network == 'Dribbble') {
+							echo "fab fa-dribbble";
 						} else {
 							echo "fal fa-plus-circle ";
 						}
