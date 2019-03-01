@@ -1,0 +1,509 @@
+@import 'https://fonts.googleapis.com/css?family=Catamaran|Cousine:400,700|Oswald:200,300,400';
+body {
+  font-family: Catamaran,Arial,sans-serif;
+  background: #464640;
+  color: #c0d3b1;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+}
+
+.underline, header a,
+footer a,
+#resume a {
+  color: #f09c42;
+  text-decoration: none;
+  box-shadow: inset 0 -4px 0 0 rgba(240, 156, 66, 0.6);
+  transition: color 0.2s,box-shadow 0.6s;
+  cursor: pointer;
+}
+
+.underline:hover, header a:hover,
+footer a:hover,
+#resume a:hover {
+  color: #f2da43;
+  box-shadow: inset 0 -14px 0 0 #2d2d27;
+}
+
+a {
+  color: #f09c42;
+}
+
+@media print {
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald',Arial,sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  margin: 8px 0;
+}
+
+h1 {
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 68px;
+  margin: 12px 0;
+}
+
+@media only screen and (max-width: 640px), print {
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 1px;
+  }
+}
+
+h2 {
+  font-size: 42px;
+}
+
+@media only screen and (max-width: 640px), print {
+  h2 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+}
+
+h3 {
+  font-size: 26px;
+}
+
+@media only screen and (max-width: 640px), print {
+  h3 {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+}
+
+h4 {
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 640px), print {
+  h4 {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
+
+@media only screen and (max-width: 640px), print {
+  p,
+  li {
+    line-height: 22px;
+  }
+}
+
+.iconStandard, main#home header .svg-inline--fa, main#home .knowledge fieldset legend .svg-inline--fa, main#resume > div .svg-inline--fa {
+  margin-right: 8px;
+  color: #bde89c;
+}
+
+@media print {
+  .iconStandard, main#home header .svg-inline--fa, main#home .knowledge fieldset legend .svg-inline--fa, main#resume > div .svg-inline--fa {
+    color: #000;
+  }
+}
+
+main#home {
+  display: block;
+}
+
+main#home header {
+  background: #506358;
+  background: linear-gradient(-32deg, #65864c 0%, #3b3b36 100%);
+  padding: 10px;
+}
+
+main#home header > div {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+main#home header > div img {
+  width: 600px;
+  position: absolute;
+  right: 0;
+  top: -100px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 640px) {
+  main#home header > div img {
+    width: 400px;
+    top: -50px;
+  }
+}
+
+main#home header > div > div {
+  position: relative;
+  z-index: 20;
+}
+
+main#home header > div > div h1 + h3 {
+  margin-top: -12px;
+}
+
+main#home .sectionHeader, main#home .profiles h2, main#home .knowledge h2 {
+  background: #2d2d27;
+  padding: 12px;
+  margin: 18px 0;
+}
+
+main#home .sectionHeader div, main#home .profiles h2 div, main#home .knowledge h2 div {
+  max-width: 1000px;
+  margin: auto;
+}
+
+main#home .profiles h2 {
+  background: linear-gradient(137deg, #1f1f1b 15%, #464640 100%);
+}
+
+main#home .profiles > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+main#home .profiles > div a {
+  flex-grow: 1;
+  flex-basis: 100px;
+  display: block;
+  margin: 4px;
+  text-decoration: none;
+  background: #f09c42;
+  color: #464640;
+  padding: 8px;
+  transition: background-color 0.8s;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+main#home .profiles > div a:hover {
+  background: #f2da43;
+}
+
+main#home .profiles > div a:active {
+  background: #ffe336;
+}
+
+main#home .profiles > div a svg {
+  display: block;
+  margin: auto;
+  font-size: 48px;
+}
+
+main#home .profiles > div a b {
+  display: block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+main#home .profiles > div a[href='resume.php'] {
+  background-color: #f2da43;
+}
+
+main#home .knowledge h2 {
+  background: linear-gradient(110deg, #1f1f1b 32%, #464640 100%);
+}
+
+main#home .knowledge fieldset {
+  border: none;
+  padding: 10px 15px;
+  background: #506358;
+  background: linear-gradient(-162deg, #5e7467 10%, #2e3932 100%);
+  max-width: 1000px;
+  margin: 0 auto 18px;
+  position: relative;
+  z-index: 15;
+}
+
+main#home .knowledge fieldset legend {
+  background: #464640;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 8px;
+  line-height: 80%;
+}
+
+main#home .knowledge fieldset legend .svg-inline--fa {
+  margin-right: 16px;
+}
+
+main#home .knowledge fieldset code {
+  border-radius: 8px;
+  padding: 16px;
+  overflow: hidden;
+  font-size: 16px;
+  max-height: 300px;
+  cursor: pointer;
+  transition: max-height 0.5s,background-color 0.8s;
+}
+
+main#home .knowledge fieldset code:hover {
+  background-color: #202020;
+}
+
+main#home .knowledge fieldset code.expanded {
+  max-height: 2400px;
+}
+
+@media only screen and (max-width: 640px) {
+  main#home .knowledge fieldset code {
+    word-break: break-all;
+    font-size: 12px;
+  }
+}
+
+main#home .knowledge fieldset p {
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+main#home .knowledge fieldset p a {
+  text-decoration: none;
+}
+
+main#home footer {
+  font-size: 80%;
+  text-align: center;
+  margin: 8px;
+}
+
+main#resume {
+  background: linear-gradient(132deg, #2d2d27 0%, #646456 60%);
+}
+
+main#resume nav.resumeOptions {
+  padding: 8px 12px;
+  position: fixed;
+  width: 200px;
+  user-select: none;
+  z-index: 20;
+}
+
+@media only screen and (max-width: 640px) {
+  main#resume nav.resumeOptions {
+    display: none;
+  }
+}
+
+@media print {
+  main#resume nav.resumeOptions {
+    display: none;
+  }
+}
+
+main#resume nav.resumeOptions > ul {
+  padding: 0;
+}
+
+main#resume nav.resumeOptions > ul ul {
+  padding-left: 18px;
+}
+
+main#resume nav.resumeOptions ul {
+  list-style-type: none;
+}
+
+main#resume nav.resumeOptions .svg-inline--fa {
+  margin-right: 6px;
+}
+
+@media screen {
+  main#resume nav.resumeOptions:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -80px;
+    width: 120%;
+    height: 3072px;
+    background: linear-gradient(132deg, #2d2d27 0%, #646456 60%);
+    transform: skewx(1.5deg);
+    z-index: -1;
+  }
+}
+
+main#resume > div {
+  margin: auto;
+  padding: 8px 12px 8px 200px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 640px), print {
+  main#resume > div {
+    padding: 12px 16px;
+  }
+}
+
+main#resume > div > svg {
+  width: 500px;
+  height: 725px;
+  position: absolute;
+  right: 20px;
+  top: -50px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 640px) {
+  main#resume > div > svg {
+    width: 600px;
+    height: 870px;
+    top: -20px;
+    right: -50px;
+  }
+}
+
+@media print {
+  main#resume > div > svg {
+    width: 300px;
+    height: 435px;
+    top: 20px;
+  }
+}
+
+main#resume > div > svg .cm {
+  fill: #2d2d27;
+}
+
+@media print {
+  main#resume > div > svg .cm {
+    fill: #ddd;
+  }
+}
+
+main#resume > div h1, main#resume > div h2, main#resume > div h3, main#resume > div h4, main#resume > div h5, main#resume > div h6, main#resume > div ul, main#resume > div p, main#resume > div time {
+  z-index: 5;
+  position: relative;
+}
+
+main#resume > div ul {
+  list-style-type: circle;
+}
+
+@media print {
+  main#resume > div div[data-section='education'] ul li, main#resume > div div[data-section='skills'] ul li, main#resume > div div[data-section='interests'] ul li {
+    display: inline-block;
+  }
+  main#resume > div div[data-section='education'] ul li::before, main#resume > div div[data-section='skills'] ul li::before, main#resume > div div[data-section='interests'] ul li::before {
+    content: '\00a0\25CB\00a0\00a0';
+  }
+  main#resume > div div div {
+    display: none;
+  }
+}
+
+@media screen {
+  main#resume > div [data-section='header'] {
+    max-width: 1000px;
+    margin: auto;
+  }
+  main#resume > div [data-section='header'] div {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin-top: -50px;
+    left: 0;
+    background: linear-gradient(-32deg, #65864c 0%, #3b3b36 100%);
+    transform: skewY(-2deg);
+    z-index: -1;
+  }
+  main#resume > div [data-section='summary'] {
+    max-width: 1000px;
+    margin: auto;
+  }
+  main#resume > div [data-section='summary'] div {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin-top: -5px;
+    left: 0;
+    background: linear-gradient(20deg, #506358 60%, #98b780 100%);
+    transform: skewY(-1.5deg);
+    z-index: -1;
+  }
+  main#resume > div [data-section='experience'] {
+    max-width: 1000px;
+    margin: auto;
+  }
+  main#resume > div [data-section='experience'] div {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin-top: auto;
+    left: 0;
+    background: linear-gradient(-96deg, #48483f 32%, #1f1f1b 100%);
+    transform: skewY(2deg);
+    z-index: -1;
+  }
+  main#resume > div [data-section='education'] {
+    max-width: 1000px;
+    margin: auto;
+  }
+  main#resume > div [data-section='education'] div {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin-top: -10px;
+    left: 0;
+    background: linear-gradient(40deg, #283022 0%, #5b6355 100%);
+    transform: skewY(-2deg);
+    z-index: -1;
+  }
+  main#resume > div [data-section='skills'] {
+    max-width: 1000px;
+    margin: auto;
+  }
+  main#resume > div [data-section='skills'] div {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    left: 0;
+    background: linear-gradient(-162deg, #5b7165 10%, #393934 100%);
+    transform: skewY(3deg);
+    z-index: -1;
+  }
+  main#resume > div [data-section='interests'] {
+    max-width: 1000px;
+    margin: auto;
+  }
+  main#resume > div [data-section='interests'] div {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin-top: -20px;
+    left: 0;
+    background: linear-gradient(162deg, #39473f 10%, #1c2117 100%);
+    transform: skewY(-2deg);
+    z-index: -1;
+  }
+}

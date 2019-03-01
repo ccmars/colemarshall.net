@@ -1,5 +1,5 @@
 /legacy
-prepros.cfg
-*.map
-*.css
-.idea
+/.idea
+/node_modules/
+/package-lock.json
+/Gulpfile.js
