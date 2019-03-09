@@ -24,14 +24,9 @@
 				"url": "https://www.behance.net/ColeMarshall"
 			},
 			{
-				"network": "Stack Overflow",
-				"username": "1836703",
-				"url": "http://stackoverflow.com/users/story/1836703"
-			},
-			{
-				"network": "GitHub",
-				"username": "ccmars",
-				"url": "https://github.com/ccmars"
+				"network": "Dribbble",
+				"username": "ColeMarshall",
+				"url": "https://dribbble.com/ColeMarshall"
 			},
 			{
 				"network": "MyFonts",
@@ -44,9 +39,14 @@
 				"url": "https://500px.com/colemarshall"
 			},
 			{
-				"network": "Dribbble",
-				"username": "ColeMarshall",
-				"url": "https://dribbble.com/ColeMarshall"
+				"network": "GitHub",
+				"username": "ccmars",
+				"url": "https://github.com/ccmars"
+			},
+			{
+				"network": "Stack Overflow",
+				"username": "1836703",
+				"url": "http://stackoverflow.com/users/story/1836703"
 			}
 		]
 	},
