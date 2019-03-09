@@ -68,7 +68,7 @@
 				</ul>
 			</nav>
 			<div>
-				<img class='cm_wireframe' src='/images/cm_wireframe.svg' width='200'>
+				<img class='cm_wireframe' src='/images/cm_wireframe.svg' width='200' alt='CM Logo'>
 				<div data-section='header'>
 					<div></div>
 					<h1><?php echo $resume->basics->name; ?></h1>

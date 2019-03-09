@@ -44,7 +44,7 @@
 						<h3><?php echo $resume->basics->label; ?></h3>
 						<h4><span class='fal fa-envelope fa-fw'></span><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
 					</div>
-					<img src='/images/cm_wireframe.svg' width='200'>
+					<img src='/images/cm_wireframe.svg' width='200' alt='CM Logo'>
 				</div>
 			</header>
 			<?php
