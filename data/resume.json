@@ -5,7 +5,7 @@
 		"picture": "http://www.ColeMarshall.net/images/ColeMarshall.jpg",
 		"email": "ColeM@ColeMarshall.net",
 		"website": "http://www.ColeMarshall.net",
-		"summary": "I am an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks. I hold a Bachelor of Fine Arts degree in Interactive Media from the Minneapolis College of Art and Design, and I have been actively involved in the online media industry for over a decade and a half.\n\nMany people are surprised to learn that I know things. These things I know are useful things too--special things even: like how to work with useful technologies like HTML, CSS, JavaScript, PHP, MySQL, Sass, jQuery, Vue.js, XML, JSON, REST, Git, and even dead languages like ActionScript and Lingo. I also know how to use software such as Photoshop, Illustrator, InDesign, XD, After Effects, Animate, Dimension, Maya, and Vegas, among many others. I know some interesting things about nuclear fallout too, but for some reason, no one's ever been interested in that information.",
+		"summary": "I am an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks. I hold a Bachelor of Fine Arts degree in Interactive Media from the Minneapolis College of Art and Design, and I have been actively involved in the online media industry for over a decade and a half.\n\nMany people are surprised to learn that I know things. These things I know are useful things too--special things even: like how to work with useful technologies like HTML, CSS, JavaScript, PHP, MySQL, Sass, Vue.js, jQuery, XML, JSON, REST, Git, and even dead languages like ActionScript and Lingo. I also know how to use software such as Photoshop, Illustrator, InDesign, XD, After Effects, Dimension, Maya, and Vegas, among many others. I know some interesting things about nuclear fallout too, but for some reason, no one's ever been interested in that information.",
 		"location": {
 			"postalCode": "53704",
 			"city": "Madison",
@@ -57,7 +57,7 @@
 			"website": "http://www.MusicMaster.com/",
 			"startDate": "2011-03-07",
 			"endDate": "",
-			"summary": "As head of MusicMaster's web department, I'm responsible for overseeing the company's online presence, from design, to frontend development, and even backend development. I also automate time-consuming tasks for support and sales staff, as well as contribute to the development of the company's online products.",
+			"summary": "As head of MusicMaster's web department, I'm responsible for overseeing the company's online presence, from design, to frontend development, backend development, and even server operations. I also automate time-consuming tasks for support and sales staff, as well as contribute to the development of the company's online products.",
 			"highlights": [
 				"(Sangus) Designed and developed an extensive, custom eCommerce system with [Authorize.net](http://www.authorize.net/) integration, [PhaseWare](http://www.phaseware.com/) integration, [Salesforce](https://www.salesforce.com/) integration, [PayPal](https://www.paypal.com/) integration, customer accounts, subscription management, contracts, invoices, and wide-ranging discount options among many other features",
 				"(Locus) Developed a detailed client station database accompanied by a [responsive station player skeuomorph frontend](http://www.musicmaster.com/stations_player.php) that looks and works much like a car stereo",
