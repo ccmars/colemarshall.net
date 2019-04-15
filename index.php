@@ -62,7 +62,7 @@
 					<div>
 					<a href='resume.php'><span class='fal fa-file-alt'></span><b>Resume</b></a>";
 					foreach ($resume->basics->profiles as $profile) {
-						echo "<a href='{$profile->url}' target='_new'><span class='";
+						echo "<a href='{$profile->url}' target='_blank'><span class='";
 						if ($profile->network == 'LinkedIn') {
 							echo "fab fa-linkedin";
 						} else if ($profile->network == 'Stack Overflow') {
@@ -104,7 +104,7 @@
 							echo htmlspecialchars($sampleCode);
 						echo "</code></pre>
 						" . ($codeDetails['fiddle']?"<p>
-								<a href='{$codeDetails['fiddle']}' target='_new'>Run it <span class='fas fa-play'></span></a>
+								<a href='{$codeDetails['fiddle']}' target='_blank'>Run it <span class='fas fa-play'></span></a>
 							</p>":'') . "
 						</fieldset>";
 					}
