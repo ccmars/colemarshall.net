@@ -64,4 +64,3 @@ $cole = new \Marshall\Cole();
 
 // Echo Cole's Profession and Specialties
 echo $cole->getReadableDetails();
-?>
