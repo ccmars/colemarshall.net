@@ -9,7 +9,7 @@
 			echo $resume->basics->name . ' - ' . $resume->basics->label . ' - Resume'; 
 		?></title>
 		<meta charset='utf-8'>
-		<meta content='width=device-width, initial-scale=0.75' name='viewport'>
+		<meta content='width=device-width, initial-scale=1' name='viewport'>
 		<meta property='og:image' content='http://www.ColeMarshall.net/images/ColeMarshall_landscape.jpg'>
 		<meta name='description' content='Cole Marshall is an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks.'>
 		<meta http-equiv="x-ua-compatible" content="ie=edge">

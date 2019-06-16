@@ -5,6 +5,7 @@ $color-highlight-ultra:#f2da43;
 $color-dark:#464640;
 $color-dark-ultra:#2d2d27;
 $color-green-light:#c0d3b1;
+$color-green:#7c8f6e;
 $color-green-dark:#506358;
 $generalRadius:8px;
 $mobile: "only screen and (max-width:640px)";
@@ -51,7 +52,7 @@ footer a,
 }
 
 $headerMargin:8px;
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, time {
 	font-family:'Oswald',Arial,sans-serif;
 	font-weight:200;
 	letter-spacing:2px;
@@ -64,8 +65,12 @@ h1 {
 	font-size:56px;
 	line-height:68px;
 	margin:12px 0;
-
-	@media #{$mobile}, print {
+	
+	@media #{$mobile} {
+		line-height:56px;
+	}
+	
+	@media print {
 		font-size:36px;
 		line-height:42px;
 		letter-spacing:1px;
@@ -74,8 +79,12 @@ h1 {
 
 h2 {
 	font-size:42px;
-
-	@media #{$mobile}, print {
+	
+	@media #{$mobile} {
+		letter-spacing:2px;
+	}
+	
+	@media print {
 		font-size:28px;
 		letter-spacing:1px;
 	}
@@ -93,7 +102,7 @@ h3 {
 h4 {
 	font-size:22px;
 
-	@media #{$mobile}, print {
+	@media print {
 		font-size:16px;
 		letter-spacing:1px;
 	}
@@ -101,7 +110,7 @@ h4 {
 
 p,
 li {
-	@media #{$mobile}, print {
+	@media print {
 		line-height:22px;
 	}
 }
@@ -126,7 +135,7 @@ main#home {
 		background:linear-gradient(-32deg, darken($color-green-light,35%) 0%,darken($color-dark,4%) 100%);
 		padding:10px;
 
-		.svg-inline--fa {
+		.fa, .fal, .far, .fas, .fab {
 			@extend .iconStandard;
 		}
 
@@ -151,12 +160,6 @@ main#home {
 			> div {
 				position:relative;
 				z-index:20;
-
-				h1 {
-					+ h3 {
-						margin-top:-12px;
-					}
-				}
 			}
 		}
 	}
@@ -209,7 +212,7 @@ main#home {
 					background:saturate($color-highlight-ultra,100%);
 				}
 
-				svg {
+				.fa, .fal, .far, .fas, .fab {
 					display:block;
 					margin:auto;
 					font-size:48px;
@@ -241,7 +244,7 @@ main#home {
 			border:none;
 			padding:10px 15px;
 			background:$color-green-dark;
-			background:linear-gradient(-162deg, lighten($color-green-dark,6%) 10%,darken($color-green-dark,15%) 100%);
+			background:linear-gradient(-162deg, lighten($color-green-dark,1%) 10%,darken($color-green-dark,15%) 100%);
 			max-width:$homeMaxWidth;
 			margin:0 auto 18px;
 			position:relative;
@@ -254,10 +257,13 @@ main#home {
 				padding:12px 18px;
 				border-radius:$generalRadius;
 				line-height:80%;
-
-				.svg-inline--fa {
+				
+				span {
+					font-weight:normal;
+				}
+				
+				.fa, .fas, .fal, .fab {
 					@extend .iconStandard;
-					margin-right:16px;
 				}
 			}
 
@@ -280,7 +286,7 @@ main#home {
 
 				@media #{$mobile} {
 					word-break:break-all;
-					font-size:12px;
+					font-size:15px;
 				}
 			}
 
@@ -288,9 +294,16 @@ main#home {
 				text-align:right;
 				text-transform:uppercase;
 				letter-spacing:1px;
+				margin:4px 0 3px 0;
 
 				a {
 					text-decoration:none;
+					opacity:0.5;
+					transition:opacity 0.25s;
+				
+					&:hover {
+						opacity:1;
+					}
 				}
 			}
 		}
@@ -354,7 +367,13 @@ main#resume {
 			}
 		}
 	}
-
+	
+	p {
+		@media #{$mobile} {
+			font-size:108%;
+		}
+	}
+	
 	> div {
 		margin:auto;
 		padding:8px 12px 8px $navigationWidth;
@@ -399,6 +418,10 @@ main#resume {
 		h1,h2,h3,h4,h5,h6,ul,p,time {
 			z-index:5;
 			position:relative;
+		}
+		
+		h4 {
+			white-space:nowrap;
 		}
 
 		ul {

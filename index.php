@@ -14,7 +14,7 @@
 
 		-->
 		<meta charset='utf-8'>
-		<meta content='width=device-width, initial-scale=0.75' name='viewport'>
+		<meta content='width=device-width, initial-scale=1' name='viewport'>
 		<meta property='og:image' content='http://www.ColeMarshall.net/images/ColeMarshall_landscape.jpg'>
 		<meta name='description' content='Cole Marshall is an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks.'>
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -22,9 +22,7 @@
 		<meta name="msapplication-navbutton-color" content="#506358">
 		<meta name="apple-mobile-web-app-status-bar-style" content="#506358">
 		<link href='/style/style.css' rel='stylesheet'>
-		<script defer src="/includes/fontawesome/fa-light.min.js"></script>
-		<script defer src="/includes/fontawesome/fa-brands.min.js"></script>
-		<script src="/includes/fontawesome/fontawesome.min.js"></script>
+		<script src="https://kit.fontawesome.com/39da7367fb.js"></script>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 		<link rel='stylesheet' href='/includes/highlight/styles/cole-neon.css'>
 		<script src='/includes/highlight/highlight.pack.js'></script>
@@ -104,7 +102,7 @@
 							echo htmlspecialchars($sampleCode);
 						echo "</code></pre>
 						" . ($codeDetails['fiddle']?"<p>
-								<a href='{$codeDetails['fiddle']}' target='_blank'>Run it <span class='fas fa-play'></span></a>
+								<a href='{$codeDetails['fiddle']}' target='_blank'>Run it <span class='fas fa-rabbit-fast fa-lg'></span></a>
 							</p>":'') . "
 						</fieldset>";
 					}
