@@ -321,6 +321,10 @@ main#resume {
 	$navigationWidth:200px;
 	$resumeMaxWidth:1000px;
 	background:linear-gradient(132deg, $color-dark-ultra 0%,lighten($color-dark-ultra,20%) 60%);
+	
+	@media print {
+		background:#fff;
+	}
 
 	nav.resumeOptions {
 		padding:8px 12px;
