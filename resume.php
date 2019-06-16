@@ -18,8 +18,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="#506358">
 		<link href='/style/style.css' rel='stylesheet'>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-		<script defer src="/includes/fontawesome/fa-light.min.js"></script>
-		<script src="/includes/fontawesome/fontawesome.min.js"></script>
+		<script src="https://kit.fontawesome.com/39da7367fb.js"></script>
 		<script src='/includes/svgInject/jquery.svgInject.js'></script>
 		<script src='/scripts/resume.js'></script>
 	</head>

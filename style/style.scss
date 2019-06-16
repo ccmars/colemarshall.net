@@ -349,7 +349,7 @@ main#resume {
 			list-style-type:none;
 		}
 
-		.svg-inline--fa {
+		.fa, .fas, .fal, .fab {
 			margin-right:6px;
 		}
 
@@ -428,7 +428,7 @@ main#resume {
 			list-style-type:circle;
 		}
 
-		.svg-inline--fa {
+		.fa, .fas, .fal, .fab {
 			@extend .iconStandard;
 		}
 
