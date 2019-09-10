@@ -22,6 +22,11 @@ body {
 	}
 }
 
+::selection {
+	background:rgba(242, 218, 67, 0.99);
+	color:$color-dark-ultra;
+}
+
 .underline {
 	color:$color-highlight;
 	text-decoration:none;
@@ -283,7 +288,7 @@ main#home {
 				&.expanded {
 					max-height:2400px;
 				}
-
+				
 				@media #{$mobile} {
 					word-break:break-all;
 					font-size:15px;
