@@ -21,6 +21,14 @@
 		<script src="https://kit.fontawesome.com/39da7367fb.js"></script>
 		<script src='/includes/svgInject/jquery.svgInject.js'></script>
 		<script src='/scripts/resume.js'></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148798504-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'UA-148798504-1');
+		</script>
 	</head>
 	<body>
 		<main id='resume'>
