@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en-US'>
 	<head>
-		<title><?php 
+		<title><?php
 			$resume = json_decode(file_get_contents('data/resume.json'));
-			echo $resume->basics->name . ' - ' . $resume->basics->label; 
+			echo $resume->basics->name . ' - ' . $resume->basics->label;
 		?></title>
 		<!--
 
@@ -13,31 +13,14 @@
 		Give it a try.
 
 		-->
-		<meta charset='utf-8'>
-		<meta content='width=device-width, initial-scale=1' name='viewport'>
-		<meta property='og:image' content='http://www.ColeMarshall.net/images/ColeMarshall_landscape.jpg'>
-		<meta name='description' content='Cole Marshall is an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks.'>
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="theme-color" content="#506358">
-		<meta name="msapplication-navbutton-color" content="#506358">
-		<meta name="apple-mobile-web-app-status-bar-style" content="#506358">
-		<link href='/style/style.css' rel='stylesheet'>
-		<script src="https://kit.fontawesome.com/39da7367fb.js"></script>
-		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<?php
+include('includes/head.php');
+?>
 		<link rel='stylesheet' href='/includes/highlight/styles/cole-neon.css'>
 		<script src='/includes/highlight/highlight.pack.js'></script>
-		<script src='/includes/svgInject/jquery.svgInject.js'></script>
 		<script src='/scripts/home.js'></script>
 		<script>
 			hljs.initHighlightingOnLoad();
-		</script>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148798504-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			
-			gtag('config', 'UA-148798504-1');
 		</script>
 	</head>
 	<body>
