@@ -265,6 +265,10 @@ main#home {
 				
 				span {
 					font-weight:normal;
+					
+					&.fal {
+						font-weight:300;
+					}
 				}
 				
 				.fa, .fas, .fal, .fab {

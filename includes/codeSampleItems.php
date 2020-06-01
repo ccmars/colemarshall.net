@@ -75,4 +75,3 @@ $codeSampleItems = [
 		'icon' => 'fab fa-git'
 	]
 ];
-?>
