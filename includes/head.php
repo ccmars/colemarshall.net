@@ -22,7 +22,7 @@ $metaImageSecure = "https://colemarshall.net/images/ColeMarshall_landscape.jpg";
 		<meta name='msapplication-navbutton-color' content='#506358'>
 		<meta name='apple-mobile-web-app-status-bar-style' content='#506358'>
 		<link href='/style/style.css' rel='stylesheet'>
-		<script src="https://kit.fontawesome.com/39da7367fb.js"></script>
+		<link href='/style/fa/css/all.min.css' rel='stylesheet'>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 		<script src='/includes/svgInject/jquery.svgInject.js'></script>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148798504-1"></script>
