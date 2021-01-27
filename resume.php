@@ -68,6 +68,7 @@ include('includes/head.php');
 					<h3><?php echo $resume->basics->label; ?></h3>
 					<h4><span class='fal fa-envelope fa-fw'></span><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
 					<h4><span class='fal fa-home fa-fw'></span><a href='<?php echo $resume->basics->website; ?>'><?php echo $resume->basics->website; ?></a></h4>
+					<h4><span class='fal fa-map-marker-alt fa-fw'></span><?php echo $resume->basics->location->city; ?>, <?php echo $resume->basics->location->region; ?></h4>
 				</div>
 				<div data-section='summary'>
 					<div></div>
