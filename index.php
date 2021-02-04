@@ -100,9 +100,6 @@ include('includes/head.php');
 				}
 				?>
 			</div>
-			<footer>
-				<a href="/legacy/">Legacy Site (Flash Required)</a>
-			</footer>
 		<?php
 		} ?>
 		</main>
