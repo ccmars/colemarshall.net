@@ -21,6 +21,8 @@ $metaImageSecure = "https://colemarshall.net/images/ColeMarshall_landscape.jpg";
 		<meta name='theme-color' content='#506358'>
 		<meta name='msapplication-navbutton-color' content='#506358'>
 		<meta name='apple-mobile-web-app-status-bar-style' content='#506358'>
+		<link rel='icon' type='image/svg+xml' href='/images/favicon.svg'>
+		<link rel='alternate icon' href='/images/favicon.ico'>
 		<link href='/style/style.css' rel='stylesheet'>
 		<link href='/style/fa/css/all.min.css' rel='stylesheet'>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
