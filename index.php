@@ -66,6 +66,8 @@ include('includes/head.php');
 							echo "fab fa-500px";
 						} else if ($profile->network == 'Dribbble') {
 							echo "fab fa-dribbble";
+						} else if ($profile->network == 'ArtStation') {
+							echo "fab fa-artstation";
 						} else {
 							echo "fal fa-plus-circle ";
 						}
