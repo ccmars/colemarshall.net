@@ -11,10 +11,10 @@ class Cole extends Human {
 	function __construct($initialProfession = "Interactive Developer & Designer") {
 		$this->profession = $initialProfession;
 		$this->specialties = [
-			"HTML", "CSS", "JavaScript", "Sass", "jQuery",
+			"HTML", "CSS", "JavaScript", "Sass", "Vue.js", "jQuery",
 			"cross-browser compatibility", "mobile/responsive design", "search engine optimization",
 			"PHP", "MySQL", "REST", "XML", "JSON", "Git", "automation",
-			"Photoshop", "Illustrator", "After Effects", "Graphic Design", "Typography",
+			"Photoshop", "Illustrator", "XD", "After Effects", "Graphic Design", "Typography",
 			"User Interface (UI) Design", "User Experience (UX) Design", "Motion Graphics"
 		];
 	}
