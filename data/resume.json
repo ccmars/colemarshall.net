@@ -57,12 +57,20 @@
 	},
 	"work": [
 		{
+			"company": "Devenir Group, LLC",
+			"position": "Senior Full Stack Software Engineer",
+			"website": "https://www.devenir.com/",
+			"startDate": "2021-01-31",
+			"endDate": "",
+			"summary": "I build robust, scalable web products and services to support the business vision, and maintain and improve existing web systems."
+		},
+		{
 			"company": "MusicMaster, Inc.",
 			"position": "Webmaster",
-			"website": "https://www.MusicMaster.com/",
+			"website": "https://MusicMaster.com/",
 			"startDate": "2011-03-07",
-			"endDate": "",
-			"summary": "As a full stack developer, I'm responsible for the design, frontend development, backend development, web server operations, and third-party API integration of the company's web-based tools. Additionally I contribute to the development of the online capabilities of the company's products, design marketing material, and automate time-consuming tasks for support and sales staff.",
+			"endDate": "2021-01-28",
+			"summary": "As a full stack developer, I was responsible for the design, frontend development, backend development, web server operations, and third-party API integration of the company's web-based tools. Additionally I contributed to the development of the online capabilities of the company's products, designed marketing material, and automated time-consuming tasks for support and sales staff.",
 			"highlights": [
 				"(Sangus) Designed and developed an extensive, custom eCommerce system with [PhaseWare](https://www.phaseware.com/)/[Salesforce](https://www.salesforce.com/)/[Zoho](https://www.zoho.com/)/[PayPal](https://www.paypal.com/)/[Authorize.net](https://www.authorize.net/) integration, customer accounts, subscription management, contracts, invoices, and wide-ranging discount options among many other features",
 				"(Osiris) Developed an online licensing system to determine legitimate access to the company's flagship software by its clients, which stays up-to-date in real time with integration into the company's customer resource management and accounting systems",
@@ -112,7 +120,7 @@
 		},{
 			"company": "Active Depth",
 			"position": "Owner",
-			"website": "https://www.ActiveDepth.com/",
+			"website": "https://ActiveDepth.com/",
 			"startDate": "2000-03-01",
 			"endDate": "",
 			"summary": "I've been actively involved in the online media industry with my own business for over a decade and a half, during which time I've tackled many diverse projects for a multitude of different clients.",
@@ -125,7 +133,7 @@
 		},{
 			"company": "Getty Images",
 			"position": "Front-End Web Developer",
-			"website": "https://www.GettyImages.com",
+			"website": "https://GettyImages.com",
 			"startDate": "2009-03-01",
 			"endDate": "2009-08-01",
 			"summary": "I was brought on for a six month contract to help a team of developers meet tough deadlines in the implementation of XHTML, CSS, and JavaScript to present some of the company's web site projects in the designer's specifications.",
@@ -136,7 +144,7 @@
 		},{
 			"company": "Raichert Media, Inc.",
 			"position": "Web Designer & Developer",
-			"website": "https://www.RaichertMedia.com/",
+			"website": "http://RaichertMedia.com/",
 			"startDate": "2006-05-01",
 			"endDate": "2008-12-01",
 			"summary": "I performed root-level maintenance on the company’s dedicated server, and I also assisted with web design and development for the company’s clients as needed.",
@@ -144,7 +152,7 @@
 		},{
 			"company": "Teaching Assistant",
 			"position": "Minneapolis College of Art and Design",
-			"website": "https://www.mcad.edu/",
+			"website": "https://mcad.edu/",
 			"startDate": "2007-01-01",
 			"endDate": "2008-05-01",
 			"summary": "As a teaching assistant for the Interactive Multi-Linear Narrative (game design) class, I provided technical direction and advice as the programming lead for two Flash-based computer game projects.",
@@ -165,7 +173,7 @@
 			"startDate": "2004-08-01",
 			"endDate": "2008-05-01",
 			"gpa": "3.8",
-			"summary": "A passion for both art and computers lead me to study Interactive Media at MCAD. The program focused on interaction design, user interfaces, graphic design, typography, motion graphics, information architecture, development, and working with clients. Interested in how users interface with entertainment applications, I took courses on video game history and their design, helping teach the game design class for two years. I also supplemented my studies in courses on photography, film, sound, and even 3D modeling and animation, which has allowed me to add unique assets to my work.",
+			"summary": "A passion for both art and computer technology lead me to study Interactive Media at MCAD. The program focused on interaction design, user interfaces, graphic design, typography, motion graphics, information architecture, development, and working with clients. Interested in how users interface with entertainment applications, I took courses on video game history and their design, helping teach the game design class for two years. I also supplemented my studies in courses on photography, film, sound, and even 3D modeling and animation, which has allowed me to add unique assets to my work.",
 			"courses": [
 				"Interactive Media",
 				"Web Design",
