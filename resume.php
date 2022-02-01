@@ -79,18 +79,22 @@ include('includes/head.php');
 					<div></div>
 					<h2><span class='fal fa-briefcase fa-fw'></span>Experience</h2>
 					<?php
-					foreach ($resume->work as $work) {
-						echo "<h3><span class='fal fa-user-circle fa-fw'></span>{$work->position}</h3>\n";
-						echo "<h4>{$work->company}</h4>
-						<time>" . date('Y',strtotime($work->startDate)) . " - " . ($work->endDate?date('Y',strtotime($work->endDate)):"Present") . "</time>
-						<p data-section='experience-summary'>
-							" . $parsedown->line($work->summary) . "
-						</p>
-						<ul data-section='experience-highlights'>";
-							foreach ($work->highlights as $highlight) {
-								echo "<li>" . $parsedown->line($highlight) . "</li>\n";
+					if (!empty($resume->work)) {
+						foreach ($resume->work as $work) {
+							echo "<h3><span class='fal fa-user-circle fa-fw'></span>{$work->position}</h3>\n";
+							echo "<h4>{$work->company}</h4>
+							<time>" . date('Y', strtotime($work->startDate)) . " - " . ($work->endDate ? date('Y', strtotime($work->endDate)) : "Present") . "</time>
+							<p data-section='experience-summary'>
+								" . $parsedown->line($work->summary) . "
+							</p>
+							<ul data-section='experience-highlights'>";
+							if (!empty($work->highlights)) {
+								foreach ($work->highlights as $highlight) {
+									echo "<li>" . $parsedown->line($highlight) . "</li>\n";
+								}
 							}
-						echo "</ul>";
+							echo "</ul>";
+						}
 					}
 					?>
 				</div>
@@ -98,53 +102,59 @@ include('includes/head.php');
 					<div></div>
 					<h2><span class='fal fa-graduation-cap fa-fw'></span>Education</h2>
 					<?php
-					foreach ($resume->education as $education) { ?>
-						<h3><span class='fal fa-pencil fa-fw'></span><?php echo $education->institution; ?></h3>
-						<h4><?php echo $education->studyType; ?> of <?php echo $education->area; ?></h4>
-						<time><?php echo date('Y',strtotime($education->endDate)); ?></time>
-						<p data-section='education-summary'>
-							<?php echo $education->summary; ?>
-						</p>
-						<ul data-section='education-courses'>
-							<?php
-							foreach ($education->courses as $course) {
-								echo "<li>{$course}</li>";
-							}
-							?>
-						</ul>
-					<?php
-					} ?>
+					if (!empty($resume->education)) {
+						foreach ($resume->education as $education) { ?>
+							<h3><span class='fal fa-pencil fa-fw'></span><?php echo $education->institution; ?></h3>
+							<h4><?php echo $education->studyType; ?> of <?php echo $education->area; ?></h4>
+							<time><?php echo date('Y',strtotime($education->endDate)); ?></time>
+							<p data-section='education-summary'>
+								<?php echo $education->summary; ?>
+							</p>
+							<ul data-section='education-courses'>
+								<?php
+								foreach ($education->courses as $course) {
+									echo "<li>{$course}</li>";
+								}
+								?>
+							</ul>
+						<?php
+						}
+					}?>
 				</div>
 				<div data-section='skills'>
 					<div></div>
 					<h2><span class='fal fa-tasks fa-fw'></span>Skills</h2>
 					<?php
-					foreach ($resume->skills as $skill) { ?>
-						<h3><span class='fal fa-keyboard fa-fw'></span><?php echo $skill->name; ?></h3>
-						<ul data-section='skills-specifics'>
-							<?php
-							foreach ($skill->keywords as $keyword) {
-								echo "<li>{$keyword}</li>";
-							}
-							?>
-						</ul>
-					<?php
+					if (!empty($resume->skills)) {
+						foreach ($resume->skills as $skill) { ?>
+							<h3><span class='fal fa-keyboard fa-fw'></span><?php echo $skill->name; ?></h3>
+							<ul data-section='skills-specifics'>
+								<?php
+								foreach ($skill->keywords as $keyword) {
+									echo "<li>{$keyword}</li>";
+								}
+								?>
+							</ul>
+						<?php
+						}
 					} ?>
 				</div>
 				<div data-section='interests'>
 					<div></div>
 					<h2><span class='fal fa-smile fa-fw'></span>Interests</h2>
 					<?php
-					foreach ($resume->interests as $interest) { ?>
-						<h3><span class='fal fa-thumbs-up fa-fw'></span><?php echo $interest->name; ?></h3>
-						<ul data-section='interests-specifics'>
-							<?php
-							foreach ($interest->keywords as $keyword) {
-								echo "<li>{$keyword}</li>";
-							}
-							?>
-						</ul>
-					<?php
+					if (!empty($resume->interests)) {
+						foreach ($resume->interests as $interest) { ?>
+							<h3><span class='fal fa-thumbs-up fa-fw'></span><?php echo $interest->name; ?></h3>
+							<ul data-section='interests-specifics'>
+								<?php
+								foreach ($interest->keywords as $keyword) {
+									echo "<li>{$keyword}</li>";
+								}
+								?>
+							</ul>
+						<?php
+						}
 					} ?>
 				</div>
 			</div>
