@@ -90,11 +90,11 @@ include('includes/head.php');
 						echo "<fieldset>
 							<legend>" . ($codeDetails['icon']?"<span class='{$codeDetails['icon']}'></span>":'') . "{$codeDetails['name']}</legend>
 							<h4>{$codeDetails['description']}</h4>
-							<pre><code" . ($codeDetails['interpret']?" class='" . $codeDetails['interpret'] . "'":" class='hljs {$codeKey}'") . ">";
+							<pre><code" . (!empty($codeDetails['interpret'])?" class='" . $codeDetails['interpret'] . "'":" class='hljs {$codeKey}'") . ">";
 							$sampleCode = file_get_contents("data/code/{$codeDetails['file']}");
 							echo htmlspecialchars($sampleCode);
 						echo "</code></pre>
-						" . ($codeDetails['fiddle']?"<p>
+						" . (!empty($codeDetails['fiddle'])?"<p>
 								<a href='{$codeDetails['fiddle']}' target='_blank'>Run it <span class='fas fa-rabbit-fast fa-lg'></span></a>
 							</p>":'') . "
 						</fieldset>";
