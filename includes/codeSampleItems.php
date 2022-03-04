@@ -26,7 +26,7 @@ $codeSampleItems = [
 		'name' => 'PHP',
 		'description' => 'PHP Hypertext Preprocessor, makes the web page interactive in the background',
 		'file' => 'php.php',
-		'fiddle' => 'http://ideone.com/cVtpIL',
+		'fiddle' => 'https://www.mycompiler.io/view/84blnPph371',
 		'icon' => 'fab fa-php'
 	],
 	'mysql' => [
@@ -43,12 +43,6 @@ $codeSampleItems = [
 		'fiddle' => 'https://jsfiddle.net/CCMars/cy91n613/',
 		'icon' => 'fab fa-sass'
 	],
-	// 'jquery' => [
-	// 	'name' => 'jQuery',
-	// 	'description' => 'Makes creating the interactive web page easier',
-	// 	'file' => 'jquery.js',
-	// 	'icon' => 'devicon-jquery-plain'
-	// ],
 	'http' => [
 		'name' => 'REST',
 		'description' => 'Representational state transfer, makes transferring data between applications easier',
