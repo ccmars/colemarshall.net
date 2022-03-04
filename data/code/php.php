@@ -5,10 +5,10 @@ namespace Marshall;
 class Cole extends Human {
 	const NAME_FIRST = "Cole";
 	const NAME_LAST = "Marshall";
-	private $profession;
-	private $specialties;
+	private string $profession;
+	private array $specialties;
 
-	function __construct($initialProfession = "Interactive Developer & Designer") {
+	function __construct(string $initialProfession = "Interactive Developer & Designer") {
 		$this->profession = $initialProfession;
 		$this->specialties = [
 			"HTML", "CSS", "JavaScript", "Sass", "Vue.js", "jQuery",
@@ -19,31 +19,27 @@ class Cole extends Human {
 		];
 	}
 
-	public function getFullName() {
+	public function getFullName():string {
 		return self::NAME_FIRST . ' ' . self::NAME_LAST;
 	}
 
-	public function getProfession() {
+	public function getProfession():string {
 		return $this->profession;
 	}
 
-	public function setProfession($newProfession) {
+	public function setProfession(string $newProfession):string {
 		return $this->profession = $newProfession;
 	}
 
-	public function getSpecialties() {
+	public function getSpecialties():array {
 		return $this->specialties;
 	}
 
-	public function setSpecialties($newSpecialties) {
-		if (is_array($newSpecialties)) {
-			return $this->specialties = $newSpecialties;
-		} else {
-			return false;
-		}
+	public function setSpecialties(array $newSpecialties):array {
+		return $this->specialties = $newSpecialties;
 	}
 
-	public function getReadableDetails() {
+	public function getReadableDetails():string {
 		$readable = $this->getFullName() . " is " . (preg_match('/^[aeiou]/i',$this->getProfession())?"an ":"a ") . $this->getProfession() . " who specializes in ";
 		for ($i = 0; $i < count($this->getSpecialties()); $i++) {
 			$readable .= $this->getSpecialties()[$i];
