@@ -1,5 +1,6 @@
-/legacy
-/.idea
-/node_modules/
-/package-lock.json
-/Gulpfile.js
+legacy
+.idea
+node_modules
+.vscode
+package-lock.json
+Gulpfile.js
