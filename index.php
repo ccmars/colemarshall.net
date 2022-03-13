@@ -20,7 +20,7 @@ include('includes/head.php');
 		<script src='/includes/highlight/highlight.pack.js'></script>
 		<script src='/scripts/home.js'></script>
 		<script>
-			hljs.initHighlightingOnLoad();
+			hljs.highlightAll();
 		</script>
 	</head>
 	<body>
