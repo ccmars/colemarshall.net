@@ -62,7 +62,7 @@
 			"website": "https://www.devenir.com/",
 			"startDate": "2021-01-31",
 			"endDate": "",
-			"summary": "I build robust, scalable web products and services to support the business vision, and maintain and improve existing web systems."
+			"summary": "I build robust, scalable web products and services to support the business vision, design marketing material, and automate key processes."
 		},
 		{
 			"company": "MusicMaster, Inc.",
@@ -123,7 +123,7 @@
 			"website": "https://ActiveDepth.com/",
 			"startDate": "2000-03-01",
 			"endDate": "",
-			"summary": "I've been actively involved in the online media industry with my own business for over a decade and a half, during which time I've tackled many diverse projects for a multitude of different clients.",
+			"summary": "I've been actively involved in the online media industry with my own business for over two decades, during which time I've tackled many diverse projects for a multitude of different clients.",
 			"highlights": [
 				"Helped numerous individuals and businesses achieve a superior online presence",
 				"Designed [Catenary](https://ActiveDepth.com/typefoundry.php), a robust, futuristic typeface consisting of six core fonts and three display fonts, containing over 800 glyphs each. The typeface contains Latin, Greek, and Cyrillic characters; small caps; world currencies; arrows; ornaments; lining numbers; old style numbers; subscripts; superscripts; fractions; and ligatures.",
@@ -271,7 +271,7 @@
 			]
 		}
 	],
-	"references": {},
+	"references": [],
 	"meta": {
 		"url": "https://colemarshall.net/data/resume.json"
 	}
