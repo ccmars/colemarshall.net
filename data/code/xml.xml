@@ -5,7 +5,7 @@
 		<last>Marshall</last>
 	</name>
 	<measurements>
-		<chest cut="regular">40</chest>
+		<chest unit="inch" cut="regular">40</chest>
 		<waist unit="inch">34</waist>
 		<outseam unit="inch">40 1/2</outseam>
 		<neck unit="inch">15 3/4</neck>
