@@ -27,11 +27,11 @@ $metaImageSecure = "https://colemarshall.net/images/ColeMarshall_landscape.jpg";
 		<link href='/style/fa/css/all.min.css' rel='stylesheet'>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 		<script src='/includes/svgInject/jquery.svgInject.js'></script>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148798504-1"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CS0EQ8NM2D"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 			
-			gtag('config', 'UA-148798504-1');
+			gtag('config', 'G-CS0EQ8NM2D');
 		</script>
