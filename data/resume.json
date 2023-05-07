@@ -204,6 +204,7 @@
 				"HTML",
 				"CSS",
 				"JavaScript",
+				"TypeScript",
 				"Sass",
 				"jQuery",
 				"Vue.js",
@@ -222,7 +223,6 @@
 				"JSON",
 				"Git",
 				"Apache",
-				"Gulp",
 				"automation"
 			]
 		},{
