@@ -23,9 +23,9 @@ include('includes/head.php');
 				<ul>
 					<li>
 						<label><input type='checkbox' data-section='summary' checked>Summary</label>
-						<ul>
+						<!--<ul>
 							<li><label><label><input type='checkbox' id='summary-extended' data-section='summary-extended'>Extended</label></li>
-						</ul>
+						</ul>-->
 					</li>
 					<li>
 						<label><input type='checkbox' data-section='experience' checked>Experience</label>
