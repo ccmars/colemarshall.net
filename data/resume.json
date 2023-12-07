@@ -203,9 +203,9 @@
 			"keywords": [
 				"HTML",
 				"CSS",
+				"Sass",
 				"JavaScript",
 				"TypeScript",
-				"Sass",
 				"jQuery",
 				"Vue.js",
 				"cross-browser compatibility",
@@ -224,7 +224,8 @@
 				"Gulp",
 				"Git",
 				"Apache",
-				"automation"
+				"automation",
+				"Infrastructure as code (IaC)"
 			]
 		},{
 			"name": "Web Design",
