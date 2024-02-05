@@ -5,9 +5,10 @@ class Cole {
 		this.nameLast = "Marshall";
 		this.profession = initialProfession;
 		this.skills = [
+			"Web Design",
 			"Frontend Web Development",
 			"Backend Web Development",
-			"Web Design"
+			"Cloud DevOps",
 		];
 	}
 
@@ -32,7 +33,7 @@ class Cole {
 }
 
 // Instantiate Cole
-let cole = new Cole("Interactive Developer & Designer");
+let cole = new Cole("Web Developer & Designer");
 
 // Echo Cole's Profession and Skills
 console.log(cole.getReadableDetails());
