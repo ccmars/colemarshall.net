@@ -14,7 +14,7 @@ class Cole extends Human {
 			"HTML", "CSS", "Sass", "JavaScript", "TypeScript", "Vue.js", "jQuery",
 			"cross-browser compatibility", "mobile/responsive design", "search engine optimization",
 			"PHP", "Node.js", "MySQL", "REST", "XML", "JSON", "Git",
-			"automation", "cloud DevOps", "IaC (Infrastructure as Code)",
+			"automation", "API development", "cloud DevOps", "IaC (Infrastructure as Code)",
 			"Photoshop", "Illustrator", "After Effects", "Graphic Design", "Typography",
 			"User Interface (UI) Design", "User Experience (UX) Design", "Motion Graphics"
 		];
