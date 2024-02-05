@@ -5,7 +5,7 @@
 		"picture": "https://ColeMarshall.net/images/ColeMarshall.jpg",
 		"email": "ColeM@ColeMarshall.net",
 		"website": "https://ColeMarshall.net",
-		"summary": "I am a seasoned Web Designer and Developer with over twenty years of experience, blending artistic creativity with technical proficiency. Holding a degree in Interactive Media from the Minneapolis College of Art and Design, my expertise spans from design to frontend and backend development. I have a strong command of a wide array of the latest technologies and design tools. My professional experience includes developing scalable web solutions, integrating complex systems, and leading innovative digital projects. Committed to creating innovative web experiences and improving business processes, I consistently strive to bring a unique and thoughtful perspective to my work.",
+		"summary": "I am a seasoned Web Designer and Developer with over twenty years of experience, blending artistic creativity with technical proficiency. Holding a degree in Interactive Media from the Minneapolis College of Art and Design, my expertise spans from design to frontend and backend development. I have a strong command of a wide array of the latest technologies and design tools. My professional experience includes developing scalable web solutions, integrating complex systems, and leading innovative online projects. Committed to creating exceptional web experiences and improving business processes, I consistently strive to bring a unique and thoughtful perspective to my work.",
 		"location": {
 			"postalCode": "53704",
 			"city": "Madison",
@@ -60,9 +60,9 @@
 			"company": "Devenir Group, LLC",
 			"position": "Senior Full Stack Software Engineer",
 			"website": "https://www.devenir.com/",
-			"startDate": "2022-01-31",
+			"startDate": "2022-02-01",
 			"endDate": "",
-			"summary": "I build robust, scalable web products and services to support the business vision, design marketing material, and automate key processes."
+			"summary": "I build and manage robust and scalable fintech web services and products, automate key processes, and design branding and marketing material. My technical work spans frontend and backend development to cloud DevOps, and includes architecting the company's modern flagship API offerings."
 		},
 		{
 			"company": "MusicMaster, Inc.",
@@ -70,7 +70,7 @@
 			"website": "https://MusicMaster.com/",
 			"startDate": "2011-03-07",
 			"endDate": "2022-01-28",
-			"summary": "As a full stack developer, I was responsible for the design, frontend development, backend development, web server operations, and third-party API integration of the company's web-based tools. Additionally I contributed to the development of the online capabilities of the company's products, designed marketing material, and automated time-consuming tasks for support and sales staff.",
+			"summary": "As a full stack developer, I was responsible for the design, frontend development, backend development, web server operations, and third-party API integration into the company's web-based tools. Additionally I contributed to the development of the online capabilities of the company's products, designed marketing material, and automated time-consuming tasks for support and sales staff.",
 			"highlights": [
 				"(Sangus) Designed and developed an extensive, custom eCommerce system with [PhaseWare](https://www.phaseware.com/)/[Salesforce](https://www.salesforce.com/)/[Zoho](https://www.zoho.com/)/[PayPal](https://www.paypal.com/)/[Authorize.net](https://www.authorize.net/) integration, customer accounts, subscription management, contracts, invoices, and wide-ranging discount options among many other features",
 				"(Osiris) Developed an online licensing system to determine legitimate access to the company's flagship software by its clients, which stays up-to-date in real time with integration into the company's customer resource management and accounting systems",
