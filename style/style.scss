@@ -129,6 +129,20 @@ li {
 	}
 }
 
+.iconStandardSvg {
+	margin-right:8px;
+	width:32px;
+	vertical-align: bottom;
+
+	path, circle {
+		fill:saturate($color-green-light,35%);
+
+		@media print {
+			fill:#000;
+		}
+	}
+}
+
 // Home
 main#home {
 	$homeMaxWidth:1000px;
@@ -223,6 +237,18 @@ main#home {
 					font-size:48px;
 				}
 
+				svg {
+					display:block;
+					margin:auto;
+					width:100%;
+					max-width:48px;
+					height:auto;
+
+					path {
+						fill:$color-dark;
+					}
+				}
+
 				b {
 					display:block;
 					text-align:center;
@@ -262,6 +288,7 @@ main#home {
 				padding:12px 18px;
 				border-radius:$generalRadius;
 				line-height:80%;
+				white-space: nowrap;
 				
 				span {
 					font-weight:normal;
@@ -273,6 +300,10 @@ main#home {
 				
 				.fa, .fas, .fal, .fab {
 					@extend .iconStandard;
+				}
+
+				svg {
+					@extend .iconStandardSvg;
 				}
 			}
 

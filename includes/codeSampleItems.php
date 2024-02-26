@@ -34,7 +34,7 @@ $codeSampleItems = [
 		'description' => 'Stores data for the web page',
 		'file' => 'sql.sql',
 		'fiddle' => 'http://sqlfiddle.com/#!9/ff8c4/2/0',
-		'icon' => 'fal fa-database'
+		'icon' => 'svg'
 	],
 	'scss' => [
 		'name' => 'Sass',
@@ -59,7 +59,7 @@ $codeSampleItems = [
 		'name' => 'JSON',
 		'description' => 'JavaScript Object Notation, a format for storing data for the web page or application',
 		'file' => 'json.json',
-		'icon' => 'fal fa-file-code'
+		'icon' => 'svg'
 	],
 	'git' => [
 		'name' => 'Git',

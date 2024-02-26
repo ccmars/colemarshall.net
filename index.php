@@ -51,27 +51,33 @@ include('includes/head.php');
 					<div>
 					<a href='resume.php'><span class='fal fa-file-alt'></span><b>Resume</b></a>";
 					foreach ($resume->basics->profiles as $profile) {
-						echo "<a href='{$profile->url}' target='_blank'><span class='";
-						if ($profile->network == 'LinkedIn') {
-							echo "fab fa-linkedin";
-						} else if ($profile->network == 'Stack Overflow') {
-							echo "fab fa-stack-overflow";
-						} else if ($profile->network == 'GitHub') {
-							echo "fab fa-github";
-						} else if ($profile->network == 'Behance') {
-							echo "fab fa-behance";
-						} else if ($profile->network == 'MyFonts') {
-							echo "fal fa-font";
-						} else if ($profile->network == '500px') {
-							echo "fab fa-500px";
-						} else if ($profile->network == 'Dribbble') {
-							echo "fab fa-dribbble";
-						} else if ($profile->network == 'ArtStation') {
-							echo "fab fa-artstation";
+						echo "<a href='{$profile->url}' target='_blank'>";
+						if ($profile->network == 'Linktree') {
+							echo "<span><img class='svgImg' src='/style/icons/linktree.svg' alt='Linktree'></span>";
 						} else {
-							echo "fal fa-plus-circle ";
+							echo "<span class='";
+							if ($profile->network == 'LinkedIn') {
+								echo "fab fa-linkedin";
+							} else if ($profile->network == 'Stack Overflow') {
+								echo "fab fa-stack-overflow";
+							} else if ($profile->network == 'GitHub') {
+								echo "fab fa-github";
+							} else if ($profile->network == 'Behance') {
+								echo "fab fa-behance";
+							} else if ($profile->network == 'MyFonts') {
+								echo "fal fa-font";
+							} else if ($profile->network == '500px') {
+								echo "fab fa-500px";
+							} else if ($profile->network == 'Dribbble') {
+								echo "fab fa-dribbble";
+							} else if ($profile->network == 'ArtStation') {
+								echo "fab fa-artstation";
+							} else {
+								echo "fal fa-plus-circle ";
+							}
+							echo " fa-fw'></span>";
 						}
-						echo " fa-fw'></span><b>{$profile->network}</b></a>";
+						echo "<b>{$profile->network}</b></a>";
 					}
 				echo "</div>
 				</div>";
@@ -88,7 +94,17 @@ include('includes/head.php');
 				foreach ($codeSampleItems as $codeKey => $codeDetails) {
 					if (file_exists("data/code/{$codeDetails['file']}")) {
 						echo "<fieldset>
-							<legend>" . ($codeDetails['icon']?"<span class='{$codeDetails['icon']}'></span>":'') . "{$codeDetails['name']}</legend>
+							<legend>";
+						if ($codeDetails['icon']) {
+							if ($codeKey == "json") {
+								echo "<img class='svgImg' src='/style/icons/json.svg' alt='JSON'>";
+							} else if ($codeKey == "mysql") {
+								echo "<img class='svgImg' src='/style/icons/mysql.svg' alt='MySQL'>";
+							} else {
+								echo "<span class='{$codeDetails['icon']}'></span>";
+							}
+						}
+						echo "{$codeDetails['name']}</legend>
 							<h4>{$codeDetails['description']}</h4>
 							<pre><code" . (!empty($codeDetails['interpret'])?" class='" . $codeDetails['interpret'] . "'":" class='hljs {$codeKey}'") . ">";
 							$sampleCode = file_get_contents("data/code/{$codeDetails['file']}");

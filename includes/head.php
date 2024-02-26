@@ -1,5 +1,5 @@
 <?php
-$metaDescription = "{$resume->basics->name} is an interactive designer and developer that specializes in online media and can handle any variety of technical and design tasks.";
+$metaDescription = "{$resume->basics->name} is an web designer and developer that specializes in online media and can handle any variety of technical and design tasks.";
 $metaImage = "http://colemarshall.net/images/ColeMarshall_landscape.jpg";
 $metaImageSecure = "https://colemarshall.net/images/ColeMarshall_landscape.jpg";
 ?>
