@@ -33,7 +33,7 @@ $codeSampleItems = [
 		'name' => 'MySQL',
 		'description' => 'Stores data for the web page',
 		'file' => 'sql.sql',
-		'fiddle' => 'http://sqlfiddle.com/#!9/ff8c4/2/0',
+		'fiddle' => 'https://sqlfiddle.com/mysql/online-compiler?&id=d0476836-e28e-4c45-b924-63b60ef5df99',
 		'icon' => 'svg'
 	],
 	'scss' => [
