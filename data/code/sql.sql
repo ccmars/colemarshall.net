@@ -3,7 +3,7 @@ CREATE TABLE `humans` (
 	`id` bigint(12) NOT NULL,
 	`name_first` varchar(255) NOT NULL,
 	`name_last` varchar(255) NOT NULL,
-	`sex` enum('male','female') NOT NULL,
+	`sex` enum('male','female','other') NOT NULL,
 	`height` int(3) NOT NULL,
 	`weight` int(3) NOT NULL,
 	`eyes` varchar(3) NOT NULL,
