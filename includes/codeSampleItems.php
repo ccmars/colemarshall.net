@@ -36,13 +36,13 @@ $codeSampleItems = [
 		'fiddle' => 'https://sqlfiddle.com/mysql/online-compiler?&id=d0476836-e28e-4c45-b924-63b60ef5df99',
 		'icon' => 'svg'
 	],
-	'scss' => [
+	/*'scss' => [
 		'name' => 'Sass',
 		'description' => 'Syntactically Awesome Style Sheet, makes defining the style of the web page easier',
 		'file' => 'scss.scss',
 		'fiddle' => 'https://jsfiddle.net/CCMars/cy91n613/',
 		'icon' => 'fab fa-sass'
-	],
+	],*/
 	'http' => [
 		'name' => 'REST',
 		'description' => 'Representational state transfer, makes transferring data between applications easier',
