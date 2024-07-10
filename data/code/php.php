@@ -13,8 +13,8 @@ class Cole extends Human {
 		$this->specialties = [
 			"HTML", "CSS", "Sass", "JavaScript", "TypeScript", "Vue.js", "jQuery",
 			"cross-browser compatibility", "mobile/responsive design", "search engine optimization",
-			"PHP", "Node.js", "MySQL", "REST", "XML", "JSON", "Git",
-			"automation", "API development", "cloud DevOps", "IaC (Infrastructure as Code)", "unit testing",
+			"PHP", "Node.js", "MySQL", "REST", "XML", "JSON", "Git", "automation",
+			"API development", "cloud DevOps", "IaC (Infrastructure as Code)", "unit testing",
 			"Photoshop", "Illustrator", "After Effects", "Graphic Design", "Typography",
 			"User Interface (UI) Design", "User Experience (UX) Design", "Motion Graphics"
 		];
