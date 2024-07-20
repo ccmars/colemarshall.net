@@ -222,7 +222,8 @@
 				"automation",
 				"cloud DevOps",
 				"infrastructure as code (IaC)",
-				"unit testing"
+				"unit testing",
+				"Jest"
 			]
 		},{
 			"name": "Web Design",
