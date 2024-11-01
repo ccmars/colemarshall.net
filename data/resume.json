@@ -223,6 +223,8 @@
 				"cloud DevOps",
 				"infrastructure as code (IaC)",
 				"unit testing",
+				"end-to-end (E2E) testing",
+				"Playwright",
 				"Jest"
 			]
 		},{
