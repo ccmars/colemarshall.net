@@ -5,7 +5,7 @@
 		"picture": "https://ColeMarshall.net/images/ColeMarshall.jpg",
 		"email": "CM@ColeMarshall.net",
 		"website": "https://ColeMarshall.net",
-		"summary": "I am a seasoned web designer and developer with over twenty years of experience, blending artistic creativity with technical proficiency. With a degree in Interactive Media from the Minneapolis College of Art and Design, my expertise encompasses design, frontend development, backend development, testing, and cloud DevOps, utilizing a wide array of the latest technologies and design tools.",
+		"summary": "I am a seasoned web designer and developer, blending artistic creativity with technical proficiency. With a degree in Interactive Media from the Minneapolis College of Art and Design, my expertise encompasses design, frontend development, backend development, testing, and cloud DevOps, utilizing a wide array of the latest technologies and design tools.",
 		"location": {
 			"postalCode": "53704",
 			"city": "Madison",
@@ -61,7 +61,6 @@
 			"position": "Senior Full Stack Software Engineer",
 			"website": "https://www.devenir.com/",
 			"startDate": "2022-02-01",
-			"endDate": "",
 			"summary": "I build and manage robust and scalable fintech web services and products, automate key processes, and design branding and marketing material. My technical work spans frontend and backend development to cloud DevOps, and includes architecting the company's modern flagship API offerings."
 		},
 		{
@@ -122,7 +121,6 @@
 			"position": "Owner",
 			"website": "https://ActiveDepth.com/",
 			"startDate": "2000-03-01",
-			"endDate": "",
 			"summary": "I've been actively involved in the online media industry with my own business for over two decades, during which time I've tackled many diverse projects for a multitude of different clients.",
 			"highlights": [
 				"Helped numerous individuals and businesses achieve a superior online presence",
@@ -144,7 +142,6 @@
 		},{
 			"company": "Raichert Media, Inc.",
 			"position": "Web Designer & Developer",
-			"website": "http://RaichertMedia.com/",
 			"startDate": "2006-05-01",
 			"endDate": "2008-12-01",
 			"summary": "I performed root-level maintenance on the company’s dedicated server, and I also assisted with web design and development for the company’s clients as needed.",
@@ -165,7 +162,7 @@
 			"studyType": "Bachelor",
 			"startDate": "2004-08-01",
 			"endDate": "2008-05-01",
-			"gpa": "3.8",
+			"gpa": "3.7",
 			"summary": "A passion for both art and computer technology lead me to study Interactive Media at MCAD. The program focused on interaction design, user interfaces, graphic design, typography, motion graphics, information architecture, development, and working with clients. Interested in how users interface with entertainment applications, I took courses on video game history and their design, helping teach the game design class for two years. I also supplemented my studies in courses on photography, film, sound, and even 3D modeling and animation, which has allowed me to add unique assets to my work.",
 			"courses": [
 				"Interactive Media",
