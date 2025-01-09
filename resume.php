@@ -62,7 +62,7 @@ include('includes/head.php');
 				</ul>
 			</nav>
 			<div>
-				<img class='cm_wireframe' src='/images/cm_wireframe.svg' width='200' alt='CM Logo'>
+				<?php echo file_get_contents('images/cm_wireframe.svg'); ?>
 				<div data-section='header'>
 					<div></div>
 					<h1><?php echo $resume->basics->name; ?></h1>

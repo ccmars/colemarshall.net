@@ -38,7 +38,7 @@ include('includes/head.php');
 						<h3><?php echo $resume->basics->label; ?></h3>
 						<h4><span class='fal fa-envelope fa-fw'></span><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
 					</div>
-					<img src='/images/cm_wireframe.svg' width='200' alt='CM Logo'>
+					<?php echo file_get_contents('images/cm_wireframe.svg'); ?>
 				</div>
 			</header>
 			<?php
@@ -55,7 +55,7 @@ include('includes/head.php');
 					foreach ($resume->basics->profiles as $profile) {
 						echo "<a href='{$profile->url}' target='_blank'>";
 						if ($profile->network == 'Linktree') {
-							echo "<span><img class='svgImg' src='/style/icons/linktree.svg' alt='Linktree'></span>";
+							echo "<span>" . file_get_contents('style/icons/linktree.svg') . "</span>";
 						} else {
 							echo "<span class='";
 							if ($profile->network == 'LinkedIn') {
@@ -99,9 +99,9 @@ include('includes/head.php');
 							<legend>";
 						if ($codeDetails['icon']) {
 							if ($codeKey == "json") {
-								echo "<img class='svgImg' src='/style/icons/json.svg' alt='JSON'>";
+								echo file_get_contents('style/icons/json.svg');
 							} else if ($codeKey == "mysql") {
-								echo "<img class='svgImg' src='/style/icons/mysql.svg' alt='MySQL'>";
+								echo file_get_contents('style/icons/mysql.svg');
 							} else {
 								echo "<span class='{$codeDetails['icon']}'></span>";
 							}
