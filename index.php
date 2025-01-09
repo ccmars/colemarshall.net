@@ -16,11 +16,13 @@
 <?php
 include('includes/head.php');
 ?>
-		<link rel='stylesheet' href='/includes/highlight/styles/cole-neon.css'>
-		<script src='/includes/highlight/highlight.pack.js'></script>
+		<link rel='stylesheet' href='/style/cole-neon.css'>
+		<script src='https://unpkg.com/@highlightjs/cdn-assets@^11/highlight.min.js'></script>
 		<script src='/scripts/home.js'></script>
 		<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
 			hljs.highlightAll();
+		});
 		</script>
 	</head>
 	<body>
