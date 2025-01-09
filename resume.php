@@ -19,6 +19,7 @@ include('includes/head.php');
 				<ul>
 					<!--<li><a><span class='fal fa-save'></span>Save</a></li>-->
 					<li><a class='print'><span class='fal fa-print'></span>Print</a></li>
+					<li><a href='data/resume.json'><span class='fal fa-brackets-curly'></span>resume.json</a></li>
 				</ul>
 				<ul>
 					<li>
@@ -83,7 +84,7 @@ include('includes/head.php');
 						foreach ($resume->work as $work) {
 							echo "<h3><span class='fal fa-user-circle fa-fw'></span>{$work->position}</h3>\n";
 							echo "<h4>{$work->company}</h4>
-							<time>" . date('Y', strtotime($work->startDate)) . " - " . ($work->endDate ? date('Y', strtotime($work->endDate)) : "Present") . "</time>
+							<time>" . date('Y', strtotime($work->startDate)) . " - " . (!empty($work->endDate) ? date('Y', strtotime($work->endDate)) : "Present") . "</time>
 							<p data-section='experience-summary'>
 								" . $parsedown->line($work->summary) . "
 							</p>
