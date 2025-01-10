@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import 'https://fonts.googleapis.com/css?family=Catamaran|Cousine:400,700|Oswald:200,300,400';
 
 $color-highlight:#f09c42;
@@ -11,534 +12,619 @@ $generalRadius:8px;
 $mobile: "only screen and (max-width:640px)";
 
 body {
-	font-family:Catamaran,Arial,sans-serif;
-	background:$color-dark;
-	color:$color-green-light;
-	margin:0;
-
-	@media print {
-		background:#fff;
-		color:#000;
-	}
+  font-family:Catamaran,Arial,sans-serif;
+  background:$color-dark;
+  color:$color-green-light;
+  margin:0;
+  
+  @media print {
+    background:#fff;
+    color:#000;
+  }
 }
 
 ::selection {
-	background:rgba(242, 218, 67, 0.99);
-	color:$color-dark-ultra;
+  background:rgba(242, 218, 67, 0.99);
+  color:$color-dark-ultra;
 }
 
 .underline {
-	color:$color-highlight;
-	text-decoration:none;
-	box-shadow:inset 0 -4px 0 0 rgba($color-highlight,0.6);
-	transition:color 0.2s,box-shadow 0.6s;
-	cursor:pointer;
-
-	&:hover {
-		color:$color-highlight-ultra;
-		box-shadow:inset 0 -14px 0 0 $color-dark-ultra;
-	}
+  color:$color-highlight;
+  text-decoration:none;
+  box-shadow:inset 0 -4px 0 0 rgba($color-highlight,0.6);
+  transition:color 0.2s,box-shadow 0.6s;
+  cursor:pointer;
+  
+  &:hover {
+    color:$color-highlight-ultra;
+    box-shadow:inset 0 -14px 0 0 $color-dark-ultra;
+  }
 }
 
 a {
-	color:$color-highlight;
-
-	@media print {
-		color:#000 !important;
-		text-decoration:none !important;
-		box-shadow:none !important;
-	}
+  color:$color-highlight;
+  
+  @media print {
+    color:#000 !important;
+    text-decoration:none !important;
+    box-shadow:none !important;
+  }
 }
 
 header a,
 footer a,
 #resume a {
-	@extend .underline;
+  @extend .underline;
 }
 
 $headerMargin:8px;
 h1, h2, h3, h4, h5, h6, time {
-	font-family:'Oswald',Arial,sans-serif;
-	font-weight:200;
-	letter-spacing:2px;
-	margin:$headerMargin 0;
+  font-family:'Oswald',Arial,sans-serif;
+  font-weight:200;
+  letter-spacing:2px;
+  margin:$headerMargin 0;
 }
 
 h1 {
-	letter-spacing:3px;
-	font-weight:400;
-	font-size:56px;
-	line-height:68px;
-	margin:12px 0;
-	
-	@media #{$mobile} {
-		line-height:56px;
-	}
-	
-	@media print {
-		font-size:36px;
-		line-height:42px;
-		letter-spacing:1px;
-	}
+  letter-spacing:3px;
+  font-weight:400;
+  font-size:56px;
+  line-height:68px;
+  margin:12px 0;
+  
+  @media #{$mobile} {
+    line-height:56px;
+  }
+  
+  @media print {
+    font-size:36px;
+    line-height:42px;
+    letter-spacing:1px;
+  }
 }
 
 h2 {
-	font-size:42px;
-	
-	@media #{$mobile} {
-		letter-spacing:2px;
-	}
-	
-	@media print {
-		font-size:28px;
-		letter-spacing:1px;
-	}
+  font-size:42px;
+  
+  @media #{$mobile} {
+    letter-spacing:2px;
+  }
+  
+  @media print {
+    font-size:28px;
+    letter-spacing:1px;
+  }
 }
 
 h3 {
-	font-size:26px;
-
-	@media #{$mobile}, print {
-		font-size:22px;
-		letter-spacing:1px;
-	}
+  font-size:26px;
+  
+  @media #{$mobile}, print {
+    font-size:22px;
+    letter-spacing:1px;
+  }
 }
 
 h4 {
-	font-size:22px;
-
-	@media print {
-		font-size:16px;
-		letter-spacing:1px;
-	}
+  font-size:22px;
+  
+  @media print {
+    font-size:16px;
+    letter-spacing:1px;
+  }
 }
 
 p,
 li {
-	@media print {
-		line-height:22px;
-	}
+  @media print {
+    line-height:22px;
+  }
 }
 
 .iconStandard {
-	margin-right:8px;
-	color:saturate($color-green-light,35%);
-
-	@media print {
-		color:#000;
-	}
+  margin-right:8px;
+  color:saturate($color-green-light,35%);
+  
+  @media print {
+    color:#000;
+  }
 }
 
 .iconStandardSvg {
-	margin-right:8px;
-	width:32px;
-	vertical-align: bottom;
-
-	path, circle {
-		fill:saturate($color-green-light,35%);
-
-		@media print {
-			fill:#000;
-		}
-	}
+  margin-right:8px;
+  width:32px;
+  vertical-align: bottom;
+  
+  path, circle {
+    fill:saturate($color-green-light,35%);
+    
+    @media print {
+      fill:#000;
+    }
+  }
 }
 
 // Home
 main#home {
-	$homeMaxWidth:1000px;
-	display:block;
-
-	// Header
-	header {
-		background:$color-green-dark;
-		background:linear-gradient(-32deg, darken($color-green-light,35%) 0%,darken($color-dark,4%) 100%);
-		padding:10px;
-
-		.fa, .fal, .far, .fas, .fab {
-			@extend .iconStandard;
-		}
-
-		> div {
-			max-width:$homeMaxWidth;
-			margin:auto;
-			position:relative;
-
-			svg {
-				width:600px;
-				position:absolute;
-				right:0;
-				top:-60px;
-				z-index:1;
-
-				@media #{$mobile} {
-					width:400px;
-					top:-50px;
-				}
-			}
-
-			> div {
-				position:relative;
-				z-index:20;
-			}
-		}
-	}
-
-	.sectionHeader {
-		background:$color-dark-ultra;
-		padding:12px;
-		margin:18px 0;
-
-		div {
-			max-width:$homeMaxWidth;
-			margin:auto;
-		}
-	}
-
-	// Profiles
-	.profiles {
-		h2 {
-			@extend .sectionHeader;
-			background:linear-gradient(137deg, darken($color-dark-ultra,5%) 15%, $color-dark 100%);
-		}
-
-		> div {
-			display:flex;
-			flex-wrap:wrap;
-			align-items:stretch;
-			justify-content:center;
-			max-width:$homeMaxWidth;
-			margin:auto;
-
-			a {
-				flex-grow:1;
-				flex-basis:80px;
-				display:block;
-				margin:4px;
-				text-decoration:none;
-				background:$color-highlight;
-				color:$color-dark;
-				padding:8px;
-				transition:background-color 0.8s;
-				text-align:center;
-				position:relative;
-				z-index:10;
-
-				&:hover {
-					background:$color-highlight-ultra;
-				}
-
-				&:active {
-					background:saturate($color-highlight-ultra,100%);
-				}
-
-				.fa, .fal, .far, .fas, .fab {
-					display:block;
-					margin:auto;
-					font-size:48px;
-				}
-
-				svg {
-					display:block;
-					margin:auto;
-					width:100%;
-					max-width:48px;
-					height:auto;
-
-					path {
-						fill:$color-dark;
-					}
-				}
-
-				b {
-					display:block;
-					text-align:center;
-					font-weight:normal;
-					font-size:12px;
-					margin-top:12px;
-				}
-
-				&[href='resume.php'] {
-					background-color:$color-highlight-ultra;
-				}
-			}
-		}
-	}
-
-	// Knowledge
-	.knowledge {
-		h2 {
-			@extend .sectionHeader;
-			background:linear-gradient(110deg, darken($color-dark-ultra,5%) 32%, $color-dark 100%);
-		}
-
-		fieldset {
-			border:none;
-			padding:10px 15px;
-			background:$color-green-dark;
-			background:linear-gradient(-162deg, lighten($color-green-dark,1%) 10%,darken($color-green-dark,15%) 100%);
-			max-width:$homeMaxWidth;
-			margin:0 auto 18px;
-			position:relative;
-			z-index:15;
-
-			legend {
-				background:$color-dark;
-				font-size:32px;
-				font-weight:bold;
-				padding:12px 18px;
-				border-radius:$generalRadius;
-				line-height:80%;
-				white-space: nowrap;
-				
-				span {
-					font-weight:normal;
-					
-					&.fal {
-						font-weight:300;
-					}
-				}
-				
-				.fa, .fas, .fal, .fab {
-					@extend .iconStandard;
-				}
-
-				svg {
-					@extend .iconStandardSvg;
-				}
-			}
-
-			code {
-				border-radius:$generalRadius;
-				padding:16px;
-				overflow:hidden;
-				font-size:16px;
-				max-height:300px;
-				cursor:pointer;
-				transition:max-height 0.5s,background-color 0.8s;
-
-				&:hover {
-					background-color:lighten(#1c1c1c,1.5%);
-				}
-
-				&.expanded {
-					max-height:2400px;
-				}
-				
-				@media #{$mobile} {
-					word-break:break-all;
-					font-size:15px;
-				}
-			}
-
-			p {
-				text-align:right;
-				text-transform:uppercase;
-				letter-spacing:1px;
-				margin:4px 0 3px 0;
-
-				a {
-					text-decoration:none;
-					opacity:0.5;
-					transition:opacity 0.25s;
-				
-					&:hover {
-						opacity:1;
-					}
-				}
-			}
-		}
-	}
-
-	footer {
-		font-size:80%;
-		text-align:center;
-		margin:8px;
-	}
+  $homeMaxWidth:1000px;
+  display:block;
+  
+  // Header
+  header {
+    background:$color-green-dark;
+    background:linear-gradient(-32deg, darken($color-green-light,35%) 0%,darken($color-dark,4%) 100%);
+    padding:10px;
+    
+    .fa, .fal, .far, .fas, .fab {
+      @extend .iconStandard;
+    }
+    
+    > div {
+      max-width:$homeMaxWidth;
+      margin:auto;
+      position:relative;
+      
+      svg {
+        width:600px;
+        position:absolute;
+        right:0;
+        top:-60px;
+        z-index:1;
+        
+        @media #{$mobile} {
+          width:400px;
+          top:-50px;
+        }
+      }
+      
+      > div {
+        position:relative;
+        z-index:20;
+      }
+    }
+  }
+  
+  .sectionHeader {
+    background:$color-dark-ultra;
+    padding:12px;
+    margin:18px 0;
+    
+    div {
+      max-width:$homeMaxWidth;
+      margin:auto;
+    }
+  }
+  
+  // Profiles
+  .profiles {
+    h2 {
+      @extend .sectionHeader;
+      background:linear-gradient(137deg, darken($color-dark-ultra,5%) 15%, $color-dark 100%);
+    }
+    
+    > div {
+      display:flex;
+      flex-wrap:wrap;
+      align-items:stretch;
+      justify-content:center;
+      max-width:$homeMaxWidth;
+      margin:auto;
+      
+      a {
+        flex-grow:1;
+        flex-basis:80px;
+        display:block;
+        margin:4px;
+        text-decoration:none;
+        background:$color-highlight;
+        color:$color-dark;
+        padding:8px;
+        transition:background-color 0.8s;
+        text-align:center;
+        position:relative;
+        z-index:10;
+        
+        &:hover {
+          background:$color-highlight-ultra;
+        }
+        
+        &:active {
+          background:saturate($color-highlight-ultra,100%);
+        }
+        
+        .fa, .fal, .far, .fas, .fab {
+          display:block;
+          margin:auto;
+          font-size:48px;
+        }
+        
+        svg {
+          display:block;
+          margin:auto;
+          width:100%;
+          max-width:48px;
+          height:auto;
+          
+          path {
+            fill:$color-dark;
+          }
+        }
+        
+        b {
+          display:block;
+          text-align:center;
+          font-weight:normal;
+          font-size:12px;
+          margin-top:12px;
+        }
+        
+        &[href='resume.php'] {
+          background-color:$color-highlight-ultra;
+        }
+      }
+    }
+  }
+  
+  // Knowledge
+  .knowledge {
+    h2 {
+      @extend .sectionHeader;
+      background:linear-gradient(110deg, darken($color-dark-ultra,5%) 32%, $color-dark 100%);
+    }
+    
+    fieldset {
+      border:none;
+      padding:10px 15px;
+      background:$color-green-dark;
+      background:linear-gradient(-162deg, lighten($color-green-dark,1%) 10%,darken($color-green-dark,15%) 100%);
+      max-width:$homeMaxWidth;
+      margin:0 auto 18px;
+      position:relative;
+      z-index:15;
+      
+      legend {
+        background:$color-dark;
+        font-size:32px;
+        font-weight:bold;
+        padding:12px 18px;
+        border-radius:$generalRadius;
+        line-height:80%;
+        white-space: nowrap;
+        
+        span {
+          font-weight:normal;
+          
+          &.fal {
+            font-weight:300;
+          }
+        }
+        
+        .fa, .fas, .fal, .fab {
+          @extend .iconStandard;
+        }
+        
+        svg {
+          @extend .iconStandardSvg;
+        }
+      }
+      
+      code {
+        border-radius:$generalRadius;
+        padding:16px;
+        overflow:hidden;
+        font-size:16px;
+        max-height:300px;
+        cursor:pointer;
+        transition:max-height 0.5s,background-color 0.8s;
+        
+        &:hover {
+          background-color:lighten(#1c1c1c,1.5%);
+        }
+        
+        &.expanded {
+          max-height:2400px;
+        }
+        
+        @media #{$mobile} {
+          word-break:break-all;
+          font-size:15px;
+        }
+      }
+      
+      p {
+        text-align:right;
+        text-transform:uppercase;
+        letter-spacing:1px;
+        margin:4px 0 3px 0;
+        
+        a {
+          text-decoration:none;
+          opacity:0.5;
+          transition:opacity 0.25s;
+          
+          &:hover {
+            opacity:1;
+          }
+        }
+      }
+    }
+  }
+  
+  footer {
+    font-size:80%;
+    text-align:center;
+    margin:8px;
+  }
 }
 
 // Resume
+$navigationWidth: 200px;
+$resumeMaxWidth: 1000px;
+$readableMaxWidth: 65ch;
+
+@mixin pill-style {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  list-style: none !important;
+  padding-left: 0;
+  
+  li {
+    margin: 0;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    max-width: none;
+  }
+}
+
+@mixin section-heading {
+  margin-top: 1.5rem;
+  
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+@mixin resumeColorBand($gradient, $angle: 0deg) {
+  position: relative;
+  padding: 0.5rem 2rem;
+  
+  > div {
+    position: relative;
+    z-index: 1;
+    max-width: $resumeMaxWidth;
+    margin: 0 auto;
+  }
+  
+  p, li {
+    max-width: $readableMaxWidth;
+  }
+  
+  ul {
+    list-style: circle;
+    padding-left: 2rem;
+    max-width: $resumeMaxWidth;
+    margin-left: 0;
+    
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+  }
+  
+  time {
+    display: block;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    left: -$navigationWidth;
+    right: -1rem;
+    top: -2rem;
+    bottom: -2rem;
+    background: $gradient;
+    transform: skewY($angle);
+    z-index: 0;
+  }
+}
+
 main#resume {
-	$navigationWidth:200px;
-	$resumeMaxWidth:1000px;
-	background:linear-gradient(132deg, $color-dark-ultra 0%,lighten($color-dark-ultra,20%) 60%);
-	
-	@media print {
-		background:#fff;
-	}
-
-	nav.resumeOptions {
-		padding:8px 12px;
-		position:fixed;
-		width:$navigationWidth;
-		user-select:none;
-		z-index:20;
-
-		@media #{$mobile} {
-			display:none;
-		}
-
-		@media print {
-			display:none;
-		}
-
-		> ul {
-			padding:0;
-
-			ul {
-				padding-left:18px;
-			}
-		}
-
-		ul {
-			list-style-type:none;
-		}
-
-		.fa, .fas, .fal, .fab {
-			margin-right:6px;
-		}
-
-		@media screen {
-			&:before {
-				content:"";
-				position:absolute;
-				top:-10px;
-				left:-80px;
-				width:120%;
-				height:3072px;
-				background:linear-gradient(132deg, $color-dark-ultra 0%,lighten($color-dark-ultra,20%) 60%);
-				transform:skewx(1.5deg);
-				z-index:-1;
-			}
-		}
-	}
-	
-	p {
-		@media #{$mobile} {
-			font-size:108%;
-		}
-	}
-	
-	> div {
-		margin:auto;
-		padding:8px 12px 8px $navigationWidth;
-		position:relative;
-		z-index:10;
-		overflow:hidden;
-
-		@media #{$mobile}, print {
-			padding:12px 16px;
-		}
-
-		> svg {
-			width:500px;
-			height:725px;
-			position:absolute;
-			right:20px;
-			top:-50px;
-			z-index:1;
-
-			@media #{$mobile} {
-				width:600px;
-				height:870px;
-				top:-20px;
-				right:-50px;
-			}
-
-			@media print {
-				width:300px;
-				height:435px;
-				top:20px;
-			}
-
-			.cm {
-				fill:$color-dark-ultra;
-
-				@media print {
-					fill:#ddd;
-				}
-			}
-		}
-
-		h1,h2,h3,h4,h5,h6,ul,p,time {
-			z-index:5;
-			position:relative;
-		}
-		
-		h4 {
-			white-space:nowrap;
-		}
-
-		ul {
-			list-style-type:circle;
-		}
-
-		.fa, .fas, .fal, .fab {
-			@extend .iconStandard;
-		}
-
-		@media print {
-			div {
-				&[data-section='education'],
-				&[data-section='skills'],
-				&[data-section='interests'] {
-					ul {
-						li {
-							display:inline-block;
-
-							&::before {
-								content:'\00a0\25CB\00a0\00a0';
-							}
-						}
-					}
-				}
-
-				div {
-					display:none;
-				}
-			}
-		}
-
-		@media screen {
-			@mixin resumeColorBand($color,$angle,$top:auto) {
-				max-width:$resumeMaxWidth;
-				margin:auto;
-
-				div {
-					content:"";
-					position:absolute;
-					width:100%;
-					height:100px;
-					margin-top:$top;
-					left:0;
-					background:$color;
-					transform:skewY($angle);
-					z-index:-1;
-				}
-			}
-
-			[data-section='header'] {
-				@include resumeColorBand(linear-gradient(-32deg, darken($color-green-light,35%) 0%,darken($color-dark,4%) 100%),-2deg,-50px);
-			}
-
-			[data-section='summary'] {
-				@include resumeColorBand(linear-gradient(20deg, $color-green-dark 60%,darken($color-green-light,15%) 100%),-1.5deg,-5px);
-			}
-
-			[data-section='experience'] {
-				@include resumeColorBand(linear-gradient(-96deg, lighten($color-dark-ultra,10%) 32%,darken($color-dark-ultra,5%) 100%),2deg);
-			}
-
-			[data-section='education'] {
-				@include resumeColorBand(linear-gradient(40deg, desaturate(darken($color-green-light,60%),10%) 0%,desaturate(darken($color-green-light,40%),20%) 100%),-2deg,-10px);
-			}
-
-			[data-section='skills'] {
-				@include resumeColorBand(linear-gradient(-162deg, lighten($color-green-dark,5%) 10%,darken($color-dark,5%) 100%),3deg,10px);
-			}
-
-			[data-section='interests'] {
-				@include resumeColorBand(linear-gradient(162deg, darken($color-green-dark,10%) 10%,desaturate(darken($color-green-light,65%),10%) 100%),-2deg,-20px);
-			}
-		}
-	}
+  background: linear-gradient(132deg, $color-dark-ultra 0%, color.adjust($color-dark-ultra, $lightness: 20%) 60%);
+  
+  @media print {
+    background: #fff;
+  }
+  
+  // Navigation
+  nav.resumeOptions {
+    padding: 8px 12px;
+    position: fixed;
+    width: $navigationWidth;
+    user-select: none;
+    z-index: 20;
+    
+    @media #{$mobile}, print {
+      display: none;
+    }
+    
+    > ul {
+      padding: 0;
+      
+      ul {
+        padding-left: 18px;
+      }
+    }
+    
+    ul {
+      list-style-type: none;
+    }
+    
+    .fa, .fas, .fal, .fab {
+      margin-right: 6px;
+    }
+    
+    @media screen {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -80px;
+        width: 120%;
+        height: 100vh;
+        background: linear-gradient(132deg, $color-dark-ultra 0%, color.adjust($color-dark-ultra, $lightness: 20%) 60%);
+        transform: skewx(1.5deg);
+        z-index: -1;
+      }
+    }
+  }
+  
+  // Main content area
+  > div {
+    margin: auto;
+    padding: 8px 12px 8px $navigationWidth;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    
+    @media #{$mobile}, print {
+      padding: 12px 16px;
+    }
+    
+    // SVG Background
+    > svg {
+      width: 500px;
+      height: 725px;
+      position: absolute;
+      right: 20px;
+      top: -50px;
+      z-index: 1;
+      
+      @media #{$mobile} {
+        width: 600px;
+        height: 870px;
+        top: -20px;
+        right: -50px;
+      }
+      
+      @media print {
+        width: 300px;
+        height: 435px;
+        top: 20px;
+      }
+      
+      .cm {
+        fill: $color-dark-ultra;
+        
+        @media print {
+          fill: #ddd;
+        }
+      }
+    }
+    
+    h1, h2, h3, h4, h5, h6, ul, p, time {
+      z-index: 5; // Ensure text colored bands
+      position: relative;
+    }
+    
+    p {
+      @media #{$mobile} {
+        font-size: 108%;
+      }
+    }
+    
+    .fa, .fas, .fal, .fab {
+      @extend .iconStandard;
+    }
+    
+    
+    &[data-section] {
+      margin-bottom: 3rem;
+      
+      h3 {
+        @include section-heading;
+      }
+    }
+    
+    [data-section='skills-specifics'],
+    [data-section='interests-specifics'],
+    [data-section='education-courses'] {
+      @include pill-style;
+    }
+    
+    // Individual section styling
+    [data-section='header'] {
+      h4 {
+        white-space: nowrap;
+      }
+      
+      @include resumeColorBand(
+              linear-gradient(-32deg,
+                  color.adjust($color-green-light, $lightness: -35%) 0%,
+                  color.adjust($color-dark, $lightness: -4%) 100%),
+              -2deg
+      );
+    }
+    
+    [data-section='summary'] {
+      @include resumeColorBand(
+              linear-gradient(20deg,
+                  $color-green-dark 60%,
+                  color.adjust($color-green-light, $lightness: -15%) 100%),
+              -1.5deg
+      );
+    }
+    
+    [data-section='experience'] {
+      @include resumeColorBand(
+              linear-gradient(-96deg,
+                  color.adjust($color-dark-ultra, $lightness: 10%) 32%,
+                  color.adjust($color-dark-ultra, $lightness: -5%) 100%),
+              2deg
+      );
+    }
+    
+    [data-section='education'] {
+      @include resumeColorBand(
+              linear-gradient(40deg,
+                  color.adjust($color-green-light, $lightness: -60%, $saturation: -10%) 0%,
+                  color.adjust($color-green-light, $lightness: -40%, $saturation: -20%) 100%),
+              -2deg
+      );
+    }
+    
+    [data-section='skills'] {
+      @include resumeColorBand(
+              linear-gradient(-162deg,
+                  color.adjust($color-green-dark, $lightness: 5%) 10%,
+                  color.adjust($color-dark, $lightness: -5%) 100%),
+              3deg
+      );
+    }
+    
+    [data-section='interests'] {
+      @include resumeColorBand(
+              linear-gradient(162deg,
+                  color.adjust($color-green-dark, $lightness: -10%) 10%,
+                  color.adjust($color-green-light, $lightness: -65%, $saturation: -10%) 100%),
+              -2deg
+      );
+    }
+    
+    @media print {
+      [data-section='education'],
+      [data-section='skills'],
+      [data-section='interests'] {
+        ul {
+          list-style-type: circle;
+          
+          li {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
 }

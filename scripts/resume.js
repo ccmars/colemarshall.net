@@ -31,9 +31,9 @@ function resumeOptions(hide = false) {
 }
 
 function resizeBands() {
-	$('#resume div div[data-section] div').each(function() {
-		$(this).height($(this).parent().height()+300);
-	});
+	// $('#resume div div[data-section] div').each(function() {
+	// 	$(this).height($(this).parent().height()+300);
+	// });
 }
 
 $(document).ready(function() {

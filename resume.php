@@ -64,7 +64,6 @@ include('includes/head.php');
 			<div>
 				<?php echo file_get_contents('images/cm_wireframe.svg'); ?>
 				<div data-section='header'>
-					<div></div>
 					<h1><?php echo $resume->basics->name; ?></h1>
 					<h3><?php echo $resume->basics->label; ?></h3>
 					<h4><span class='fal fa-envelope fa-fw'></span><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
@@ -72,12 +71,10 @@ include('includes/head.php');
 					<h4><span class='fal fa-map-marker-alt fa-fw'></span><?php echo $resume->basics->location->city; ?>, <?php echo $resume->basics->location->region; ?></h4>
 				</div>
 				<div data-section='summary'>
-					<div></div>
 					<h2><span class='fal fa-check-circle fa-fw'></span>Summary</h2>
 					<?php echo $parsedown->text($resume->basics->summary); ?>
 				</div>
 				<div data-section='experience'>
-					<div></div>
 					<h2><span class='fal fa-briefcase fa-fw'></span>Experience</h2>
 					<?php
 					if (!empty($resume->work)) {
@@ -100,7 +97,6 @@ include('includes/head.php');
 					?>
 				</div>
 				<div data-section='education'>
-					<div></div>
 					<h2><span class='fal fa-graduation-cap fa-fw'></span>Education</h2>
 					<?php
 					if (!empty($resume->education)) {
@@ -123,7 +119,6 @@ include('includes/head.php');
 					}?>
 				</div>
 				<div data-section='skills'>
-					<div></div>
 					<h2><span class='fal fa-tasks fa-fw'></span>Skills</h2>
 					<?php
 					if (!empty($resume->skills)) {
@@ -141,7 +136,6 @@ include('includes/head.php');
 					} ?>
 				</div>
 				<div data-section='interests'>
-					<div></div>
 					<h2><span class='fal fa-smile fa-fw'></span>Interests</h2>
 					<?php
 					if (!empty($resume->interests)) {
