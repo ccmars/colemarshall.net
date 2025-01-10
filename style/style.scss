@@ -114,13 +114,6 @@ h4 {
   }
 }
 
-p,
-li {
-  @media print {
-    line-height: 22px;
-  }
-}
-
 .iconStandard {
   margin-right: 8px;
   color: color.adjust($color-green-light, $saturation: 35%);
@@ -550,7 +543,8 @@ main#resume {
         max-width: none;
         
         @media print {
-        
+          margin-bottom: 0 !important;
+          line-height: 1 !important;
         }
       }
     }
