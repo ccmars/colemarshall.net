@@ -102,7 +102,7 @@ include('includes/head.php');
 					if (!empty($resume->education)) {
 						foreach ($resume->education as $education) { ?>
 							<h3><span class='fal fa-pencil fa-fw'></span><?php echo $education->institution; ?></h3>
-							<h4><?php echo $education->studyType; ?> of <?php echo $education->area; ?></h4>
+							<h4><?php echo $education->studyType; ?> in <?php echo $education->area; ?></h4>
 							<time><?php echo date('Y',strtotime($education->endDate)); ?></time>
 							<p data-section='education-summary'>
 								<?php echo $education->summary; ?>

@@ -1,53 +1,53 @@
 @use 'sass:color';
 @import 'https://fonts.googleapis.com/css?family=Catamaran|Cousine:400,700|Oswald:200,300,400';
 
-$color-highlight:#f09c42;
-$color-highlight-ultra:#f2da43;
-$color-dark:#464640;
-$color-dark-ultra:#2d2d27;
-$color-green-light:#c0d3b1;
-$color-green:#7c8f6e;
-$color-green-dark:#506358;
-$generalRadius:8px;
+$color-highlight: #f09c42;
+$color-highlight-ultra: #f2da43;
+$color-dark: #464640;
+$color-dark-ultra: #2d2d27;
+$color-green-light: #c0d3b1;
+$color-green: #7c8f6e;
+$color-green-dark: #506358;
+$generalRadius: 8px;
 $mobile: "only screen and (max-width:640px)";
 
 body {
-  font-family:Catamaran,Arial,sans-serif;
-  background:$color-dark;
-  color:$color-green-light;
-  margin:0;
+  font-family: Catamaran, Arial, sans-serif;
+  background: $color-dark;
+  color: $color-green-light;
+  margin: 0;
   
   @media print {
-    background:#fff;
-    color:#000;
+    background: #fff;
+    color: #000;
   }
 }
 
 ::selection {
-  background:rgba(242, 218, 67, 0.99);
-  color:$color-dark-ultra;
+  background: rgba(242, 218, 67, 0.99);
+  color: $color-dark-ultra;
 }
 
 .underline {
-  color:$color-highlight;
-  text-decoration:none;
-  box-shadow:inset 0 -4px 0 0 rgba($color-highlight,0.6);
-  transition:color 0.2s,box-shadow 0.6s;
-  cursor:pointer;
+  color: $color-highlight;
+  text-decoration: none;
+  box-shadow: inset 0 -4px 0 0 rgba($color-highlight, 0.6);
+  transition: color 0.2s, box-shadow 0.6s;
+  cursor: pointer;
   
   &:hover {
-    color:$color-highlight-ultra;
-    box-shadow:inset 0 -14px 0 0 $color-dark-ultra;
+    color: $color-highlight-ultra;
+    box-shadow: inset 0 -14px 0 0 $color-dark-ultra;
   }
 }
 
 a {
-  color:$color-highlight;
+  color: $color-highlight;
   
   @media print {
-    color:#000 !important;
-    text-decoration:none !important;
-    box-shadow:none !important;
+    color: #000 !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
   }
 }
 
@@ -57,141 +57,141 @@ footer a,
   @extend .underline;
 }
 
-$headerMargin:8px;
+$headerMargin: 8px;
 h1, h2, h3, h4, h5, h6, time {
-  font-family:'Oswald',Arial,sans-serif;
-  font-weight:200;
-  letter-spacing:2px;
-  margin:$headerMargin 0;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 200;
+  letter-spacing: 2px;
+  margin: $headerMargin 0;
 }
 
 h1 {
-  letter-spacing:3px;
-  font-weight:400;
-  font-size:56px;
-  line-height:68px;
-  margin:12px 0;
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 68px;
+  margin: 12px 0;
   
   @media #{$mobile} {
-    line-height:56px;
+    line-height: 56px;
   }
   
   @media print {
-    font-size:36px;
-    line-height:42px;
-    letter-spacing:1px;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 1px;
   }
 }
 
 h2 {
-  font-size:42px;
+  font-size: 42px;
   
   @media #{$mobile} {
-    letter-spacing:2px;
+    letter-spacing: 2px;
   }
   
   @media print {
-    font-size:28px;
-    letter-spacing:1px;
+    font-size: 28px;
+    letter-spacing: 1px;
   }
 }
 
 h3 {
-  font-size:26px;
+  font-size: 26px;
   
   @media #{$mobile}, print {
-    font-size:22px;
-    letter-spacing:1px;
+    font-size: 22px;
+    letter-spacing: 1px;
   }
 }
 
 h4 {
-  font-size:22px;
+  font-size: 22px;
   
   @media print {
-    font-size:16px;
-    letter-spacing:1px;
+    font-size: 16px;
+    letter-spacing: 1px;
   }
 }
 
 p,
 li {
   @media print {
-    line-height:22px;
+    line-height: 22px;
   }
 }
 
 .iconStandard {
-  margin-right:8px;
-  color:saturate($color-green-light,35%);
+  margin-right: 8px;
+  color: color.adjust($color-green-light, $saturation: 35%);
   
   @media print {
-    color:#000;
+    color: #000;
   }
 }
 
 .iconStandardSvg {
-  margin-right:8px;
-  width:32px;
+  margin-right: 8px;
+  width: 32px;
   vertical-align: bottom;
   
   path, circle {
-    fill:saturate($color-green-light,35%);
+    fill: color.adjust($color-green-light, $saturation: 35%);
     
     @media print {
-      fill:#000;
+      fill: #000;
     }
   }
 }
 
 // Home
 main#home {
-  $homeMaxWidth:1000px;
-  display:block;
+  $homeMaxWidth: 1000px;
+  display: block;
   
   // Header
   header {
-    background:$color-green-dark;
-    background:linear-gradient(-32deg, darken($color-green-light,35%) 0%,darken($color-dark,4%) 100%);
-    padding:10px;
+    background: $color-green-dark;
+    background: linear-gradient(-32deg, color.adjust($color-green-light, $lightness: -35%) 0%, color.adjust($color-dark, $lightness: -4%) 100%);
+    padding: 10px;
     
     .fa, .fal, .far, .fas, .fab {
       @extend .iconStandard;
     }
     
     > div {
-      max-width:$homeMaxWidth;
-      margin:auto;
-      position:relative;
+      max-width: $homeMaxWidth;
+      margin: auto;
+      position: relative;
       
       svg {
-        width:600px;
-        position:absolute;
-        right:0;
-        top:-60px;
-        z-index:1;
+        width: 600px;
+        position: absolute;
+        right: 0;
+        top: -60px;
+        z-index: 1;
         
         @media #{$mobile} {
-          width:400px;
-          top:-50px;
+          width: 400px;
+          top: -50px;
         }
       }
       
       > div {
-        position:relative;
-        z-index:20;
+        position: relative;
+        z-index: 20;
       }
     }
   }
   
   .sectionHeader {
-    background:$color-dark-ultra;
-    padding:12px;
-    margin:18px 0;
+    background: $color-dark-ultra;
+    padding: 12px;
+    margin: 18px 0;
     
     div {
-      max-width:$homeMaxWidth;
-      margin:auto;
+      max-width: $homeMaxWidth;
+      margin: auto;
     }
   }
   
@@ -199,67 +199,67 @@ main#home {
   .profiles {
     h2 {
       @extend .sectionHeader;
-      background:linear-gradient(137deg, darken($color-dark-ultra,5%) 15%, $color-dark 100%);
+      background: linear-gradient(137deg, color.adjust($color-dark-ultra, $lightness: -5%) 15%, $color-dark 100%);
     }
     
     > div {
-      display:flex;
-      flex-wrap:wrap;
-      align-items:stretch;
-      justify-content:center;
-      max-width:$homeMaxWidth;
-      margin:auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: center;
+      max-width: $homeMaxWidth;
+      margin: auto;
       
       a {
-        flex-grow:1;
-        flex-basis:80px;
-        display:block;
-        margin:4px;
-        text-decoration:none;
-        background:$color-highlight;
-        color:$color-dark;
-        padding:8px;
-        transition:background-color 0.8s;
-        text-align:center;
-        position:relative;
-        z-index:10;
+        flex-grow: 1;
+        flex-basis: 80px;
+        display: block;
+        margin: 4px;
+        text-decoration: none;
+        background: $color-highlight;
+        color: $color-dark;
+        padding: 8px;
+        transition: background-color 0.8s;
+        text-align: center;
+        position: relative;
+        z-index: 10;
         
         &:hover {
-          background:$color-highlight-ultra;
+          background: $color-highlight-ultra;
         }
         
         &:active {
-          background:saturate($color-highlight-ultra,100%);
+          background: color.adjust($color-highlight-ultra, $saturation: 100%);
         }
         
         .fa, .fal, .far, .fas, .fab {
-          display:block;
-          margin:auto;
-          font-size:48px;
+          display: block;
+          margin: auto;
+          font-size: 48px;
         }
         
         svg {
-          display:block;
-          margin:auto;
-          width:100%;
-          max-width:48px;
-          height:auto;
+          display: block;
+          margin: auto;
+          width: 100%;
+          max-width: 48px;
+          height: auto;
           
           path {
-            fill:$color-dark;
+            fill: $color-dark;
           }
         }
         
         b {
-          display:block;
-          text-align:center;
-          font-weight:normal;
-          font-size:12px;
-          margin-top:12px;
+          display: block;
+          text-align: center;
+          font-weight: normal;
+          font-size: 12px;
+          margin-top: 12px;
         }
         
         &[href='resume.php'] {
-          background-color:$color-highlight-ultra;
+          background-color: $color-highlight-ultra;
         }
       }
     }
@@ -269,33 +269,33 @@ main#home {
   .knowledge {
     h2 {
       @extend .sectionHeader;
-      background:linear-gradient(110deg, darken($color-dark-ultra,5%) 32%, $color-dark 100%);
+      background: linear-gradient(110deg, color.adjust($color-dark-ultra, $lightness: -5%) 32%, $color-dark 100%);
     }
     
     fieldset {
-      border:none;
-      padding:10px 15px;
-      background:$color-green-dark;
-      background:linear-gradient(-162deg, lighten($color-green-dark,1%) 10%,darken($color-green-dark,15%) 100%);
-      max-width:$homeMaxWidth;
-      margin:0 auto 18px;
-      position:relative;
-      z-index:15;
+      border: none;
+      padding: 10px 15px;
+      background: $color-green-dark;
+      background: linear-gradient(-162deg, color.adjust($color-green-dark, $lightness: 1%) 10%, color.adjust($color-green-dark, $lightness: -15%) 100%);
+      max-width: $homeMaxWidth;
+      margin: 0 auto 18px;
+      position: relative;
+      z-index: 15;
       
       legend {
-        background:$color-dark;
-        font-size:32px;
-        font-weight:bold;
-        padding:12px 18px;
-        border-radius:$generalRadius;
-        line-height:80%;
+        background: $color-dark;
+        font-size: 32px;
+        font-weight: bold;
+        padding: 12px 18px;
+        border-radius: $generalRadius;
+        line-height: 80%;
         white-space: nowrap;
         
         span {
-          font-weight:normal;
+          font-weight: normal;
           
           &.fal {
-            font-weight:300;
+            font-weight: 300;
           }
         }
         
@@ -309,41 +309,41 @@ main#home {
       }
       
       code {
-        border-radius:$generalRadius;
-        padding:16px;
-        overflow:hidden;
-        font-size:16px;
-        max-height:300px;
-        cursor:pointer;
-        transition:max-height 0.5s,background-color 0.8s;
+        border-radius: $generalRadius;
+        padding: 16px;
+        overflow: hidden;
+        font-size: 16px;
+        max-height: 300px;
+        cursor: pointer;
+        transition: max-height 0.5s, background-color 0.8s;
         
         &:hover {
-          background-color:lighten(#1c1c1c,1.5%);
+          background-color: color.adjust(#1c1c1c, $lightness: 1.5%);
         }
         
         &.expanded {
-          max-height:2400px;
+          max-height: 2400px;
         }
         
         @media #{$mobile} {
-          word-break:break-all;
-          font-size:15px;
+          word-break: break-all;
+          font-size: 15px;
         }
       }
       
       p {
-        text-align:right;
-        text-transform:uppercase;
-        letter-spacing:1px;
-        margin:4px 0 3px 0;
+        text-align: right;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 4px 0 3px 0;
         
         a {
-          text-decoration:none;
-          opacity:0.5;
-          transition:opacity 0.25s;
+          text-decoration: none;
+          opacity: 0.5;
+          transition: opacity 0.25s;
           
           &:hover {
-            opacity:1;
+            opacity: 1;
           }
         }
       }
@@ -351,9 +351,9 @@ main#home {
   }
   
   footer {
-    font-size:80%;
-    text-align:center;
-    margin:8px;
+    font-size: 80%;
+    text-align: center;
+    margin: 8px;
   }
 }
 
@@ -362,44 +362,16 @@ $navigationWidth: 200px;
 $resumeMaxWidth: 1000px;
 $readableMaxWidth: 65ch;
 
-@mixin pill-style {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  list-style: none !important;
-  padding-left: 0;
-  
-  li {
-    margin: 0;
-    padding: 0.25rem 0.75rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    max-width: none;
-  }
-}
-
-@mixin section-heading {
-  margin-top: 1.5rem;
-  
-  &:first-of-type {
-    margin-top: 0;
-  }
-}
-
-@mixin resumeColorBand($gradient, $angle: 0deg) {
+@mixin resumeSection($gradient, $angle: 0deg) {
   position: relative;
-  padding: 0.5rem 2rem;
-  
-  > div {
-    position: relative;
-    z-index: 1;
-    max-width: $resumeMaxWidth;
-    margin: 0 auto;
-  }
+  padding: 0.15rem 2rem 0.5rem;
   
   p, li {
     max-width: $readableMaxWidth;
+    
+    @media #{$mobile}, print {
+      max-width: 100%;
+    }
   }
   
   ul {
@@ -407,6 +379,10 @@ $readableMaxWidth: 65ch;
     padding-left: 2rem;
     max-width: $resumeMaxWidth;
     margin-left: 0;
+    
+    @media #{$mobile}, print {
+      max-width: 100%;
+    }
     
     li {
       margin-bottom: 0.5rem;
@@ -427,7 +403,11 @@ $readableMaxWidth: 65ch;
     bottom: -2rem;
     background: $gradient;
     transform: skewY($angle);
-    z-index: 0;
+    z-index: -1;
+    
+    @media print {
+      background: #fff;
+    }
   }
 }
 
@@ -524,11 +504,6 @@ main#resume {
       }
     }
     
-    h1, h2, h3, h4, h5, h6, ul, p, time {
-      z-index: 5; // Ensure text colored bands
-      position: relative;
-    }
-    
     p {
       @media #{$mobile} {
         font-size: 108%;
@@ -539,28 +514,53 @@ main#resume {
       @extend .iconStandard;
     }
     
-    
     &[data-section] {
       margin-bottom: 3rem;
       
       h3 {
-        @include section-heading;
+        margin-top: 1.5rem;
+        
+        &:first-of-type {
+          margin-top: 0;
+        }
       }
     }
     
-    [data-section='skills-specifics'],
-    [data-section='interests-specifics'],
-    [data-section='education-courses'] {
-      @include pill-style;
+    ul[data-section='skills-specifics'],
+    ul[data-section='interests-specifics'],
+    ul[data-section='education-courses'] {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding-left: 0;
+      
+      @media screen {
+        list-style-type: none !important;
+      }
+      
+      @media print {
+      
+      }
+      
+      li {
+        margin: 0 0.5rem 0.5rem 0;
+        padding: 0.25rem 0.75rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        max-width: none;
+        
+        @media print {
+        
+        }
+      }
     }
     
-    // Individual section styling
     [data-section='header'] {
       h4 {
         white-space: nowrap;
       }
       
-      @include resumeColorBand(
+      @include resumeSection(
               linear-gradient(-32deg,
                   color.adjust($color-green-light, $lightness: -35%) 0%,
                   color.adjust($color-dark, $lightness: -4%) 100%),
@@ -569,7 +569,7 @@ main#resume {
     }
     
     [data-section='summary'] {
-      @include resumeColorBand(
+      @include resumeSection(
               linear-gradient(20deg,
                   $color-green-dark 60%,
                   color.adjust($color-green-light, $lightness: -15%) 100%),
@@ -578,7 +578,7 @@ main#resume {
     }
     
     [data-section='experience'] {
-      @include resumeColorBand(
+      @include resumeSection(
               linear-gradient(-96deg,
                   color.adjust($color-dark-ultra, $lightness: 10%) 32%,
                   color.adjust($color-dark-ultra, $lightness: -5%) 100%),
@@ -587,7 +587,7 @@ main#resume {
     }
     
     [data-section='education'] {
-      @include resumeColorBand(
+      @include resumeSection(
               linear-gradient(40deg,
                   color.adjust($color-green-light, $lightness: -60%, $saturation: -10%) 0%,
                   color.adjust($color-green-light, $lightness: -40%, $saturation: -20%) 100%),
@@ -596,7 +596,7 @@ main#resume {
     }
     
     [data-section='skills'] {
-      @include resumeColorBand(
+      @include resumeSection(
               linear-gradient(-162deg,
                   color.adjust($color-green-dark, $lightness: 5%) 10%,
                   color.adjust($color-dark, $lightness: -5%) 100%),
@@ -605,26 +605,12 @@ main#resume {
     }
     
     [data-section='interests'] {
-      @include resumeColorBand(
+      @include resumeSection(
               linear-gradient(162deg,
                   color.adjust($color-green-dark, $lightness: -10%) 10%,
                   color.adjust($color-green-light, $lightness: -65%, $saturation: -10%) 100%),
               -2deg
       );
-    }
-    
-    @media print {
-      [data-section='education'],
-      [data-section='skills'],
-      [data-section='interests'] {
-        ul {
-          list-style-type: circle;
-          
-          li {
-            display: inline-block;
-          }
-        }
-      }
     }
   }
 }

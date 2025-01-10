@@ -30,7 +30,6 @@ $metaThemeColor = '#506358';
 		<link rel='preconnect' href='https://unpkg.com'>
 		<link rel='dns-prefetch' href='https://unpkg.com'>
 		<script src='https://unpkg.com/jquery@^3/dist/jquery.min.js'></script>
-		<script async src='/includes/svgInject/jquery.svgInject.js'></script>
 		<script async src='https://www.googletagmanager.com/gtag/js?id=G-CS0EQ8NM2D'></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
