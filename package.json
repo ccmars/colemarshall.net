@@ -1,14 +1,22 @@
 {
-  "name": "cmnet",
-  "version": "1.0.0",
+  "name": "colemarshallnet",
+  "author": "Cole Marshall",
+  "version": "2.0.0",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://ccmars@bitbucket.org/ccmars/cm.net.git"
+    "url": "git+https://github.com/ccmars/colemarshall.net.git"
   },
-  "bugs": {
-    "url": "https://bitbucket.org/ccmars/cm.net/issues"
-  },
-  "homepage": "https://bitbucket.org/ccmars/cm.net#readme",
-  "devDependencies": {}
+  "homepage": "https://colemarshall.net",
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "personal website",
+    "portfolio",
+    "resume",
+    "Cole Marshall"
+  ],
+  "private": true
 }
