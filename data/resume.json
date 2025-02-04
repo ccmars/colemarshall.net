@@ -270,6 +270,20 @@
 			]
 		}
 	],
+	"references": [
+		{
+			"name": "Scott Wirt, CTO of MusicMaster, Inc.",
+			"reference": "It was my pleasure to have Cole on my team at MusicMaster for more than 10 years. He is both a gifted web developer and a talented artist. During his time here, I placed many challenges before him and he never failed to find a solid, creative solution to accomplish the goal. I was always impressed by his ability to manage a wide variety of projects and responsibilities while maintaining focus on priorities and deadlines. Cole will be missed at MusicMaster but I know that he will be an awesome addition wherever his career takes him."
+		},
+		{
+			"name": "Laurie Knapp, CEO of MusicMaster, Inc.",
+			"reference": "MusicMaster is fortunate to have benefited from Cole's many talents for over a decade. Among the many things that stand out about Cole are his versatility and his work ethic. Brought on initially as a Webmaster, Cole was always willing to expand into additional projects and soon his talents were being used to enhance nearly every aspect of our business. He designed and built a back-end system for our company that's used in countless ways to integrate and improve our operations. Whenever a new feature was requested, it was always done sooner than we expected. In fact, I was constantly amazed by how quickly Cole would respond to and solve any issues that I brought to him.\n\nIn addition, Cole is just an all-around pleasant person to work with. He is always professional and his positive attitude is infectious. He is extremely knowledgeable and skilled in his field, and this gave our management team the confidence that we could rely on him to take our ideas and execute them to the highest level - even beyond our expectations. In addition to his technical side, Cole also excels in creative projects, and is a gifted writer and designer. During his time here, Cole created many graphics elements for us, from logos to trade-show booth art. The impact of Cole's work will continue to benefit MusicMaster even beyond his tenure here, and any company will be better for having him onboard."
+		},
+		{
+			"name": "Dave Hoefler, Senior Product Owner at Getty Images",
+			"reference": "Cole and I worked closely on a few projects for Getty Images. His work was top notch. He's easy to work with and offers great insight into solving problems in a creative, tactful, and efficient manner. He picks up on new skills very fast. I enjoyed working with him, and I'm sure anyone else who works with him in the future will agree with me on that. He's very friendly, and easy to get along with, which are two qualities that make the work environment a very enjoyable place."
+		}
+	],
 	"meta": {
 		"url": "https://colemarshall.net/data/resume.json"
 	}
