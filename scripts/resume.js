@@ -12,7 +12,7 @@ function resumeOptions(hide = false) {
         const highlightsElements = document.querySelectorAll(`#resume > div [data-section$="highlights"] li:nth-child(n+${HIGHLIGHTS_DEFAULT + 1})`);
         toggleElements(highlightsElements, checkbox.checked, hide);
       } else if (section.includes('references')) {
-        const referencesElements = document.querySelectorAll(`#resume > div [data-section="references"] div:nth-child(n+3)`);
+        const referencesElements = document.querySelectorAll(`#resume > div [data-section="references"] div:nth-child(n+4)`);
         toggleElements(referencesElements, checkbox.checked, hide);
       }
     } else {
