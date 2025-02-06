@@ -11,6 +11,9 @@ function resumeOptions(hide = false) {
       } else if (section.includes('highlights')) {
         const highlightsElements = document.querySelectorAll(`#resume > div [data-section$="highlights"] li:nth-child(n+${HIGHLIGHTS_DEFAULT + 1})`);
         toggleElements(highlightsElements, checkbox.checked, hide);
+      } else if (section.includes('references')) {
+        const referencesElements = document.querySelectorAll(`#resume > div [data-section="references"] div:nth-child(n+3)`);
+        toggleElements(referencesElements, checkbox.checked, hide);
       }
     } else {
       const sectionElements = document.querySelectorAll(`#resume > div [data-section="${section}"]`);
@@ -19,7 +22,7 @@ function resumeOptions(hide = false) {
   });
 }
 
-function toggleElements(elements, isVisible, immediate = false) {
+function toggleElements(elements, isVisible) {
   elements.forEach(element => {
     if (isVisible) {
       element.style.display = element.dataset.originalDisplay || '';

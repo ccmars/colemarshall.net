@@ -602,12 +602,23 @@ main#resume {
       );
     }
     
+    [data-section='references'] {
+      @include resumeSection(
+              linear-gradient(75deg,
+                  color.adjust($color-dark, $lightness: 2%) 0%,
+                  color.adjust($color-dark, $lightness: -10%, $saturation: -10%) 60%),
+              -3deg,
+              -1rem
+      );
+    }
+    
     [data-section='interests'] {
       @include resumeSection(
               linear-gradient(162deg,
                   color.adjust($color-green-dark, $lightness: -10%) 10%,
                   color.adjust($color-green-light, $lightness: -65%, $saturation: -10%) 100%),
-              -2deg
+              -2deg,
+              -1rem
       );
     }
   }

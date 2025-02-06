@@ -54,6 +54,12 @@ include('includes/head.php');
 						</ul>
 					</li>
 					<li>
+						<label><input type='checkbox' data-section='references'>References</label>
+						<ul>
+							<li><label><input type='checkbox' data-section='references-extended'>Extended</label></li>
+						</ul>
+					</li>
+					<li>
 						<label><input type='checkbox' data-section='interests'>Interests</label>
 						<ul>
 							<li><label><input type='checkbox' data-section='interests-specifics'>Specifics</label></li>
@@ -132,6 +138,31 @@ include('includes/head.php');
 								?>
 							</ul>
 						<?php
+						}
+					} ?>
+				</div>
+				<div data-section="references">
+					<h2><span class='fal fa-comments-alt fa-fw'></span>References</h2>
+					<?php
+					if (!empty($resume->references)) {
+						foreach ($resume->references as $reference) {
+							if (str_contains($reference->name, ',')) {
+								$nameParts = explode(',', $reference->name, 2);
+								$name = trim($nameParts[0]);
+								$position = trim($nameParts[1]);
+							} else {
+								$name = trim($reference->name);
+							}
+							
+							$referenceText = nl2br($reference->reference); ?>
+							<div>
+								<h3><span class='fal fa-user fa-fw'></span><?php echo $name; ?></h3>
+								<?php if (!empty($position)) { ?>
+									<h4><?php echo $position; ?></h4>
+								<?php } ?>
+								<p><?php echo $referenceText; ?></p>
+							</div>
+							<?php
 						}
 					} ?>
 				</div>

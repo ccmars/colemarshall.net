@@ -147,8 +147,8 @@
 			"summary": "I performed root-level maintenance on the company’s dedicated server, and I also assisted with web design and development for the company’s clients as needed.",
 			"highlights": []
 		},{
-			"company": "Teaching Assistant",
-			"position": "Minneapolis College of Art and Design",
+			"company": "Minneapolis College of Art and Design",
+			"position": "Teaching Assistant",
 			"website": "https://mcad.edu/",
 			"startDate": "2007-01-01",
 			"endDate": "2008-05-01",
@@ -286,7 +286,7 @@
 	],
 	"meta": {
 		"canonical": "https://colemarshall.net/data/resume.json",
-		"version": "2.0.0",
-		"lastModified": "2025-02-03T21:42:00Z"
+		"version": "2.0.1",
+		"lastModified": "2025-02-05T21:53:00Z"
 	}
 }
