@@ -1,8 +1,18 @@
 # colemarshall.net
 
-Personal site and interactive resume of **Cole Marshall** — Web Designer & Developer.
+The personal site and interactive resume of **Cole Marshall** — Web Designer & Developer. Live at **[colemarshall.net](https://colemarshall.net)**.
 
 ![CM Monogram](./images/cm_wireframe.svg)
+
+## The pitch
+
+This site is a working argument that the modern web platform is enough. No frameworks, no build step, no CDNs — just current-spec HTML, CSS, JavaScript, and a little PHP:
+
+- **One JSON file drives the whole site.** Every piece of content — the home page, the interactive resume, the JSON-LD structured data, the downloadable resume — renders from [`data/resume.json`](data/resume.json) ([JSON Resume](https://jsonresume.org/) format). Update the data and the site follows.
+- **An interactive resume, not a PDF.** [colemarshall.net/resume.php](https://colemarshall.net/resume.php) lets you tailor exactly the sections you want to see, print the result, or take the raw JSON with you.
+- **Modern native CSS with no preprocessor.** Design tokens as custom properties, `light-dark()` theming, `color-mix()`, native nesting, logical properties, fluid `clamp()` type. The entire design system is one readable file: [`style/main.css`](style/main.css).
+- **Code samples that actually run.** The home page's Knowledge section is written as a running joke, but every sample is real, current-syntax code — PHP 8.5, modern JavaScript, native CSS — each with a "Run it" link that executes it.
+- **Fast and accessible by default.** Semantic HTML, skip links, ARIA where it earns its keep, self-hosted variable fonts, and no runtime dependency heavier than highlight.js.
 
 ## Stack
 
@@ -10,11 +20,11 @@ Deliberately simple and dependency-light:
 
 - **PHP 8.1+** for templating — no framework
 - **[JSON Resume](https://jsonresume.org/)** (`data/resume.json`) as the single source of truth for all content
-- **Modern native CSS** (`style/main.css`) — design tokens via custom properties, `light-dark()` theming, fluid `clamp()` type, native nesting. No preprocessor, no build step.
+- **Modern native CSS** (`style/main.css`) — no preprocessor, no build step
 - **Vanilla JavaScript** (`scripts/`)
-- **[Parsedown](https://parsedown.org/)** (vendored via Composer) for Markdown in resume content
+- **[Parsedown](https://parsedown.org/)** (vendored) for Markdown in resume content
 
-All third-party assets are self-hosted — no CDN requests at runtime except Google Analytics:
+All third-party assets are self-hosted — the only runtime request that leaves the origin is Google Analytics:
 
 | Asset | Source | License |
 | --- | --- | --- |
@@ -48,3 +58,7 @@ php -S localhost:8080
 ```
 
 When deploying changed CSS/JS, bump `ASSET_VERSION` in `includes/config.php` to bust browser caches. Update `sitemap.xml` lastmod dates when content changes.
+
+## License
+
+The code is here to be read and learned from. The content — resume data, copy, images, and the CM monogram — is © Cole Marshall, all rights reserved.
