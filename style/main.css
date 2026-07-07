@@ -709,6 +709,8 @@ a {
 	.resume-options .resume-options-panel {
 		position: static;
 		max-height: none;
+		/* Leave the top-right corner to the fixed theme toggle */
+		margin-inline-end: 52px;
 	}
 }
 
