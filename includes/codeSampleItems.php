@@ -33,7 +33,7 @@ $codeSampleItems = [
 	],
 	'php' => [
 		'name' => 'PHP',
-		'description' => 'PHP Hypertext Preprocessor, makes the web page interactive in the background',
+		'description' => 'PHP: Hypertext Preprocessor, makes the web page interactive in the background',
 		'file' => 'php.php',
 		'fiddle' => 'https://www.mycompiler.io/view/84blnPph371',
 		'icon' => 'brand-php',

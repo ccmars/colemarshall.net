@@ -63,7 +63,7 @@ $page = [
 							</ul>
 						</li>
 						<li>
-							<label><input type='checkbox' data-section='references'>References</label>
+							<label><input type='checkbox' data-section='references' checked>References</label>
 							<ul>
 								<li><label><input type='checkbox' data-section='references-extended'>Extended</label></li>
 							</ul>
@@ -104,13 +104,19 @@ $page = [
 								echo e($work->company);
 							} ?>
 						</p>
+						<?php
+							$startYear = date('Y', strtotime($work->startDate));
+							$endYear = empty($work->endDate) ? null : date('Y', strtotime($work->endDate));
+						?>
 						<p class='resume-period'>
-							<time datetime='<?php echo e(date('Y-m', strtotime($work->startDate))); ?>'><?php echo e(date('Y', strtotime($work->startDate))); ?></time>
+							<time datetime='<?php echo e(date('Y-m', strtotime($work->startDate))); ?>'><?php echo e($startYear); ?></time>
+							<?php if ($endYear !== $startYear) { ?>
 							–
-							<?php if (!empty($work->endDate)) { ?>
-							<time datetime='<?php echo e(date('Y-m', strtotime($work->endDate))); ?>'><?php echo e(date('Y', strtotime($work->endDate))); ?></time>
+							<?php if ($endYear !== null) { ?>
+							<time datetime='<?php echo e(date('Y-m', strtotime($work->endDate))); ?>'><?php echo e($endYear); ?></time>
 							<?php } else { ?>
 							Present
+							<?php } ?>
 							<?php } ?>
 						</p>
 						<?php if (!empty($work->summary)) { ?>
