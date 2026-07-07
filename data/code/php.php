@@ -23,18 +23,11 @@ class Cole extends Human {
 	) {}
 
 	public function getReadableDetails(): string {
-		$specialties = $this->specialties;
-		$finalSpecialty = array_pop($specialties);
+		$specialties = array_slice($this->specialties, 0, -1)
+			|> (fn(array $most) => implode(', ', $most) . ', and ' . array_last($this->specialties));
 		$article = preg_match('/^[aeiou]/i', $this->profession) ? 'an' : 'a';
 
-		return sprintf(
-			'%s is %s %s who specializes in %s, and %s.',
-			$this->fullName,
-			$article,
-			$this->profession,
-			implode(', ', $specialties),
-			$finalSpecialty,
-		);
+		return "{$this->fullName} is {$article} {$this->profession} who specializes in {$specialties}.";
 	}
 }
 

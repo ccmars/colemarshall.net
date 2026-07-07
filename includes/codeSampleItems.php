@@ -14,21 +14,21 @@ $codeSampleItems = [
 		'name' => 'HTML',
 		'description' => 'Hypertext Markup Language, defines the structure of the web page',
 		'file' => 'html.html',
-		'fiddle' => 'https://jsfiddle.net/CCMars/sct5L8pu/',
+		'fiddle' => 'https://jsfiddle.net/wjqb5e70/',
 		'icon' => 'brand-html5',
 	],
 	'css' => [
 		'name' => 'CSS',
 		'description' => 'Cascading Style Sheet, defines the style of the web page',
 		'file' => 'css.css',
-		'fiddle' => 'https://jsfiddle.net/CCMars/k27nrqd5/',
+		'fiddle' => 'https://jsfiddle.net/eLpkfvbs/',
 		'icon' => 'brand-css3',
 	],
 	'javascript' => [
 		'name' => 'JavaScript',
 		'description' => 'Makes the web page interactive in the foreground',
 		'file' => 'javascript.js',
-		'fiddle' => 'https://jsfiddle.net/CCMars/ur1t5Ld5/',
+		'fiddle' => 'https://jsfiddle.net/5vmtrcwg/',
 		'icon' => 'brand-javascript',
 	],
 	'php' => [
@@ -43,7 +43,7 @@ $codeSampleItems = [
 		'description' => 'Stores data for the web page',
 		'file' => 'sql.sql',
 		'language' => 'sql',
-		'fiddle' => 'https://sqlfiddle.com/mysql/online-compiler?&id=d0476836-e28e-4c45-b924-63b60ef5df99',
+		'fiddle' => 'https://www.mycompiler.io/view/20ivYADjlWH',
 		'icon' => 'brand-mysql',
 	],
 	'http' => [
