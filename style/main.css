@@ -898,6 +898,23 @@ a {
 }
 
 /* --------------------------------------------------------------------------
+   Site footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+	margin-block-start: 24px;
+	padding-block: 2.5rem 3rem;
+	padding-inline: 16px;
+	border-block-start: 1px solid color-mix(in srgb, var(--color-text-muted) 25%, transparent);
+	text-align: center;
+	font-size: var(--text-small);
+	color: var(--color-text-muted);
+
+	p {
+		margin-block: 0.35em;
+	}
+}
+
+/* --------------------------------------------------------------------------
    Print
    -------------------------------------------------------------------------- */
 @media print {

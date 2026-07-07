@@ -8,7 +8,7 @@
 const SITE_URL = 'https://colemarshall.net';
 
 // Bump when deploying changed CSS/JS to bust browser caches
-const ASSET_VERSION = '3.2.1';
+const ASSET_VERSION = '3.3.0';
 
 // Data sources, relative to the site root
 const RESUME_JSON_PATH = 'data/resume.json';

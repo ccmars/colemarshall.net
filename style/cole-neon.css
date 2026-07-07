@@ -1,5 +1,7 @@
 /* ==========================================================================
    Cole Neon — highlight.js theme
+   Light values target ≥4.5:1 contrast on --color-code-bg (#f4f2e5);
+   dark values keep the original neon-on-charcoal look.
    ========================================================================== */
 
 .hljs,
@@ -8,7 +10,7 @@
 	overflow-x: auto;
 	padding: 0.5em;
 	background: var(--color-code-bg, #1c1c1c);
-	color: light-dark(#5c645e, #71787c);
+	color: light-dark(#4c544e, #71787c);
 	tab-size: 4;
 	font-family: 'Cousine', 'Courier New', monospace;
 	white-space: pre-wrap;
@@ -20,7 +22,7 @@
 
 .hljs-comment {
 	/* Orange */
-	color: light-dark(#8f6400, rgba(255, 204, 0, 0.866));
+	color: light-dark(#7a5600, rgba(255, 204, 0, 0.866));
 	background: light-dark(rgba(161, 120, 76, 0.14), rgba(161, 120, 76, 0.105));
 	font-style: italic;
 	font-weight: bold;
@@ -28,91 +30,91 @@
 
 .hljs-string {
 	/* Very Light Purple -> Slate Purple */
-	color: light-dark(#5d5f88, rgba(200, 200, 210, 0.933));
+	color: light-dark(#50527c, rgba(200, 200, 210, 0.933));
 	background: light-dark(rgba(115, 120, 180, 0.12), rgba(170, 175, 219, 0.1));
 }
 
 .hljs-number {
 	/* Light Green -> Deep Teal */
-	color: light-dark(#1f7268, rgba(143, 194, 187, 0.866));
+	color: light-dark(#1a6158, rgba(143, 194, 187, 0.866));
 	background: light-dark(rgba(31, 114, 104, 0.08), rgba(119, 194, 187, 0.058));
 	font-weight: bold;
 }
 
 .hljs-tag {
 	/* Blue */
-	color: light-dark(rgba(28, 100, 140, 0.55), rgba(73, 166, 210, 0.5));
+	color: light-dark(rgba(21, 84, 120, 0.85), rgba(73, 166, 210, 0.5));
 }
 
 .hljs-name {
 	/* Bright Blue */
-	color: light-dark(#1c6f9e, rgba(73, 166, 210, 0.9));
+	color: light-dark(#15597f, rgba(73, 166, 210, 0.9));
 	background: light-dark(rgba(28, 111, 158, 0.08), rgba(73, 166, 210, 0.07));
 }
 
 .hljs-attribute,
 .hljs-attr {
 	/* Dark Blue */
-	color: light-dark(#33608f, rgba(73, 134, 194, 0.8));
+	color: light-dark(#2b527d, rgba(73, 134, 194, 0.8));
 	background: light-dark(rgba(51, 96, 143, 0.1), rgba(73, 134, 194, 0.1));
 }
 
 .hljs-literal {
 	/* Dark Yellow -> Olive */
-	color: light-dark(#77702a, rgba(209, 203, 135, 0.733));
+	color: light-dark(#605a1e, rgba(209, 203, 135, 0.733));
 	background: light-dark(rgba(119, 112, 42, 0.14), rgba(209, 203, 135, 0.2));
 }
 
 .hljs-keyword {
 	/* Purple */
-	color: light-dark(#6a4cae, rgba(145, 119, 206, 1));
+	color: light-dark(#5b3f99, rgba(145, 119, 206, 1));
 	background: light-dark(rgba(106, 76, 174, 0.07), rgba(139, 93, 223, 0.066));
 }
 
 .hljs-variable,
 .hljs-built_in {
 	/* Bright Green -> Pine Green */
-	color: light-dark(#177a55, rgba(97, 216, 169, 0.733));
+	color: light-dark(#126245, rgba(97, 216, 169, 0.733));
 	background: light-dark(rgba(23, 122, 85, 0.08), rgba(34, 255, 169, 0.07));
 }
 
 .hljs-regexp {
 	/* Yellow -> Mustard */
-	color: light-dark(#7d7400, rgba(255, 255, 0, 0.733));
+	color: light-dark(#625b00, rgba(255, 255, 0, 0.733));
 	background: light-dark(rgba(125, 116, 0, 0.12), rgba(255, 255, 0, 0.133));
 	font-weight: bold;
 }
 
 .hljs-selector-id {
 	/* Light Purple */
-	color: light-dark(#665c9e, rgba(158, 150, 204, 1));
+	color: light-dark(#554b8c, rgba(158, 150, 204, 1));
 	background: light-dark(rgba(160, 105, 106, 0.12), rgba(206, 138, 139, 0.133));
 	font-style: italic;
 }
 
 .hljs-selector-class {
 	/* Yellow Green */
-	color: light-dark(#6d7200, rgba(157, 163, 0, 0.866));
+	color: light-dark(#565a00, rgba(157, 163, 0, 0.866));
 	background: light-dark(rgba(109, 114, 0, 0.08), rgba(157, 163, 0, 0.066));
 }
 
 .hljs-selector-attr,
 .hljs-selector-pseudo {
 	/* Gold */
-	color: light-dark(#8a7410, rgba(214, 191, 42, 0.866));
+	color: light-dark(#6f5d0a, rgba(214, 191, 42, 0.866));
 	background: light-dark(rgba(138, 116, 16, 0.1), rgba(214, 191, 42, 0.1));
 	font-style: italic;
 }
 
 .hljs-selector-tag {
 	/* Red-Brown */
-	color: light-dark(#96552a, rgba(182, 128, 85, 1));
+	color: light-dark(#7c4520, rgba(182, 128, 85, 1));
 	background: light-dark(rgba(150, 85, 42, 0.1), rgba(182, 128, 85, 0.1));
 }
 
 .hljs-meta {
 	/* Bright Red */
-	color: light-dark(#a13527, rgba(183, 70, 55, 1));
+	color: light-dark(#8c2c20, rgba(183, 70, 55, 1));
 	background: light-dark(rgba(161, 53, 39, 0.08), rgba(45, 0, 22, 0.3));
 }
 
