@@ -1,189 +1,198 @@
 <?php
-	require('includes/vendor/autoload.php');
-	$parsedown = new Parsedown();
-?><!DOCTYPE html>
+require_once 'includes/functions.php';
+
+$resume = loadResume();
+if ($resume === null) {
+	http_response_code(500);
+	exit('<!DOCTYPE html><title>Site malfunction!</title><h1>Site malfunction!</h1><p>The resume data could not be loaded. Please try again later.</p>');
+}
+
+$page = [
+	'title' => "{$resume->basics->name} – {$resume->basics->label} – Resume",
+	'description' => "Interactive resume of {$resume->basics->name}, {$resume->basics->label} in {$resume->basics->location->city}, {$resume->basics->location->region}. Tailor the sections you want to see, then print or download the JSON.",
+	'canonicalPath' => '/resume.php',
+	'ogType' => 'profile',
+];
+?>
+<!DOCTYPE html>
 <html lang='en-US'>
 	<head>
-		<title><?php 
-			$resume = json_decode(file_get_contents('data/resume.json'));
-			echo $resume->basics->name . ' - ' . $resume->basics->label . ' - Resume'; 
-		?></title>
-<?php
-include('includes/head.php');
-?>
-		<script src='/scripts/resume.js'></script>
+<?php include 'includes/head.php'; ?>
+		<script defer src='/scripts/resume.js?v=<?php echo ASSET_VERSION; ?>'></script>
 	</head>
 	<body>
-		<main id='resume'>
-			<nav class='resumeOptions'>
-				<ul>
-					<!--<li><a><span class='fal fa-save'></span>Save</a></li>-->
-					<li><a class='print'><span class='fal fa-print'></span>Print</a></li>
-					<li><a href='data/resume.json'><span class='fal fa-brackets-curly'></span>resume.json</a></li>
-				</ul>
-				<ul>
-					<li>
-						<label><input type='checkbox' data-section='summary' checked>Summary</label>
-						<!--<ul>
-							<li><label><label><input type='checkbox' id='summary-extended' data-section='summary-extended'>Extended</label></li>
-						</ul>-->
-					</li>
-					<li>
-						<label><input type='checkbox' data-section='experience' checked>Experience</label>
-						<ul>
-							<li><label><input type='checkbox' data-section='experience-summary' checked>Summary</label></li>
-							<li>
-								<label><input type='checkbox' data-section='experience-highlights' checked>Highlights</label>
-								<ul>
-									<li><label><input type='checkbox' data-section='experience-highlights-extended'>Extended</label></li>
-								</ul>
-							</li>
+		<a class='skip-link' href='#resume-sheet'>Skip to resume</a>
+		<button type='button' class='theme-toggle' hidden aria-label='Switch theme'>
+			<span class='theme-toggle-orb' aria-hidden='true'></span>
+		</button>
+		<div class='resume-layout'>
+			<aside class='resume-options' aria-label='Resume options'>
+				<details class='resume-options-panel' open>
+					<summary>Resume options</summary>
+					<ul class='resume-actions'>
+						<li><button type='button' class='action-button print'><?php echo icon('printer'); ?>Print</button></li>
+						<li><a class='action-button' href='data/resume.json'><?php echo icon('braces'); ?>resume.json</a></li>
+					</ul>
+					<ul class='resume-toggles'>
+						<li>
+							<label><input type='checkbox' data-section='summary' checked>Summary</label>
+						</li>
+						<li>
+							<label><input type='checkbox' data-section='experience' checked>Experience</label>
+							<ul>
+								<li><label><input type='checkbox' data-section='experience-summary' checked>Summary</label></li>
+								<li>
+									<label><input type='checkbox' data-section='experience-highlights' checked>Highlights</label>
+									<ul>
+										<li><label><input type='checkbox' data-section='experience-highlights-extended'>Extended</label></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<label><input type='checkbox' data-section='education' checked>Education</label>
+							<ul>
+								<li><label><input type='checkbox' data-section='education-summary'>Summary</label></li>
+								<li><label><input type='checkbox' data-section='education-courses'>Courses</label></li>
+							</ul>
+						</li>
+						<li>
+							<label><input type='checkbox' data-section='skills' checked>Skills</label>
+							<ul>
+								<li><label><input type='checkbox' data-section='skills-specifics' checked>Specifics</label></li>
+							</ul>
+						</li>
+						<li>
+							<label><input type='checkbox' data-section='references'>References</label>
+							<ul>
+								<li><label><input type='checkbox' data-section='references-extended'>Extended</label></li>
+							</ul>
+						</li>
+						<li>
+							<label><input type='checkbox' data-section='interests'>Interests</label>
+							<ul>
+								<li><label><input type='checkbox' data-section='interests-specifics'>Specifics</label></li>
+							</ul>
+						</li>
+					</ul>
+				</details>
+			</aside>
+			<main class='resume-sheet' id='resume-sheet'>
+				<?php echo inlineSvg('images/cm_wireframe.svg', 'resume-monogram'); ?>
+				<header data-section='header'>
+					<h1><?php echo e($resume->basics->name); ?></h1>
+					<p class='resume-role'><?php echo e($resume->basics->label); ?></p>
+					<ul class='resume-contact'>
+						<li><?php echo icon('mail'); ?><a href='mailto:<?php echo e($resume->basics->email); ?>'><?php echo e($resume->basics->email); ?></a></li>
+						<li><?php echo icon('home'); ?><a href='<?php echo e($resume->basics->website); ?>'><?php echo e($resume->basics->website); ?></a></li>
+						<li><?php echo icon('map-pin'); ?><?php echo e($resume->basics->location->city); ?>, <?php echo e($resume->basics->location->region); ?></li>
+					</ul>
+				</header>
+				<section data-section='summary'>
+					<h2><?php echo icon('circle-check'); ?>Summary</h2>
+					<?php echo markdownBlock($resume->basics->summary); ?>
+				</section>
+				<section data-section='experience'>
+					<h2><?php echo icon('briefcase'); ?>Experience</h2>
+					<?php foreach ($resume->work ?? [] as $work) { ?>
+					<article class='resume-entry'>
+						<h3><?php echo icon('user-circle'); ?><?php echo e($work->position); ?></h3>
+						<p class='resume-organization'>
+							<?php if (!empty($work->website)) { ?>
+							<a href='<?php echo e($work->website); ?>' target='_blank' rel='noopener'><?php echo e($work->company); ?></a>
+							<?php } else {
+								echo e($work->company);
+							} ?>
+						</p>
+						<p class='resume-period'>
+							<time datetime='<?php echo e(date('Y-m', strtotime($work->startDate))); ?>'><?php echo e(date('Y', strtotime($work->startDate))); ?></time>
+							–
+							<?php if (!empty($work->endDate)) { ?>
+							<time datetime='<?php echo e(date('Y-m', strtotime($work->endDate))); ?>'><?php echo e(date('Y', strtotime($work->endDate))); ?></time>
+							<?php } else { ?>
+							Present
+							<?php } ?>
+						</p>
+						<?php if (!empty($work->summary)) { ?>
+						<p data-section='experience-summary'><?php echo markdownLine($work->summary); ?></p>
+						<?php } ?>
+						<?php if (!empty($work->highlights)) { ?>
+						<ul data-section='experience-highlights'>
+							<?php foreach ($work->highlights as $highlight) { ?>
+							<li><?php echo markdownLine($highlight); ?></li>
+							<?php } ?>
 						</ul>
-					</li>
-					<li>
-						<label><input type='checkbox' data-section='education' checked>Education</label>
-						<ul>
-							<li><label><input type='checkbox' data-section='education-summary'>Summary</label></li>
-							<li><label><input type='checkbox' data-section='education-courses'>Courses</label></li>
+						<?php } ?>
+					</article>
+					<?php } ?>
+				</section>
+				<section data-section='education'>
+					<h2><?php echo icon('school'); ?>Education</h2>
+					<?php foreach ($resume->education ?? [] as $education) { ?>
+					<article class='resume-entry'>
+						<h3><?php echo icon('pencil'); ?><?php echo e($education->institution); ?></h3>
+						<p class='resume-organization'><?php echo e($education->studyType); ?> in <?php echo e($education->area); ?></p>
+						<p class='resume-period'>
+							<time datetime='<?php echo e(date('Y-m', strtotime($education->endDate))); ?>'><?php echo e(date('Y', strtotime($education->endDate))); ?></time>
+						</p>
+						<?php if (!empty($education->summary)) { ?>
+						<p data-section='education-summary'><?php echo e($education->summary); ?></p>
+						<?php } ?>
+						<?php if (!empty($education->courses)) { ?>
+						<ul class='tag-list' data-section='education-courses'>
+							<?php foreach ($education->courses as $course) { ?>
+							<li><?php echo e($course); ?></li>
+							<?php } ?>
 						</ul>
-					</li>
-					<li>
-						<label><input type='checkbox' data-section='skills' checked>Skills</label>
-						<ul>
-							<li><label><input type='checkbox' data-section='skills-specifics' checked>Specifics</label></li>
+						<?php } ?>
+					</article>
+					<?php } ?>
+				</section>
+				<section data-section='skills'>
+					<h2><?php echo icon('list-check'); ?>Skills</h2>
+					<?php foreach ($resume->skills ?? [] as $skill) { ?>
+					<article class='resume-entry'>
+						<h3><?php echo icon('keyboard'); ?><?php echo e($skill->name); ?></h3>
+						<ul class='tag-list' data-section='skills-specifics'>
+							<?php foreach ($skill->keywords as $keyword) { ?>
+							<li><?php echo e($keyword); ?></li>
+							<?php } ?>
 						</ul>
-					</li>
-					<li>
-						<label><input type='checkbox' data-section='references'>References</label>
-						<ul>
-							<li><label><input type='checkbox' data-section='references-extended'>Extended</label></li>
-						</ul>
-					</li>
-					<li>
-						<label><input type='checkbox' data-section='interests'>Interests</label>
-						<ul>
-							<li><label><input type='checkbox' data-section='interests-specifics'>Specifics</label></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-			<div>
-				<?php echo file_get_contents('images/cm_wireframe.svg'); ?>
-				<div data-section='header'>
-					<h1><?php echo $resume->basics->name; ?></h1>
-					<h3><?php echo $resume->basics->label; ?></h3>
-					<h4><span class='fal fa-envelope fa-fw'></span><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
-					<h4><span class='fal fa-home fa-fw'></span><a href='<?php echo $resume->basics->website; ?>'><?php echo $resume->basics->website; ?></a></h4>
-					<h4><span class='fal fa-map-marker-alt fa-fw'></span><?php echo $resume->basics->location->city; ?>, <?php echo $resume->basics->location->region; ?></h4>
-				</div>
-				<div data-section='summary'>
-					<h2><span class='fal fa-check-circle fa-fw'></span>Summary</h2>
-					<?php echo $parsedown->text($resume->basics->summary); ?>
-				</div>
-				<div data-section='experience'>
-					<h2><span class='fal fa-briefcase fa-fw'></span>Experience</h2>
-					<?php
-					if (!empty($resume->work)) {
-						foreach ($resume->work as $work) {
-							echo "<h3><span class='fal fa-user-circle fa-fw'></span>{$work->position}</h3>\n";
-							echo "<h4>{$work->company}</h4>
-							<time>" . date('Y', strtotime($work->startDate)) . " - " . (!empty($work->endDate) ? date('Y', strtotime($work->endDate)) : "Present") . "</time>
-							<p data-section='experience-summary'>
-								" . $parsedown->line($work->summary) . "
-							</p>
-							<ul data-section='experience-highlights'>";
-							if (!empty($work->highlights)) {
-								foreach ($work->highlights as $highlight) {
-									echo "<li>" . $parsedown->line($highlight) . "</li>\n";
-								}
-							}
-							echo "</ul>";
+					</article>
+					<?php } ?>
+				</section>
+				<section data-section='references'>
+					<h2><?php echo icon('messages'); ?>References</h2>
+					<?php foreach ($resume->references ?? [] as $reference) {
+						$referenceName = trim($reference->name);
+						$referencePosition = null;
+						if (str_contains($referenceName, ',')) {
+							[$referenceName, $referencePosition] = array_map('trim', explode(',', $referenceName, 2));
 						}
-					}
 					?>
-				</div>
-				<div data-section='education'>
-					<h2><span class='fal fa-graduation-cap fa-fw'></span>Education</h2>
-					<?php
-					if (!empty($resume->education)) {
-						foreach ($resume->education as $education) { ?>
-							<h3><span class='fal fa-pencil fa-fw'></span><?php echo $education->institution; ?></h3>
-							<h4><?php echo $education->studyType; ?> in <?php echo $education->area; ?></h4>
-							<time><?php echo date('Y',strtotime($education->endDate)); ?></time>
-							<p data-section='education-summary'>
-								<?php echo $education->summary; ?>
-							</p>
-							<ul data-section='education-courses'>
-								<?php
-								foreach ($education->courses as $course) {
-									echo "<li>{$course}</li>";
-								}
-								?>
-							</ul>
-						<?php
-						}
-					}?>
-				</div>
-				<div data-section='skills'>
-					<h2><span class='fal fa-tasks fa-fw'></span>Skills</h2>
-					<?php
-					if (!empty($resume->skills)) {
-						foreach ($resume->skills as $skill) { ?>
-							<h3><span class='fal fa-keyboard fa-fw'></span><?php echo $skill->name; ?></h3>
-							<ul data-section='skills-specifics'>
-								<?php
-								foreach ($skill->keywords as $keyword) {
-									echo "<li>{$keyword}</li>";
-								}
-								?>
-							</ul>
-						<?php
-						}
-					} ?>
-				</div>
-				<div data-section="references">
-					<h2><span class='fal fa-comments-alt fa-fw'></span>References</h2>
-					<?php
-					if (!empty($resume->references)) {
-						foreach ($resume->references as $reference) {
-							if (str_contains($reference->name, ',')) {
-								$nameParts = explode(',', $reference->name, 2);
-								$name = trim($nameParts[0]);
-								$position = trim($nameParts[1]);
-							} else {
-								$name = trim($reference->name);
-							}
-							
-							$referenceText = nl2br($reference->reference); ?>
-							<div>
-								<h3><span class='fal fa-user fa-fw'></span><?php echo $name; ?></h3>
-								<?php if (!empty($position)) { ?>
-									<h4><?php echo $position; ?></h4>
-								<?php } ?>
-								<p><?php echo $referenceText; ?></p>
-							</div>
-							<?php
-						}
-					} ?>
-				</div>
-				<div data-section='interests'>
-					<h2><span class='fal fa-smile fa-fw'></span>Interests</h2>
-					<?php
-					if (!empty($resume->interests)) {
-						foreach ($resume->interests as $interest) { ?>
-							<h3><span class='fal fa-thumbs-up fa-fw'></span><?php echo $interest->name; ?></h3>
-							<ul data-section='interests-specifics'>
-								<?php
-								foreach ($interest->keywords as $keyword) {
-									echo "<li>{$keyword}</li>";
-								}
-								?>
-							</ul>
-						<?php
-						}
-					} ?>
-				</div>
-			</div>
-		</main>
+					<article class='resume-entry'>
+						<h3><?php echo icon('user'); ?><?php echo e($referenceName); ?></h3>
+						<?php if ($referencePosition !== null) { ?>
+						<p class='resume-organization'><?php echo e($referencePosition); ?></p>
+						<?php } ?>
+						<blockquote><p><?php echo nl2br(e($reference->reference)); ?></p></blockquote>
+					</article>
+					<?php } ?>
+				</section>
+				<section data-section='interests'>
+					<h2><?php echo icon('mood-smile'); ?>Interests</h2>
+					<?php foreach ($resume->interests ?? [] as $interest) { ?>
+					<article class='resume-entry'>
+						<h3><?php echo icon('thumb-up'); ?><?php echo e($interest->name); ?></h3>
+						<ul class='tag-list' data-section='interests-specifics'>
+							<?php foreach ($interest->keywords as $keyword) { ?>
+							<li><?php echo e($keyword); ?></li>
+							<?php } ?>
+						</ul>
+					</article>
+					<?php } ?>
+				</section>
+			</main>
+		</div>
 	</body>
 </html>

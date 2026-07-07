@@ -1,7 +1,7 @@
 git clone https://gituniverse.com/virgosupercluster/localgroup-milkyway-orionarm-sol-earth-animals-mammals-primates-humans.git
-git branch -d cole
-git checkout cole
+git switch -c cole
+git add .
 git commit -m "Specify properties for instantiating Cole object with Human class"
-git checkout master
+git switch main
 git merge cole
 git push --all

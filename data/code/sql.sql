@@ -1,41 +1,31 @@
--- Humans table
-CREATE TABLE `humans` (
-	`id` bigint(12) NOT NULL,
-	`name_first` varchar(255) NOT NULL,
-	`name_last` varchar(255) NOT NULL,
-	`sex` enum('male','female','other') NOT NULL,
-	`height` int(3) NOT NULL,
-	`weight` int(3) NOT NULL,
-	`eyes` varchar(3) NOT NULL,
-	`hair` varchar(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-ALTER TABLE `humans`
-	ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `humans`
-	MODIFY `id` bigint(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79692643551;
-
 -- Human eye color table
-CREATE TABLE `humans_eyes` (
-	`id` varchar(3) NOT NULL,
-	`name` varchar(12) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-ALTER TABLE `humans_eyes`
-	ADD PRIMARY KEY (`id`);
+CREATE TABLE humans_eyes (
+	id CHAR(3) PRIMARY KEY,
+	name VARCHAR(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Human hair color table
-CREATE TABLE `humans_hair` (
-	`id` varchar(3) NOT NULL,
-	`name` varchar(7) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE humans_hair (
+	id CHAR(3) PRIMARY KEY,
+	name VARCHAR(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-ALTER TABLE `humans_hair`
-	ADD PRIMARY KEY (`id`);
+-- Humans table
+CREATE TABLE humans (
+	id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	name_first VARCHAR(255) NOT NULL,
+	name_last VARCHAR(255) NOT NULL,
+	sex ENUM('male', 'female', 'other') NOT NULL,
+	height TINYINT UNSIGNED NOT NULL COMMENT 'cm',
+	weight SMALLINT UNSIGNED NOT NULL COMMENT 'kg',
+	eyes CHAR(3) NOT NULL,
+	hair CHAR(3) NOT NULL,
+	FOREIGN KEY (eyes) REFERENCES humans_eyes (id),
+	FOREIGN KEY (hair) REFERENCES humans_hair (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=79692643551;
 
 -- Populate human eye colors
-INSERT INTO `humans_eyes` (`id`, `name`) VALUES
+INSERT INTO humans_eyes (id, name) VALUES
 ('blk', 'Black'),
 ('blu', 'Blue'),
 ('bro', 'Brown'),
@@ -47,7 +37,7 @@ INSERT INTO `humans_eyes` (`id`, `name`) VALUES
 ('unk', 'Unknown');
 
 -- Populate human hair colors
-INSERT INTO `humans_hair` (`id`, `name`) VALUES
+INSERT INTO humans_hair (id, name) VALUES
 ('blk', 'Black'),
 ('bro', 'Brown'),
 ('bln', 'Blonde'),
@@ -59,8 +49,12 @@ INSERT INTO `humans_hair` (`id`, `name`) VALUES
 ('unk', 'Unknown');
 
 -- Create record for Cole Marshall (the 79,692,643,551st human to be born)
-INSERT INTO `humans` (`name_last`, `name_first`, `sex`, `height`, `weight`, `eyes`, `hair`) VALUES
+INSERT INTO humans (name_last, name_first, sex, height, weight, eyes, hair) VALUES
 ('Marshall', 'Cole', 'male', 177, 80, 'haz', 'bro');
 
 -- Retrieve all humans named Cole, including eye color name and hair color name
-SELECT `humans`.`name_last`, `humans`.`name_first`, `humans_eyes`.`name` `eyes`, `humans_hair`.`name` `hair` FROM `humans` LEFT JOIN `humans_eyes` ON `humans`.`eyes` = `humans_eyes`.`id` LEFT JOIN `humans_hair` ON `humans`.`hair` = `humans_hair`.`id` WHERE `name_first` = 'Cole'
+SELECT h.name_last, h.name_first, e.name AS eyes, ha.name AS hair
+FROM humans AS h
+LEFT JOIN humans_eyes AS e ON e.id = h.eyes
+LEFT JOIN humans_hair AS ha ON ha.id = h.hair
+WHERE h.name_first = 'Cole';

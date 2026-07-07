@@ -1,45 +1,43 @@
 /* Human container */
 #humans {
-	font-family: "Homo Sapiens", Arial, sans-serif;
-	box-shadow: 12px 2px 16px 1px rgba(0, 0, 0, 0.3);
-	position: relative;
-	animation-duration: 10s;
-	animation-name: walk;
-}
-
-/* Walk forward */
-@keyframes walk {
-	from {
-		left: 0;
-	}
-
-	to {
-		left: 100px;
-	}
-}
+	font-family: 'Homo Sapiens', Arial, sans-serif;
+	box-shadow: 12px 2px 16px 1px rgb(0 0 0 / 0.3);
+	animation: walk 10s;
 
 	/* Average male height, medium build, and imperfect posture */
-	#humans .cole {
-		height: 177cm;
+	.cole {
+		block-size: 177cm;
 		padding: 1cm;
 		font-style: italic;
-	}
 
 		/* Hazel eyes and light skin tone */
-		#humans .cole main {
+		main {
 			color: #514a3a;
 			background-color: #efdec4;
 		}
 
 		/* Mouth */
-		#humans .cole > div {
-			width: 5cm;
-			height: 1cm;
+		> div {
+			inline-size: 5cm;
+			block-size: 1cm;
 			color: #ccc8c5;
 			background-color: #9f7879;
-		}
 
 			/* Smile */
-			#humans .cole > div:active {
+			&:active {
 				border-radius: 0 0 8px 8px;
 			}
+		}
+	}
+}
+
+/* Walk forward */
+@keyframes walk {
+	from {
+		translate: 0;
+	}
+
+	to {
+		translate: 100px;
+	}
+}

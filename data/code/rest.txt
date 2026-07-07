@@ -1,7 +1,8 @@
-POST /api/cole/properties HTTP/1.1
+PATCH /api/cole/properties HTTP/2
 Host: colemarshall.net
-Content-Type: application/json; charset=utf-8
-Content-Length: 52
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.human
+Content-Type: application/merge-patch+json
+Accept: application/json
 
 {
 	"bloodType": {

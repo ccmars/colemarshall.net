@@ -3,61 +3,43 @@
 namespace Marshall;
 
 class Cole extends Human {
-	const NAME_FIRST = "Cole";
-	const NAME_LAST = "Marshall";
-	private string $profession;
-	private array $specialties;
+	final public const string NAME_FIRST = 'Cole';
+	final public const string NAME_LAST = 'Marshall';
 
-	function __construct(string $initialProfession = "Web Developer & Designer") {
-		$this->profession = $initialProfession;
-		$this->specialties = [
-			"HTML", "CSS", "Sass", "JavaScript", "TypeScript", "Vue.js", "jQuery",
-			"cross-browser compatibility", "mobile/responsive design", "search engine optimization",
-			"PHP", "Node.js", "MySQL", "REST", "XML", "JSON", "Git", "automation",
-			"API development", "cloud DevOps", "IaC (Infrastructure as Code)", "unit testing", "end-to-end testing",
-			"Photoshop", "Illustrator", "After Effects", "Graphic Design", "Typography",
-			"User Interface (UI) Design", "User Experience (UX) Design", "Motion Graphics"
-		];
+	public string $fullName {
+		get => self::NAME_FIRST . ' ' . self::NAME_LAST;
 	}
 
-	public function getFullName():string {
-		return self::NAME_FIRST . ' ' . self::NAME_LAST;
-	}
+	public function __construct(
+		public private(set) string $profession = 'Web Developer & Designer',
+		public private(set) array $specialties = [
+			'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue.js',
+			'cross-browser compatibility', 'mobile/responsive design', 'search engine optimization',
+			'PHP', 'Node.js', 'MySQL', 'REST', 'XML', 'JSON', 'Git', 'automation',
+			'API development', 'cloud DevOps', 'IaC (Infrastructure as Code)', 'unit testing', 'end-to-end testing',
+			'Photoshop', 'Illustrator', 'After Effects', 'Graphic Design', 'Typography',
+			'User Interface (UI) Design', 'User Experience (UX) Design', 'Motion Graphics',
+		],
+	) {}
 
-	public function getProfession():string {
-		return $this->profession;
-	}
+	public function getReadableDetails(): string {
+		$specialties = $this->specialties;
+		$finalSpecialty = array_pop($specialties);
+		$article = preg_match('/^[aeiou]/i', $this->profession) ? 'an' : 'a';
 
-	public function setProfession(string $newProfession):string {
-		return $this->profession = $newProfession;
-	}
-
-	public function getSpecialties():array {
-		return $this->specialties;
-	}
-
-	public function setSpecialties(array $newSpecialties):array {
-		return $this->specialties = $newSpecialties;
-	}
-
-	public function getReadableDetails():string {
-		$readable = $this->getFullName() . " is " . (preg_match('/^[aeiou]/i',$this->getProfession())?"an ":"a ") . $this->getProfession() . " who specializes in ";
-		for ($i = 0; $i < count($this->getSpecialties()); $i++) {
-			$readable .= $this->getSpecialties()[$i];
-			if ($i == count($this->getSpecialties()) - 2) {
-				$readable .= (count($this->getSpecialties()) > 2?",":'') . " and ";
-			} else if ($i == count($this->getSpecialties()) - 1) {
-				$readable .= ".";
-			} else {
-				$readable .= ", ";
-			}
-		}
-		return $readable;
+		return sprintf(
+			'%s is %s %s who specializes in %s, and %s.',
+			$this->fullName,
+			$article,
+			$this->profession,
+			implode(', ', $specialties),
+			$finalSpecialty,
+		);
 	}
 }
 
 // Instantiate Cole
-$cole = new \Marshall\Cole();
+$cole = new Cole();
 
-// Echo Cole's Profession and Specialties
+// Echo Cole's profession and specialties
 echo $cole->getReadableDetails();

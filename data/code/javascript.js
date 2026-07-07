@@ -1,39 +1,31 @@
 // Cole Class
 class Cole {
-	constructor(initialProfession) {
-		this.nameFirst = "Cole";
-		this.nameLast = "Marshall";
-		this.profession = initialProfession;
-		this.skills = [
-			"Web Design",
-			"Frontend Web Development",
-			"Backend Web Development",
-			"Cloud DevOps",
-		];
+	#nameFirst = 'Cole';
+	#nameLast = 'Marshall';
+	#skills = [
+		'Web Design',
+		'Frontend Web Development',
+		'Backend Web Development',
+		'Cloud DevOps',
+	];
+
+	constructor(profession) {
+		this.profession = profession;
 	}
 
-	getFullName() {
-		return this.nameFirst + ' ' + this.nameLast;
+	get fullName() {
+		return `${this.#nameFirst} ${this.#nameLast}`;
 	}
 
-	getReadableDetails() {
-		let readable = this.getFullName() + " is " + (this.profession.match(/^[aeiou]/i)?"an ":"a ") + this.profession + " who specializes in ";
-		for (let i = 0; i < this.skills.length; i++) {
-			readable += this.skills[i];
-			if (i === this.skills.length - 2) {
-				readable += (this.skills.length > 2?",":'') + " and ";
-			} else if (i === this.skills.length - 1) {
-				readable += ".";
-			} else {
-				readable += ", ";
-			}
-		}
-		return readable;
+	get readableDetails() {
+		const article = /^[aeiou]/i.test(this.profession) ? 'an' : 'a';
+		const skills = new Intl.ListFormat('en', { type: 'conjunction' }).format(this.#skills);
+		return `${this.fullName} is ${article} ${this.profession} who specializes in ${skills}.`;
 	}
 }
 
 // Instantiate Cole
-let cole = new Cole("Web Developer & Designer");
+const cole = new Cole('Web Developer & Designer');
 
-// Echo Cole's Profession and Skills
-console.log(cole.getReadableDetails());
+// Echo Cole's profession and skills
+console.log(cole.readableDetails);

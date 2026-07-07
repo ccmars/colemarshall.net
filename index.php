@@ -1,127 +1,102 @@
+<?php
+require_once 'includes/functions.php';
+
+$resume = loadResume();
+if ($resume === null) {
+	http_response_code(500);
+	exit('<!DOCTYPE html><title>Site malfunction!</title><h1>Site malfunction!</h1><p>The resume data could not be loaded. Please try again later.</p>');
+}
+
+$page = [
+	'title' => "{$resume->basics->name} – {$resume->basics->label}",
+	'description' => "{$resume->basics->name} is a web designer and developer in {$resume->basics->location->city}, {$resume->basics->location->region} — blending design, frontend and backend development, testing, and cloud DevOps.",
+	'canonicalPath' => '/',
+	'ogType' => 'website',
+];
+
+require 'includes/codeSampleItems.php';
+?>
 <!DOCTYPE html>
 <html lang='en-US'>
 	<head>
-		<title><?php
-			$resume = json_decode(file_get_contents('data/resume.json'));
-			echo $resume->basics->name . ' - ' . $resume->basics->label;
-		?></title>
 		<!--
 
 		Looking under the hood, I see. Nice!
-		These code samples are presented with highlight.js and some logos from Font Awesome.
+		These code samples are presented with highlight.js and icons from Tabler.
 		The content may be a joke, but all the code actually runs.
 		Give it a try.
 
 		-->
-<?php
-include('includes/head.php');
-?>
-		<link rel='stylesheet' href='/style/cole-neon.css'>
-		<script src='https://unpkg.com/@highlightjs/cdn-assets@^11/highlight.min.js'></script>
-		<script src='/scripts/home.js'></script>
-		<script>
-		document.addEventListener('DOMContentLoaded', (event) => {
-			hljs.highlightAll();
-		});
-		</script>
+<?php include 'includes/head.php'; ?>
+		<link rel='stylesheet' href='/style/cole-neon.css?v=<?php echo ASSET_VERSION; ?>'>
+		<script defer src='/scripts/vendor/highlight.min.js'></script>
+		<script defer src='/scripts/vendor/http.min.js'></script>
+		<script defer src='/scripts/home.js?v=<?php echo ASSET_VERSION; ?>'></script>
 	</head>
 	<body>
-		<main id='home'>
-		<?php
-		if (is_null($resume)) {
-			echo "Site malfunction!";
-		} else { ?>
-			<header>
-				<div>
-					<div>
-						<h1><?php echo $resume->basics->name; ?></h1>
-						<h3><?php echo $resume->basics->label; ?></h3>
-						<h4><span class='fal fa-envelope fa-fw'></span><a href='mailto:<?php echo $resume->basics->email; ?>'><?php echo $resume->basics->email; ?></a></h4>
-					</div>
-					<?php echo file_get_contents('images/cm_wireframe.svg'); ?>
+		<a class='skip-link' href='#main'>Skip to content</a>
+		<button type='button' class='theme-toggle' hidden aria-label='Switch theme'>
+			<span class='theme-toggle-orb' aria-hidden='true'></span>
+		</button>
+		<header class='hero'>
+			<div class='hero-inner'>
+				<div class='hero-text'>
+					<h1><?php echo e($resume->basics->name); ?></h1>
+					<p class='hero-role'><?php echo e($resume->basics->label); ?></p>
+					<p class='hero-contact'>
+						<?php echo icon('mail'); ?><a href='mailto:<?php echo e($resume->basics->email); ?>'><?php echo e($resume->basics->email); ?></a>
+					</p>
 				</div>
-			</header>
-			<?php
-			// Profiles
-			if ($resume->basics->profiles) {
-				echo "<div class='profiles'>
-					<h2>
-						<div>
-							Profiles
-						</div>
-					</h2>
-					<div>
-					<a href='resume.php'><span class='fal fa-file-alt'></span><b>Resume</b></a>";
-					foreach ($resume->basics->profiles as $profile) {
-						echo "<a href='{$profile->url}' target='_blank'>";
-						if ($profile->network == 'Linktree') {
-							echo "<span>" . file_get_contents('style/icons/linktree.svg') . "</span>";
-						} else {
-							echo "<span class='";
-							if ($profile->network == 'LinkedIn') {
-								echo "fab fa-linkedin";
-							} else if ($profile->network == 'Stack Overflow') {
-								echo "fab fa-stack-overflow";
-							} else if ($profile->network == 'GitHub') {
-								echo "fab fa-github";
-							} else if ($profile->network == 'Behance') {
-								echo "fab fa-behance";
-							} else if ($profile->network == 'MyFonts') {
-								echo "fal fa-font";
-							} else if ($profile->network == '500px') {
-								echo "fab fa-500px";
-							} else if ($profile->network == 'Dribbble') {
-								echo "fab fa-dribbble";
-							} else if ($profile->network == 'ArtStation') {
-								echo "fab fa-artstation";
-							} else {
-								echo "fal fa-plus-circle ";
-							}
-							echo " fa-fw'></span>";
-						}
-						echo "<b>{$profile->network}</b></a>";
-					}
-				echo "</div>
-				</div>";
-			} ?>
-			<div class='knowledge'>
-				<h2>
-					<div>
-						Knowledge
-					</div>
-				</h2>
-				<?php
-				// Code Samples
-				require('includes/codeSampleItems.php');
-				foreach ($codeSampleItems as $codeKey => $codeDetails) {
-					if (file_exists("data/code/{$codeDetails['file']}")) {
-						echo "<fieldset>
-							<legend>";
-						if ($codeDetails['icon']) {
-							if ($codeKey == "json") {
-								echo file_get_contents('style/icons/json.svg');
-							} else if ($codeKey == "mysql") {
-								echo file_get_contents('style/icons/mysql.svg');
-							} else {
-								echo "<span class='{$codeDetails['icon']}'></span>";
-							}
-						}
-						echo "{$codeDetails['name']}</legend>
-							<h4>{$codeDetails['description']}</h4>
-							<pre><code" . (!empty($codeDetails['interpret'])?" class='" . $codeDetails['interpret'] . "'":" class='hljs {$codeKey}'") . ">";
-							$sampleCode = file_get_contents("data/code/{$codeDetails['file']}");
-							echo htmlspecialchars($sampleCode);
-						echo "</code></pre>
-						" . (!empty($codeDetails['fiddle'])?"<p>
-								<a href='{$codeDetails['fiddle']}' target='_blank'>Run it <span class='fas fa-rabbit-fast fa-lg'></span></a>
-							</p>":'') . "
-						</fieldset>";
-					}
-				}
-				?>
+				<?php echo inlineSvg('images/cm_wireframe.svg', 'hero-monogram'); ?>
 			</div>
-		<?php
-		} ?>
+		</header>
+		<main id='main'>
+			<?php if (!empty($resume->basics->profiles)) { ?>
+			<section class='profiles' aria-labelledby='profiles-heading'>
+				<h2 class='section-heading' id='profiles-heading'><span>Profiles</span></h2>
+				<ul class='profile-grid' style='--profile-count: <?php echo count($resume->basics->profiles) + 1; ?>'>
+					<li>
+						<a class='profile-tile profile-tile-featured' href='resume.php'>
+							<?php echo icon('file-text', 'icon-profile'); ?>
+							<b>Resume</b>
+						</a>
+					</li>
+					<?php foreach ($resume->basics->profiles as $profile) { ?>
+					<li>
+						<a class='profile-tile' href='<?php echo e($profile->url); ?>' target='_blank' rel='noopener'>
+							<?php echo profileIcon($profile->network); ?>
+							<b><?php echo e($profile->network); ?></b>
+						</a>
+					</li>
+					<?php } ?>
+				</ul>
+			</section>
+			<?php } ?>
+			<section class='knowledge' aria-labelledby='knowledge-heading'>
+				<h2 class='section-heading' id='knowledge-heading'><span>Knowledge</span></h2>
+				<?php foreach ($codeSampleItems as $sampleKey => $sample) {
+					$samplePath = CODE_SAMPLE_DIRECTORY . "/{$sample['file']}";
+					if (!is_file($samplePath)) {
+						continue;
+					}
+
+					$language = $sample['language'] ?? $sampleKey;
+					$codeClass = ($language === 'nohighlight') ? 'hljs nohighlight' : "hljs language-{$language}";
+					$codeId = "code-{$sampleKey}";
+				?>
+				<article class='code-card'>
+					<h3 class='code-card-title'><?php echo icon($sample['icon']); ?><?php echo e($sample['name']); ?></h3>
+					<p class='code-card-description'><?php echo e($sample['description']); ?></p>
+					<pre><code id='<?php echo $codeId; ?>' class='<?php echo $codeClass; ?>'><?php echo e(file_get_contents($samplePath)); ?></code></pre>
+					<p class='code-card-actions'>
+						<button type='button' class='action-button code-toggle' aria-expanded='false' aria-controls='<?php echo $codeId; ?>'><?php echo icon('chevron-down'); ?><span class='code-toggle-label'>Expand</span></button>
+						<?php if (!empty($sample['fiddle'])) { ?>
+						<a class='action-button code-run' href='<?php echo e($sample['fiddle']); ?>' target='_blank' rel='noopener'><?php echo icon('rocket'); ?>Run it</a>
+						<?php } ?>
+					</p>
+				</article>
+				<?php } ?>
+			</section>
 		</main>
 	</body>
 </html>

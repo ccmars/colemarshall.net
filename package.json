@@ -1,8 +1,8 @@
 {
   "name": "colemarshallnet",
   "author": "Cole Marshall",
-  "version": "2.0.0",
-  "description": "",
+  "version": "3.0.0",
+  "description": "Personal site and interactive resume of Cole Marshall — PHP, JSON Resume, modern native CSS, vanilla JS.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ccmars/colemarshall.net.git"

@@ -1,71 +1,74 @@
 <?php
-// Code Samples Items
+
+/**
+ * Code samples shown in the Knowledge section of the home page.
+ *   name        - display name
+ *   description - one-line summary shown under the heading
+ *   file        - source file inside CODE_SAMPLE_DIRECTORY
+ *   language    - highlight.js language class (defaults to the array key)
+ *   fiddle      - optional "run it" URL
+ *   icon        - icon name (see ICON_DIRECTORY)
+ */
 $codeSampleItems = [
 	'html' => [
 		'name' => 'HTML',
 		'description' => 'Hypertext Markup Language, defines the structure of the web page',
 		'file' => 'html.html',
 		'fiddle' => 'https://jsfiddle.net/CCMars/sct5L8pu/',
-		'icon' => 'fab fa-html5'
+		'icon' => 'brand-html5',
 	],
 	'css' => [
 		'name' => 'CSS',
 		'description' => 'Cascading Style Sheet, defines the style of the web page',
 		'file' => 'css.css',
 		'fiddle' => 'https://jsfiddle.net/CCMars/k27nrqd5/',
-		'icon' => 'fab fa-css3-alt'
+		'icon' => 'brand-css3',
 	],
 	'javascript' => [
 		'name' => 'JavaScript',
 		'description' => 'Makes the web page interactive in the foreground',
 		'file' => 'javascript.js',
 		'fiddle' => 'https://jsfiddle.net/CCMars/ur1t5Ld5/',
-		'icon' => 'fab fa-js'
+		'icon' => 'brand-javascript',
 	],
 	'php' => [
 		'name' => 'PHP',
 		'description' => 'PHP Hypertext Preprocessor, makes the web page interactive in the background',
 		'file' => 'php.php',
 		'fiddle' => 'https://www.mycompiler.io/view/84blnPph371',
-		'icon' => 'fab fa-php'
+		'icon' => 'brand-php',
 	],
 	'mysql' => [
 		'name' => 'MySQL',
 		'description' => 'Stores data for the web page',
 		'file' => 'sql.sql',
+		'language' => 'sql',
 		'fiddle' => 'https://sqlfiddle.com/mysql/online-compiler?&id=d0476836-e28e-4c45-b924-63b60ef5df99',
-		'icon' => 'svg'
+		'icon' => 'brand-mysql',
 	],
-	/*'scss' => [
-		'name' => 'Sass',
-		'description' => 'Syntactically Awesome Style Sheet, makes defining the style of the web page easier',
-		'file' => 'scss.scss',
-		'fiddle' => 'https://jsfiddle.net/CCMars/cy91n613/',
-		'icon' => 'fab fa-sass'
-	],*/
 	'http' => [
 		'name' => 'REST',
 		'description' => 'Representational state transfer, makes transferring data between applications easier',
 		'file' => 'rest.txt',
-		'icon' => 'fal fa-server'
+		'icon' => 'server',
 	],
 	'xml' => [
 		'name' => 'XML',
 		'description' => 'Extensible Markup Language, a format for storing data for the web page or application',
 		'file' => 'xml.xml',
-		'icon' => 'fal fa-code'
+		'icon' => 'code',
 	],
 	'json' => [
 		'name' => 'JSON',
 		'description' => 'JavaScript Object Notation, a format for storing data for the web page or application',
 		'file' => 'json.json',
-		'icon' => 'svg'
+		'icon' => 'braces',
 	],
 	'git' => [
 		'name' => 'Git',
 		'description' => 'Allows the tracking of source changes to the web page or application',
 		'file' => 'git.txt',
-		'interpret' => 'hljs nohighlight',
-		'icon' => 'fab fa-git'
-	]
+		'language' => 'nohighlight',
+		'icon' => 'brand-git',
+	],
 ];
