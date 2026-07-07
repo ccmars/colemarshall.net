@@ -9,7 +9,7 @@ if ($resume === null) {
 
 $page = [
 	'title' => "{$resume->basics->name} – {$resume->basics->label}",
-	'description' => "{$resume->basics->name} is a web designer and developer in {$resume->basics->location->city}, {$resume->basics->location->region} — blending design, frontend and backend development, testing, and cloud DevOps.",
+	'description' => "{$resume->basics->name} is a senior full-stack engineer and designer in {$resume->basics->location->city}, {$resume->basics->location->region} — blending design, frontend and backend development, testing, and cloud DevOps.",
 	'canonicalPath' => '/',
 	'ogType' => 'website',
 ];

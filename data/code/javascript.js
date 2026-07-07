@@ -25,7 +25,7 @@ class Cole {
 }
 
 // Instantiate Cole
-const cole = new Cole('Web Developer & Designer');
+const cole = new Cole('Senior Full-Stack Engineer & Designer');
 
 // Echo Cole's profession and skills
 console.log(cole.readableDetails);

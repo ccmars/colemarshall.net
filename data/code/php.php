@@ -11,7 +11,7 @@ class Cole extends Human {
 	}
 
 	public function __construct(
-		public private(set) string $profession = 'Web Developer & Designer',
+		public private(set) string $profession = 'Senior Full-Stack Engineer & Designer',
 		public private(set) array $specialties = [
 			'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue.js',
 			'cross-browser compatibility', 'mobile/responsive design', 'search engine optimization',
