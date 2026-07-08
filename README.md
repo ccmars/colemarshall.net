@@ -61,4 +61,4 @@ When deploying changed CSS/JS, bump `ASSET_VERSION` in `includes/config.php` to 
 
 ## License
 
-The code is [MIT licensed](LICENSE) — take whatever is useful, keep the notice. The content is not code: the resume data, copy, photography, and the CM monogram (`images/cm_wireframe.svg` and related artwork) are © Cole Marshall, all rights reserved.
+The [MIT license](LICENSE) covers the source code only — take whatever is useful, keep the notice. The content is not code: the resume data, copy, photography, and the CM monogram (`images/cm_wireframe.svg` and related artwork) are © Cole Marshall, all rights reserved.
