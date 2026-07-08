@@ -262,9 +262,7 @@ a {
 	}
 }
 
-/* One treatment for every small control: Expand, Run it, Print, resume.json.
-   Reuses the tile pairings — light: sage fill like the featured tile, hovering
-   to pine like the profile tiles; dark: sage outline filling in on hover. */
+/* One treatment for every small control: Expand, Run it, Print, resume.json */
 .action-button {
 	display: inline-flex;
 	align-items: center;
@@ -337,8 +335,7 @@ a {
 		border-color: var(--color-text-muted);
 	}
 
-	/* Both palettes on one swatch: cream/pine half, olive/amber half.
-	   Flipping the theme rolls the orb to the other side. */
+	/* Both theme palettes on one orb; toggling rolls it to the other half */
 	.theme-toggle-orb {
 		width: 20px;
 		height: 20px;
@@ -540,7 +537,7 @@ a {
 		position: relative;
 	}
 
-	/* Fade-out cue: signals truncated code on collapsed, expandable cards */
+	/* Fade-out signals truncated code on collapsed cards */
 	&:not(.expanded):not(.code-card-static) pre::after {
 		content: '';
 		position: absolute;
@@ -658,7 +655,7 @@ a {
 		margin-block-end: 4px;
 	}
 
-	/* Desktop: the panel a permanent sidebar */
+	/* Desktop: permanent sidebar */
 	@media (min-width: 761px) {
 		summary {
 			cursor: default;
@@ -905,7 +902,7 @@ a {
 	padding-block: 4.25rem 2.75rem;
 	padding-inline: 16px;
 	background: var(--band-hero);
-	/* Askew band edge, kin to the resume sheet's skewed section bands */
+	/* Askew edge, matching the resume's skewed section bands */
 	clip-path: polygon(0 min(2.5rem, 4vw), 100% 0, 100% 100%, 0 100%);
 	text-align: center;
 	font-size: var(--text-small);

@@ -1,7 +1,6 @@
 /* ==========================================================================
    Cole Neon — highlight.js theme
-   Light values target ≥4.5:1 contrast on --color-code-bg (#f4f2e5);
-   dark values keep the original neon-on-charcoal look.
+   Light values must keep ≥4.5:1 contrast on --color-code-bg (#f4f2e5).
    ========================================================================== */
 
 .hljs,

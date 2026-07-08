@@ -2,8 +2,7 @@ const CONSOLE_GREETING = 'Look at you! You seem to know where the really good st
 const CONSOLE_GREETING_STYLE = 'color:#C0D3B1; background-color:#3B3C36; font-size:180%; padding:8px; font-weight:bold; border-radius:12px;';
 
 const STATIC_CARD_CLASS = 'code-card-static';
-// Cards overflowing by less than ~2 code lines just show in full instead
-// of offering a pointless expand (CSS lifts max-height on static cards).
+// Minimum overflow (~2 code lines) before a card gets an expand control
 const CODE_OVERFLOW_TOLERANCE_PX = 48;
 const RESIZE_DEBOUNCE_MS = 150;
 
@@ -39,10 +38,6 @@ function setCardExpanded(card, isExpanded) {
 	}
 }
 
-/**
- * Expansion only makes sense when the collapsed view actually truncates the
- * code; short samples become static (no button, no click affordance).
- */
 function refreshCardExpandability() {
 	document.querySelectorAll('.code-card').forEach((card) => {
 		const code = card.querySelector('code');
@@ -80,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	initializeCodeCards();
 	refreshCardExpandability();
 
-	// Re-measure once the web fonts land and whenever rewrapping could change heights.
+	// Re-measure when web fonts load or a resize rewraps the code.
 	document.fonts?.ready.then(refreshCardExpandability);
 	window.addEventListener('resize', debounce(refreshCardExpandability, RESIZE_DEBOUNCE_MS));
 

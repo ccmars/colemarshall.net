@@ -37,7 +37,7 @@ function saveOptions() {
 	try {
 		localStorage.setItem(OPTIONS_STORAGE_KEY, JSON.stringify(state));
 	} catch {
-		// Storage unavailable (private mode, quota) - options simply won't persist.
+		// Storage unavailable (private mode, quota) - options won't persist.
 	}
 }
 
@@ -62,10 +62,7 @@ function restoreOptions() {
 	});
 }
 
-/**
- * The options panel is a permanent sidebar on desktop and a collapsed
- * disclosure on mobile. Sync on load and whenever the breakpoint changes.
- */
+/** Desktop: the options panel is a permanent sidebar. Mobile: a collapsed disclosure. */
 function initializeOptionsPanel() {
 	const panel = document.querySelector('.resume-options-panel');
 	if (!panel) {
@@ -77,8 +74,7 @@ function initializeOptionsPanel() {
 	const syncPanel = () => {
 		panel.open = !mobileQuery.matches;
 
-		// Desktop: the panel is permanent, so the summary is a plain heading -
-		// keep it out of the tab order rather than focusable but inert.
+		// Desktop: the summary is a static heading; keep it out of the tab order.
 		if (summary) {
 			summary.tabIndex = mobileQuery.matches ? 0 : -1;
 		}

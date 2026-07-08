@@ -9,7 +9,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 /**
  * Load and decode the resume data. Returns null when the file is missing
- * or malformed so callers can fail gracefully.
+ * or malformed.
  */
 function loadResume(): ?object
 {
@@ -93,7 +93,7 @@ function icon(string $name, string $class = ''): string
 }
 
 /**
- * Icon for a profile network, using the configured map.
+ * Icon for a profile network.
  */
 function profileIcon(string $network): string
 {
@@ -116,17 +116,6 @@ function inlineSvg(string $path, string $class = ''): string
 	$svg = preg_replace('/(<svg\b[^>]*?)\s+id=(["\'])[^"\']*\2/', '$1', file_get_contents($path), 1);
 
 	return str_replace('<svg ', "<svg {$attributes} ", $svg);
-}
-
-/**
- * Human-readable year range, e.g. "2011 - 2022" or "2022 - Present".
- */
-function yearRange(?string $startDate, ?string $endDate): string
-{
-	$start = $startDate ? date('Y', strtotime($startDate)) : '';
-	$end = $endDate ? date('Y', strtotime($endDate)) : 'Present';
-
-	return trim("{$start} – {$end}", ' –') ?: '';
 }
 
 /**
