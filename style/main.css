@@ -901,16 +901,27 @@ a {
    Site footer
    -------------------------------------------------------------------------- */
 .site-footer {
-	margin-block-start: 24px;
-	padding-block: 2.5rem 3rem;
+	margin-block-start: 48px;
+	padding-block: 4.25rem 2.75rem;
 	padding-inline: 16px;
-	border-block-start: 1px solid color-mix(in srgb, var(--color-text-muted) 25%, transparent);
+	background: var(--band-hero);
+	/* Askew band edge, kin to the resume sheet's skewed section bands */
+	clip-path: polygon(0 min(2.5rem, 4vw), 100% 0, 100% 100%, 0 100%);
 	text-align: center;
 	font-size: var(--text-small);
 	color: var(--color-text-muted);
 
+	.footer-monogram {
+		width: 60px;
+		height: auto;
+	}
+
+	.footer-monogram .cm {
+		fill: light-dark(var(--brand-pine), var(--brand-amber));
+	}
+
 	p {
-		margin-block: 0.35em;
+		margin-block: 0.9em 0;
 	}
 }
 

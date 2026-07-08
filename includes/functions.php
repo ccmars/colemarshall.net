@@ -112,7 +112,10 @@ function inlineSvg(string $path, string $class = ''): string
 
 	$attributes = "aria-hidden='true' focusable='false'" . ($class !== '' ? " class='" . e($class) . "'" : '');
 
-	return str_replace('<svg ', "<svg {$attributes} ", file_get_contents($path));
+	// Drop the root id so the same file can be inlined more than once per page
+	$svg = preg_replace('/(<svg\b[^>]*?)\s+id=(["\'])[^"\']*\2/', '$1', file_get_contents($path), 1);
+
+	return str_replace('<svg ', "<svg {$attributes} ", $svg);
 }
 
 /**
