@@ -136,7 +136,7 @@ $page = [
 					<h2><?php echo icon('school'); ?>Education</h2>
 					<?php foreach ($resume->education ?? [] as $education) { ?>
 					<article class='resume-entry'>
-						<h3><?php echo icon('pencil'); ?><?php echo e($education->institution); ?></h3>
+						<h3><?php echo icon('pencil'); ?><?php if (!empty($education->website)) { ?><a href='<?php echo e($education->website); ?>' target='_blank' rel='noopener'><?php echo e($education->institution); ?></a><?php } else { echo e($education->institution); } ?></h3>
 						<p class='resume-organization'><?php echo e($education->studyType); ?> in <?php echo e($education->area); ?></p>
 						<p class='resume-period'>
 							<time datetime='<?php echo e(date('Y-m', strtotime($education->endDate))); ?>'><?php echo e(date('Y', strtotime($education->endDate))); ?></time>

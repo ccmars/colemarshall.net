@@ -5,7 +5,7 @@
 		"picture": "https://ColeMarshall.net/images/ColeMarshall_face.jpg",
 		"email": "CM@ColeMarshall.net",
 		"website": "https://ColeMarshall.net",
-		"summary": "I am a seasoned full-stack engineer and designer, blending artistic creativity with technical proficiency. With a degree in Interactive Media from the [Minneapolis College of Art and Design](https://www.mcad.edu/), my expertise encompasses design, frontend development, backend development, testing, and cloud DevOps, utilizing a wide array of the latest technologies and design tools.",
+		"summary": "I am a senior full-stack engineer and designer, blending artistic creativity with technical proficiency. My work spans design, frontend and backend development, automated testing, and cloud DevOps, all on modern platforms and current tools.",
 		"location": {
 			"postalCode": "53704",
 			"city": "Madison",
@@ -64,10 +64,10 @@
 			"summary": "I build and manage robust, scalable fintech web services and products for the HSA (health savings account) investment industry. My work spans backend and frontend development, automated testing, and cloud DevOps, and I automate key processes across the business.",
 			"highlights": [
 				"Architected and built the company's modern flagship API offerings in [Node.js](https://nodejs.org/), with their [AWS](https://aws.amazon.com/) infrastructure authored entirely as code using [CDK](https://aws.amazon.com/cdk/) and [TypeScript](https://www.typescriptlang.org/)",
-				"Lead contributor to the company's HSA investment portal assets and infrastructure — a [Vue.js](https://vuejs.org/) frontend backed by [Laravel](https://laravel.com/) services and a dedicated authentication service",
+				"Lead contributor to the company's HSA investment portal assets and infrastructure: a [Vue.js](https://vuejs.org/) frontend backed by [Laravel](https://laravel.com/) services and a dedicated authentication service",
 				"Established the HSA investment portal's end-to-end test coverage from the ground up with [Playwright](https://playwright.dev/)",
 				"Designed and built [Devenir's public marketing website](https://www.devenir.com/)",
-				"Created branding and logos for Devenir's product family, including [myHSAinvestments](https://myhsainvestments.com/), [HSA Guided Portfolio](https://hsaguidedportfolio.com/), [HSA Search](https://www.hsasearch.com/), [HSA Planner](https://www.hsaplanner.com/), [HSA Research](https://www.hsaresearch.com/), and [HSA Compass](https://hsacompass.com/)",
+				"Created branding and logos for Devenir's product family, including [myHSAinvestments](https://myhsainvestments.com/), [HSA Search](https://www.hsasearch.com/), [HSA Planner](https://www.hsaplanner.com/), [HSA Research](https://www.hsaresearch.com/), and [HSA Compass](https://hsacompass.com/)",
 				"Introduced agentic AI tooling to the engineering workflow"
 			]
 		},
@@ -127,7 +127,7 @@
 		},{
 			"company": "Minneapolis College of Art and Design",
 			"position": "Teaching Assistant",
-			"website": "https://mcad.edu/",
+			"website": "https://www.mcad.edu/",
 			"startDate": "2007-01-01",
 			"endDate": "2008-05-01",
 			"summary": "As a teaching assistant for the Interactive Multi-Linear Narrative (game design) class, I provided technical direction and advice as the programming lead for two Flash-based computer game projects."
@@ -136,6 +136,7 @@
 	"education": [
 		{
 			"institution": "Minneapolis College of Art and Design",
+			"website": "https://www.mcad.edu/",
 			"area": "Interactive Media",
 			"studyType": "Bachelor of Fine Arts",
 			"startDate": "2004-08-01",
@@ -264,7 +265,7 @@
 	],
 	"meta": {
 		"canonical": "https://colemarshall.net/data/resume.json",
-		"version": "2.2.1",
-		"lastModified": "2026-07-08T18:33:00Z"
+		"version": "2.2.2",
+		"lastModified": "2026-07-08T19:09:00Z"
 	}
 }
