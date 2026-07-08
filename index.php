@@ -99,7 +99,7 @@ require 'includes/codeSampleItems.php';
 			</section>
 		</main>
 		<footer class='site-footer'>
-			<p>Hand-built with PHP, native CSS, and vanilla JavaScript — no frameworks, no build step.</p>
+			<p>Hand-built with PHP, native CSS, and vanilla JavaScript — no frameworks, no build step. <a href='<?php echo GITHUB_REPO_URL; ?>' target='_blank' rel='noopener'>Read the source</a>.</p>
 			<p><a href='resume.php'>Resume</a> · <a href='mailto:<?php echo e($resume->basics->email); ?>'><?php echo e($resume->basics->email); ?></a> · © <?php echo date('Y'); ?> Cole Marshall</p>
 		</footer>
 	</body>

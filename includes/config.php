@@ -10,6 +10,9 @@ const SITE_URL = 'https://colemarshall.net';
 // Bump when deploying changed CSS/JS to bust browser caches
 const ASSET_VERSION = '3.3.0';
 
+// Public source repository
+const GITHUB_REPO_URL = 'https://github.com/ccmars/colemarshall.net';
+
 // Data sources, relative to the site root
 const RESUME_JSON_PATH = 'data/resume.json';
 const CODE_SAMPLE_DIRECTORY = 'data/code';
