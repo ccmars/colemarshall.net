@@ -5,7 +5,7 @@
 		"picture": "https://ColeMarshall.net/images/ColeMarshall_face.jpg",
 		"email": "CM@ColeMarshall.net",
 		"website": "https://ColeMarshall.net",
-		"summary": "I am a seasoned full-stack engineer and designer, blending artistic creativity with technical proficiency. With a degree in Interactive Media from the Minneapolis College of Art and Design, my expertise encompasses design, frontend development, backend development, testing, and cloud DevOps, utilizing a wide array of the latest technologies and design tools.",
+		"summary": "I am a seasoned full-stack engineer and designer, blending artistic creativity with technical proficiency. With a degree in Interactive Media from the [Minneapolis College of Art and Design](https://www.mcad.edu/), my expertise encompasses design, frontend development, backend development, testing, and cloud DevOps, utilizing a wide array of the latest technologies and design tools.",
 		"location": {
 			"postalCode": "53704",
 			"city": "Madison",
@@ -58,17 +58,17 @@
 	"work": [
 		{
 			"company": "Devenir Group, LLC",
-			"position": "Senior Full Stack Software Engineer",
+			"position": "Senior Full-Stack Software Engineer",
 			"website": "https://www.devenir.com/",
 			"startDate": "2022-02-01",
-			"summary": "I build and manage robust, scalable fintech web services and products for the HSA (health savings account) investment industry — a market [Devenir's own benchmark research](https://www.hsaresearch.com/) puts at $174 billion across 41.7 million accounts. My work spans backend and frontend development, automated testing, and cloud DevOps, and I automate key processes across the business.",
+			"summary": "I build and manage robust, scalable fintech web services and products for the HSA (health savings account) investment industry — a market [Devenir's own benchmark research](https://www.hsaresearch.com/) puts at over $174 billion across over 41.7 million accounts. My work spans backend and frontend development, automated testing, and cloud DevOps, and I automate key processes across the business.",
 			"highlights": [
 				"Architected and built the company's modern flagship API offerings in [Node.js](https://nodejs.org/), with their [AWS](https://aws.amazon.com/) infrastructure authored entirely as code using [CDK](https://aws.amazon.com/cdk/) and [TypeScript](https://www.typescriptlang.org/)",
-				"Lead contributor to the company's HSA investment portal — a [Vue.js](https://vuejs.org/) frontend backed by [Laravel](https://laravel.com/) services and a dedicated authentication service",
-				"Established the portal's end-to-end test coverage from the ground up with [Playwright](https://playwright.dev/)",
-				"Designed and built [Devenir's public website](https://www.devenir.com/)",
-				"Created branding and logos across the product family, including [myHSAinvestments](https://myhsainvestments.com/) and [HSA Guided Portfolio](https://hsaguidedportfolio.com/)",
-				"Introduced agentic AI tooling and a shared library of agent skills to the engineering workflow"
+				"Lead contributor to the company's HSA investment portal assets and infrastructure — a [Vue.js](https://vuejs.org/) frontend backed by [Laravel](https://laravel.com/) services and a dedicated authentication service",
+				"Established the HSA investment portal's end-to-end test coverage from the ground up with [Playwright](https://playwright.dev/)",
+				"Designed and built [Devenir's public marketing website](https://www.devenir.com/)",
+				"Created branding and logos for Devenir's product family, including [myHSAinvestments](https://myhsainvestments.com/), [HSA Guided Portfolio](https://hsaguidedportfolio.com/), [HSA Search](https://www.hsasearch.com/), [HSA Planner](https://www.hsaplanner.com/), [HSA Research](https://www.hsaresearch.com/), and [HSA Compass](https://hsacompass.com/)",
+				"Introduced agentic AI tooling to the engineering workflow"
 			]
 		},
 		{
@@ -77,19 +77,19 @@
 			"website": "https://MusicMaster.com/",
 			"startDate": "2011-03-07",
 			"endDate": "2022-01-28",
-			"summary": "As a full stack developer, I was responsible for the design, frontend development, backend development, web server operations, and third-party API integration into the company's web-based tools. Additionally I contributed to the development of the online capabilities of the company's products, designed marketing material, and automated time-consuming tasks for support and sales staff.",
+			"summary": "As a full-stack developer, I was responsible for the design, frontend development, backend development, web server operations, and third-party API integration into the company's web-based tools. Additionally I contributed to the development of the online capabilities of the company's products, designed marketing material, and automated time-consuming tasks for support and sales staff.",
 			"highlights": [
 				"Designed and developed an extensive, custom eCommerce system with [PhaseWare](https://www.phaseware.com/)/[Salesforce](https://www.salesforce.com/)/[Zoho](https://www.zoho.com/)/[PayPal](https://www.paypal.com/)/[Authorize.net](https://www.authorize.net/) integration, customer accounts, subscription management, contracts, invoices, and wide-ranging discount options among many other features (Sangus)",
 				"Developed an online licensing system to determine legitimate access to the company's flagship software by its clients, which stays up-to-date in real time with integration into the company's customer resource management and accounting systems (Osiris)",
 				"Search Engine Optimization: Optimized the MusicMaster website so that it appears as number one on Google for the company's primary keywords \"music scheduling\" and \"music scheduling software\"",
 				"Created a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) API for Odin, a web-based administration system I created for company-wide use, using [Slim](https://www.slimframework.com/) that accepts and returns [JSON](https://www.json.org/) or [XML](https://www.w3.org/XML/) as needed, uses [HTTP authentication](https://en.wikipedia.org/wiki/Basic_access_authentication), and includes extensive [Markdown](https://en.wikipedia.org/wiki/Markdown) documentation (Munin)",
-				"Managed two cloud-based Apache web servers, with load balancers, and a cloud-based MySQL database, which run the majority of the company's online assets, including the web sites and software API. The servers were maintained as [PCI compliant](https://www.pcisecuritystandards.org/), secure enough to store sensitive financial information (Asgard and Vanaheim)",
+				"Managed two cloud-based [Apache](https://httpd.apache.org/) web servers, with load balancers, and a cloud-based [MySQL](https://www.mysql.com/) database, which run the majority of the company's online assets, including the web sites and software API. The servers were maintained as [PCI compliant](https://www.pcisecuritystandards.org/), secure enough to store sensitive financial information (Asgard and Vanaheim)",
 				"Designed the graphics for [MusicMaster's massive 20' x 40' exhibit](https://www.behance.net/gallery/111528159/MusicMaster-Exhibit-Booth-Graphics) for the yearly [NAB Show in Las Vegas](https://www.nabshow.com/)",
 				"Created a back-end administrative framework that manages all of MusicMaster's web applications, selectively giving its users the ability to access the site's administrative options; built on [PHP](https://php.net/) and [JavaScript](https://en.wikipedia.org/wiki/JavaScript), the system is designed to allow developers to rapidly create administrative user interfaces, the centerpiece being a form creation class that handles intricate error-checking with minimal parameters (Odin)",
 				"Created a robust localization system with a reactive, easy-to-use administration that supports all [UTF-8 languages](https://www.unicode.org/standard/supported.html), multiple software and web products, [XML](https://www.w3.org/XML/)/[CSV](https://en.wikipedia.org/wiki/Comma-separated_values) import/export of localization data (Nimrod)",
 				"Developed an [OData](https://www.odata.org/) interface from scratch using [PHP](https://www.php.net/) and [Slim](https://www.slimframework.com/) that allows [Salesforce](https://www.salesforce.com/) to integrate external data using [Salesforce Connect](https://help.salesforce.com/s/articleView?id=sf.platform_connect_about.htm) (Tyr)",
 				"Created a certification testing system for the MusicMaster Scheduling software, which displays questions that must be answered in a fixed time-frame, giving users the option to occasionally pass on a question, add time to answer, and remove one wrong answer from a question; administrative features include managing test questions with the option to include images and shuffle the order of the multiple choice answers, the creation of custom categories and custom difficulties, and a comprehensive look at how questions are statistically being answered (Athena)",
-				"Created a newsletter management program that integrates into WordPress, turning postings into suitable HTML and text e-mails, sends previews to editors, gives subscribers and administrators easy-to-use subscription management options, processes returned mail, and removes and reports undeliverable e-mail addresses from the subscribers database (Mercury)",
+				"Created a newsletter management program that integrates into [WordPress](https://wordpress.org/), turning postings into suitable HTML and text e-mails, sends previews to editors, gives subscribers and administrators easy-to-use subscription management options, processes returned mail, and removes and reports undeliverable e-mail addresses from the subscribers database (Mercury)",
 				"Developed a detailed client station database accompanied by a [responsive station player skeuomorph frontend](https://www.musicmaster.com/stations_player.php) that looks and works much like a car stereo (Locus)",
 				"Created [branding packages](https://www.behance.net/gallery/26791257/Blendella-Branding-Packages), designed [user interfaces and outlined the user experience](https://www.behance.net/gallery/26758243/Blendella-Mars-UIUX), and developed frontend styling for Blendella, where users can listen to and vote on the music they want to hear next",
 				"Created [MusicMaster's 30th Anniversary logo](https://www.behance.net/gallery/21673833/MusicMaster-30th-Anniversary-Logos-(Process)), which appeared on banners, shirts, plaques, and even packets of fruit snacks"
@@ -265,6 +265,6 @@
 	"meta": {
 		"canonical": "https://colemarshall.net/data/resume.json",
 		"version": "2.2.0",
-		"lastModified": "2026-07-07T22:26:00Z"
+		"lastModified": "2026-07-08T02:46:00Z"
 	}
 }
