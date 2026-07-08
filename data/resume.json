@@ -14,9 +14,19 @@
 		},
 		"profiles": [
 			{
+				"network": "GitHub",
+				"username": "ccmars",
+				"url": "https://github.com/ccmars"
+			},
+			{
 				"network": "LinkedIn",
 				"username": "colemarshall",
 				"url": "https://www.linkedin.com/in/colemarshall"
+			},
+			{
+				"network": "Stack Overflow",
+				"username": "1836703",
+				"url": "https://stackoverflow.com/users/1836703/"
 			},
 			{
 				"network": "Behance",
@@ -37,16 +47,6 @@
 				"network": "500px",
 				"username": "colemarshall",
 				"url": "https://500px.com/colemarshall"
-			},
-			{
-				"network": "GitHub",
-				"username": "ccmars",
-				"url": "https://github.com/ccmars"
-			},
-			{
-				"network": "Stack Overflow",
-				"username": "1836703",
-				"url": "https://stackoverflow.com/users/1836703/"
 			},
 			{
 				"network": "Linktree",
@@ -265,6 +265,6 @@
 	"meta": {
 		"canonical": "https://colemarshall.net/data/resume.json",
 		"version": "2.2.0",
-		"lastModified": "2026-07-08T02:46:00Z"
+		"lastModified": "2026-07-08T04:04:00Z"
 	}
 }
