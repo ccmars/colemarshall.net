@@ -1,6 +1,6 @@
 # colemarshall.net
 
-The personal site and interactive resume of **Cole Marshall** — Web Designer & Developer. Live at **[colemarshall.net](https://colemarshall.net)**.
+The personal site and interactive resume of **Cole Marshall** — Senior Full-Stack Engineer & Designer. Live at **[colemarshall.net](https://colemarshall.net)**.
 
 ![CM Monogram](./images/cm_wireframe.svg)
 
