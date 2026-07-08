@@ -61,7 +61,7 @@
 			"position": "Senior Full-Stack Software Engineer",
 			"website": "https://www.devenir.com/",
 			"startDate": "2022-02-01",
-			"summary": "I build and manage robust, scalable fintech web services and products for the HSA (health savings account) investment industry — a market [Devenir's own benchmark research](https://www.hsaresearch.com/) puts at over $174 billion across over 41.7 million accounts. My work spans backend and frontend development, automated testing, and cloud DevOps, and I automate key processes across the business.",
+			"summary": "I build and manage robust, scalable fintech web services and products for the HSA (health savings account) investment industry. My work spans backend and frontend development, automated testing, and cloud DevOps, and I automate key processes across the business.",
 			"highlights": [
 				"Architected and built the company's modern flagship API offerings in [Node.js](https://nodejs.org/), with their [AWS](https://aws.amazon.com/) infrastructure authored entirely as code using [CDK](https://aws.amazon.com/cdk/) and [TypeScript](https://www.typescriptlang.org/)",
 				"Lead contributor to the company's HSA investment portal assets and infrastructure — a [Vue.js](https://vuejs.org/) frontend backed by [Laravel](https://laravel.com/) services and a dedicated authentication service",
@@ -264,7 +264,7 @@
 	],
 	"meta": {
 		"canonical": "https://colemarshall.net/data/resume.json",
-		"version": "2.2.0",
-		"lastModified": "2026-07-08T04:04:00Z"
+		"version": "2.2.1",
+		"lastModified": "2026-07-08T18:33:00Z"
 	}
 }
