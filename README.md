@@ -1,12 +1,12 @@
-# colemarshall.net
+# ColeMarshall.net
 
 The personal site and interactive resume of **Cole Marshall** — Senior Full-Stack Engineer & Designer. Live at **[colemarshall.net](https://colemarshall.net)**.
 
 ![CM Monogram](./images/cm_wireframe.svg)
 
-## The pitch
+## Summary
 
-This site is a working argument that the modern web platform is enough. No frameworks, no build step, no CDNs — just current-spec HTML, CSS, JavaScript, and a little PHP:
+This site is a working argument that the modern web platform is enough. Just current-spec HTML, CSS, JavaScript, and a little PHP:
 
 - **One JSON file drives the whole site.** Every piece of content — the home page, the interactive resume, the JSON-LD structured data, the downloadable resume — renders from [`data/resume.json`](data/resume.json) ([JSON Resume](https://jsonresume.org/) format). Update the data and the site follows.
 - **An interactive resume, not a PDF.** [colemarshall.net/resume.php](https://colemarshall.net/resume.php) lets you tailor exactly the sections you want to see, print the result, or take the raw JSON with you.
@@ -18,7 +18,7 @@ This site is a working argument that the modern web platform is enough. No frame
 
 Deliberately simple and dependency-light:
 
-- **PHP 8.1+** for templating — no framework
+- **PHP 8+** for templating — no framework
 - **[JSON Resume](https://jsonresume.org/)** (`data/resume.json`) as the single source of truth for all content
 - **Modern native CSS** (`style/main.css`) — no preprocessor, no build step
 - **Vanilla JavaScript** (`scripts/`)
