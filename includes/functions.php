@@ -95,9 +95,9 @@ function icon(string $name, string $class = ''): string
 /**
  * Icon for a profile network.
  */
-function profileIcon(string $network): string
+function profileIcon(string $network, string $class = 'icon-profile'): string
 {
-	return icon(PROFILE_ICONS[$network] ?? PROFILE_ICON_FALLBACK, 'icon-profile');
+	return icon(PROFILE_ICONS[$network] ?? PROFILE_ICON_FALLBACK, $class);
 }
 
 /**

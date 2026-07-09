@@ -8,7 +8,7 @@
 const SITE_URL = 'https://colemarshall.net';
 
 // Bump when deploying changed CSS/JS to bust browser caches
-const ASSET_VERSION = '3.3.2';
+const ASSET_VERSION = '3.4.0';
 
 // Public source repository
 const GITHUB_REPO_URL = 'https://github.com/ccmars/colemarshall.net';

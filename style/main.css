@@ -385,6 +385,11 @@ a {
 		margin-block: 0 0.6em;
 	}
 
+	.hero-pitch {
+		max-width: 48ch;
+		margin-block: 0 0.9em;
+	}
+
 	.hero-contact {
 		font-family: var(--font-heading);
 		font-weight: 300;
@@ -397,7 +402,8 @@ a {
 		position: absolute;
 		top: -60px;
 		right: 0;
-		width: clamp(340px, 46vw, 600px);
+		/* Sized to stay right of the pitch text and above the profile strip */
+		width: clamp(300px, 36vw, 480px);
 		height: auto;
 		z-index: 1;
 		pointer-events: none;
@@ -436,8 +442,8 @@ a {
    -------------------------------------------------------------------------- */
 .profile-grid {
 	display: grid;
-	/* One column per tile so a row never strands an orphan; --profile-count is set inline from the data */
-	grid-template-columns: repeat(var(--profile-count, 9), minmax(0, 1fr));
+	/* One row: the resume tile plus the three headline profiles */
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 8px;
 	max-width: var(--width-content);
 	margin: 0 auto;
@@ -445,22 +451,16 @@ a {
 	list-style: none;
 }
 
-@media (max-width: 960px) {
-	.profile-grid {
-		grid-template-columns: repeat(5, minmax(0, 1fr));
-	}
-}
-
 @media (max-width: 560px) {
 	.profile-grid {
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
 
 .profile-tile {
 	display: block;
 	height: 100%;
-	padding: 14px 8px 10px;
+	padding: 18px 8px 14px;
 	background: light-dark(var(--brand-pine), var(--brand-amber));
 	color: light-dark(#eef0e4, var(--color-tile-text));
 	text-align: center;
@@ -478,8 +478,8 @@ a {
 
 	.icon-profile {
 		display: block;
-		width: 42px;
-		height: 42px;
+		width: 48px;
+		height: 48px;
 		margin: 0 auto 10px;
 		color: inherit;
 	}
@@ -487,7 +487,7 @@ a {
 	b {
 		display: block;
 		font-weight: 500;
-		font-size: 0.75rem;
+		font-size: 0.85rem;
 		white-space: nowrap;
 	}
 }
@@ -501,8 +501,58 @@ a {
 	}
 }
 
+/* Supporting profiles: quiet outlined pills that fill to tile colors on hover */
+.profile-strip {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	max-width: var(--width-content);
+	margin: 8px auto 0;
+	padding: 0 16px;
+	list-style: none;
+
+	li {
+		/* Shared basis + grow keeps pills on a line the same width and every
+		   line filled edge to edge, so a wrapped pill never strands */
+		flex: 1 1 150px;
+		display: flex;
+		margin: 0;
+	}
+}
+
+.profile-pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 5px 14px;
+	font-size: var(--text-small);
+	font-weight: 500;
+	white-space: nowrap;
+	text-decoration: none;
+	color: light-dark(var(--brand-olive-deep), var(--brand-sage-light));
+	/* Opaque in dark so the monogram's amber lines can't bleed through the outline */
+	background: light-dark(transparent, var(--color-bg));
+	border: 1px solid light-dark(color-mix(in srgb, var(--brand-pine) 55%, transparent), color-mix(in srgb, var(--brand-sage-light) 45%, transparent));
+	border-radius: var(--radius-small);
+	position: relative;
+	z-index: 10;
+	transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), translate var(--transition-fast);
+
+	&:hover {
+		color: light-dark(#eef0e4, var(--color-tile-text));
+		background: light-dark(var(--brand-pine), var(--brand-amber));
+		border-color: light-dark(var(--brand-pine), var(--brand-amber));
+		translate: 0 -2px;
+	}
+
+	.icon {
+		color: inherit;
+	}
+}
+
 /* --------------------------------------------------------------------------
-   Home: knowledge / code samples
+   Home: self-portraits / code samples
    -------------------------------------------------------------------------- */
 .code-card {
 	max-width: var(--width-content);

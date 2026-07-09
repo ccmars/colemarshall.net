@@ -11,7 +11,7 @@ This site is a working argument that the modern web platform is enough. Just cur
 - **One JSON file drives the whole site.** Every piece of content — the home page, the interactive resume, the JSON-LD structured data, the downloadable resume — renders from [`data/resume.json`](data/resume.json) ([JSON Resume](https://jsonresume.org/) format). Update the data and the site follows.
 - **An interactive resume, not a PDF.** [colemarshall.net/resume.php](https://colemarshall.net/resume.php) lets you tailor exactly the sections you want to see, print the result, or take the raw JSON with you.
 - **Modern native CSS with no preprocessor.** Design tokens as custom properties, `light-dark()` theming, `color-mix()`, native nesting, logical properties, fluid `clamp()` type. The entire design system is one readable file: [`style/main.css`](style/main.css).
-- **Code samples that actually run.** The home page's Knowledge section is written as a running joke, but every sample is real, current-syntax code — PHP 8.5, modern JavaScript, native CSS — each with a "Run it" link that executes it.
+- **Code samples that actually run.** The home page's Self-Portraits section is written as a running joke, but every sample is real, current-syntax code — PHP 8.5, modern JavaScript, native CSS — each with a "Run it" link that executes it.
 - **Fast and accessible by default.** Semantic HTML, skip links, ARIA where it earns its keep, self-hosted variable fonts, and no runtime dependency heavier than highlight.js.
 
 ## Stack
@@ -41,10 +41,10 @@ includes/
   config.php            All site-wide configuration and tunable values
   functions.php         Shared helpers (data loading, escaping, icons, schema)
   head.php              Shared <head>: meta, OpenGraph, JSON-LD, analytics
-  codeSampleItems.php   Code sample definitions for the Knowledge section
+  codeSampleItems.php   Code sample definitions for the Self-Portraits section
 data/
   resume.json           JSON Resume — edit this to update site content
-  code/                 Source files for the Knowledge samples
+  code/                 Source files for the Self-Portraits samples
 style/                  main.css, cole-neon.css (code theme), fonts, icons
 scripts/                home.js, resume.js, vendored highlight.js
 ```

@@ -9,7 +9,7 @@ if ($resume === null) {
 
 $page = [
 	'title' => "{$resume->basics->name} – {$resume->basics->label}",
-	'description' => "{$resume->basics->name} is a senior full-stack engineer and designer in {$resume->basics->location->city}, {$resume->basics->location->region} — blending design, frontend and backend development, testing, and cloud DevOps.",
+	'description' => "{$resume->basics->name} is a senior full-stack engineer and designer in {$resume->basics->location->city}, {$resume->basics->location->region}, blending design, frontend and backend development, testing, and cloud DevOps.",
 	'canonicalPath' => '/',
 	'ogType' => 'website',
 ];
@@ -43,6 +43,7 @@ require 'includes/codeSampleItems.php';
 				<div class='hero-text'>
 					<h1><?php echo e($resume->basics->name); ?></h1>
 					<p class='hero-role'><?php echo e($resume->basics->label); ?></p>
+					<p class='hero-pitch'>Blending design, frontend and backend development, testing, and cloud DevOps from <?php echo e($resume->basics->location->city); ?>, <?php echo e($resume->basics->location->region); ?>.</p>
 					<p class='hero-contact'>
 						<?php echo icon('mail'); ?><a href='mailto:<?php echo e($resume->basics->email); ?>'><?php echo e($resume->basics->email); ?></a>
 					</p>
@@ -51,17 +52,21 @@ require 'includes/codeSampleItems.php';
 			</div>
 		</header>
 		<main id='main'>
-			<?php if (!empty($resume->basics->profiles)) { ?>
+			<?php if (!empty($resume->basics->profiles)) {
+				// resume.json orders profiles by hiring funnel; the first three headline beside the resume tile
+				$headlineProfiles = array_slice($resume->basics->profiles, 0, 3);
+				$supportingProfiles = array_slice($resume->basics->profiles, 3);
+			?>
 			<section class='profiles' aria-labelledby='profiles-heading'>
 				<h2 class='section-heading' id='profiles-heading'><span>Profiles</span></h2>
-				<ul class='profile-grid' style='--profile-count: <?php echo count($resume->basics->profiles) + 1; ?>'>
+				<ul class='profile-grid'>
 					<li>
 						<a class='profile-tile profile-tile-featured' href='resume.php'>
 							<?php echo icon('file-text', 'icon-profile'); ?>
 							<b>Resume</b>
 						</a>
 					</li>
-					<?php foreach ($resume->basics->profiles as $profile) { ?>
+					<?php foreach ($headlineProfiles as $profile) { ?>
 					<li>
 						<a class='profile-tile' href='<?php echo e($profile->url); ?>' target='_blank' rel='noopener'>
 							<?php echo profileIcon($profile->network); ?>
@@ -70,10 +75,21 @@ require 'includes/codeSampleItems.php';
 					</li>
 					<?php } ?>
 				</ul>
+				<?php if (!empty($supportingProfiles)) { ?>
+				<ul class='profile-strip'>
+					<?php foreach ($supportingProfiles as $profile) { ?>
+					<li>
+						<a class='profile-pill' href='<?php echo e($profile->url); ?>' target='_blank' rel='noopener'>
+							<?php echo profileIcon($profile->network, ''); ?><?php echo e($profile->network); ?>
+						</a>
+					</li>
+					<?php } ?>
+				</ul>
+				<?php } ?>
 			</section>
 			<?php } ?>
-			<section class='knowledge' aria-labelledby='knowledge-heading'>
-				<h2 class='section-heading' id='knowledge-heading'><span>Knowledge</span></h2>
+			<section class='self-portraits' aria-labelledby='self-portraits-heading'>
+				<h2 class='section-heading' id='self-portraits-heading'><span>Self-Portraits</span></h2>
 				<?php foreach ($codeSampleItems as $sampleKey => $sample) {
 					$samplePath = CODE_SAMPLE_DIRECTORY . "/{$sample['file']}";
 					if (!is_file($samplePath)) {

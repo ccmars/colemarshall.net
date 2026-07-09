@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Code samples shown in the Knowledge section of the home page.
+ * Code samples shown in the Self-Portraits section of the home page.
  *   name        - display name
  *   description - one-line summary shown under the heading
  *   file        - source file inside CODE_SAMPLE_DIRECTORY
