@@ -2,6 +2,7 @@ PATCH /api/cole/properties HTTP/2
 Host: colemarshall.net
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.human
 Content-Type: application/merge-patch+json
+Content-Length: 61
 Accept: application/json
 
 {
